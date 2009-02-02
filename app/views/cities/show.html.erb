@@ -1,18 +1,6 @@
-<p>
-  <b>Name:</b>
-  <%=h @city.name %>
-</p>
+<%= render :partial => "layouts/main_banner"%>
 
-<p>
-  <b>Description:</b>
-  <%=h @city.description %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%=h @city.image %>
-</p>
-
-
-<%= link_to 'Edit', edit_city_path(@city) %> |
-<%= link_to 'Back', cities_path %>
+<div class="blur">
+<h1><%=h @city.name %></h1>
+<p><%=h @city.description %></p>
+</div>

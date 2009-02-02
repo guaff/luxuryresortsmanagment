@@ -14,6 +14,10 @@ class LocationsController < ApplicationController
   # GET /locations/1.xml
   def show
     @location = Location.find(params[:id])
+    @cities = @location.cities.find(:all)
+    
+    @cities_count_divided = @cities.size/3
+    
 
     respond_to do |format|
       format.html # show.html.erb

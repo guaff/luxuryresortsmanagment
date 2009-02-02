@@ -3,7 +3,40 @@
 <div class="blur">
 <h1><%=h @location.name %></h1>
 <p><%=h @location.description %></p>
-
 <%= link_to 'Back', locations_path %>
+</div>
 
+
+<div class="boxes_down">
+	<h2>select one city:</h2>
+	<div class="left">
+	<table width="260px" height="100%">
+	<% for city in @cities[0..@cities_count_divided] %>
+  	<tr>
+    	<td class="oscura"><%= link_to city.name, city %></td>
+  	</tr>
+		<% end %>
+	</table>
+	</div>
+	
+	<div class="right" style="margin-left: 40px;">
+		<table width="260px" height="100%" float="right;">
+		<% for city in @cities[@cities_count_divided*2+1..@cities_count_divided*3] %>
+  	<tr>
+    	<td class="oscura"><%= link_to city.name, city %></td>
+  	</tr>
+		<% end %>
+		</table>
+	</div>
+	
+	<div class="right">
+		<table width="260px;" height="100%">
+		<% for city in @cities[@cities_count_divided..@cities_count_divided*2] %>
+  	<tr>
+    	<td class="oscura"><%= link_to city.name, city %></td>
+  	</tr>
+		<% end %>
+		</table>
+	</div>
+	
 </div>
