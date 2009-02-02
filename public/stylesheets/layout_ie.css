@@ -1,0 +1,10 @@
+.main_banner{ width: 595px; height: 332px; float: left; }
+.main_blur{ width: 595px; height:332px; float:left; }
+.blur{ width: 288px; float: right; margin-top: -6px;}
+.find_resort{ width: 268px; height: 160px; background-color: #f8f6f2; float: right; text-align: center; padding: 10px; margin-bottom: 60px;}
+
+.checkout_left{ width: 150px;}
+
+.checkout_center{ width: 200px; float: left; text-align: left;}
+
+.footer img{ margin-top: 30px;}

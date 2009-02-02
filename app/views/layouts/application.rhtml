@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Luxury Resort Managment</title>
+	<link rel="stylesheet" href="/styleSheets/layout.css" type="text/css" media="screen" title="main css" charset="utf-8" />
+	<link rel="stylesheet" href="/styleSheets/text.css" type="text/css" media="screen"  charset="utf-8" />
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" href="StyleSheets/layout_ie.css" type="text/css" media="screen"  charset="utf-8" />
+	<![endif] -->
+	
+</head>
+
+<body>
+	
+	<div class="container">
+		<div class="logo"><img src="images/logo.jpg" alt="resort luxury managment logo"/></div>
+		
+		<%= render :partial => "layouts/navegacion" %>
+		
+		<div class="main_banner">
+			<img src="images/main_banner/main_banner.jpg" alt="neat relaxing banner"/>
+		</div>
+		
+
+		
+		<div class="blur">
+		<h1>Welcome</h1>
+		<h2>Our goal is to provide you with the top of the notch 
+		resorts around the world, just for you.</h2>
+		</div>
+		
+		<div class="find_resort">
+			<h3>FIND A RESORT</h3>
+			<img src="images/find_resort_icon.jpg" alt="find a resort" /><br/>
+			<input type="text" name="location" value="Choose a Location" id="location_find"/><br/>
+			<input type="text" name="city" value="Select a City" id="city"/><br/>
+			<input type="submit" name="submit" value="find" id="submit" class="submit"/><br/>
+		</div>
+		
+		<div class="boxes_down">
+		
+		<div class="activities">
+			<img src="images/activities_image.jpg" alt="activities"/>
+			<h3>ACTIVITIES</h3>
+			<h4>Aspen Village</h4>
+			<p>In winter, skiers and snow boarders enjoy Brundage Mountain from a base elevation of 6,000 feet.</p>
+		</div>
+		
+		<div class="featured">
+			<img src="images/fetured_image.jpg" alt="featured resort"/>
+			<h3>FEATURED</h3>
+			<h4>7 Mile Beach</h4>
+			<p>The Caribbean waters offer a full range of sports, including diving, snorkeling, windsurfing, and sailing</p>
+		</div>
+		
+		<div class="join_club">
+			<h3>JOIN THE CLUB</h3>
+			<p class="no_margin">Subscribe to club and receive exclusive offers.</p>
+			<input type="text" name="location" value="Choose a Location" id="location" class="input_colorado" /><br/>
+			<input type="text" name="city" value="Select a City" id="city_join" class="input_colorado"/><br/>
+			<input type="submit" name="submit" value="find" id="submit_join" class="submit_colorado"/><br/>
+		</div>
+		
+		</div>
+		
+		<%= render :partial => "layouts/footer" %>
+		
+		
+	</div>
+</body>
+</html>

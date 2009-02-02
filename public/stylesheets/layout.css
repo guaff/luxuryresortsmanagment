@@ -1,0 +1,83 @@
+/* RESORT LUXURY MANAGMENT MAIN CSS */
+/* December 11, 2008. 				*/
+/* Ivan Acosta-Rubio > Bakedweb.net */
+/* ivan at bakedweb dot net 		*/ 
+
+body{ background: url(../images/bg.jpg) fixed; margin: 0;}
+
+/* MAIN ELEMENTS */
+.container{ width: 868px; margin: 0 auto; background: white; padding-left: 31px; padding-right: 31px;}
+.logo{ float: left;}
+
+
+/* MENU */
+.menu{ float: right;}
+.lista_menu{ list-style: none; margin-top: .7em;}
+.lista_menu li{ display: inline; padding:  .7em; margin-top: 1em; }
+.lista_menu li:hover{  background: #ededed; padding: .7em;}
+.lista_menu a{ text-decoration: none;}
+
+/* VARIOUS */
+.no_margin{ margin: 0px;}
+
+/* ELEMENTS */
+.right{ float: right;}
+.left{ float: left;}
+.main_banner{ width: 565px; height: 332px; float: left;}
+.main_blur{ width: 565px; height: 332px; float: left;}
+
+.line_height_35{ line-height: 35px;}
+
+.blur{ width: 288px; float: right; margin-top: -6px;}
+.find_resort{ width: 268px; height: 160px; background-color: #f8f6f2; float: right; text-align: center; padding: 10px;}
+
+/* INPUTS */
+input{ border: 0px; height: 13px; background: white; font-size: 12px; color: #857461; padding: 7px; margin-top: .3em;}
+.submit{ height: 32px;}
+.submit:hover { background-color: #a8cee1; color: #a3917d;}
+.input_colorado{ border: 0px; height: 13px; background: #f9f7f3; font-size: 12px; color: #857461; padding: 7px; margin-top: .3em;}
+.submit_colorado{ height: 32px; background: #f9f7f3;}
+.submit:hover { background-color: #a8cee1; color: #a3917d;}
+label{ font-size: 12px; color: #8c7964;}
+
+
+/* BOXES DOWN */
+.boxes_down{ width: 100%; float: left;}
+
+.activities{ border: 1px solid #e8e6e1; width: 252px; height: 147px; float: left; margin-top: 1.3em; padding: 10px;}
+.featured{ border: 1px solid #e8e6e1; width: 252px; height: 147px;  float: left; margin-top: 1.3em; margin-left: 1em; padding: 10px}
+.join_club{ border: 1px solid #e8e6e1; width: 268px; height: 147px; float: right; margin-top: 1.3em; padding: 10px}
+.column_1{ width: 275px; height: 167px; float: left; margin-top: 1.3em; }
+.column_2{ width: 275px; height: 167px; float: left; margin-top: 1.3em; margin-left: 1em; }
+.column_3{ width: 288px; height: 167px; float: right; margin-top: 1.3em; }
+.column_1 .oscura, .column_2 .oscura, .column_3 .oscura{ background-color: #f8f6f2;  margin: 0px; padding: 10px 0 10px 10px;}
+.column_1 .clara, .column_2 .clara, .column_3 .clara{ background-color: #fdfcfb; width: 100%; margin: 0px; padding: 10px 0 10px 10px;}
+.featured img, .activities img{ float: left; margin-right: 10px;}
+featured p, activities p{ float: right; }
+
+/* FULL VIEW */
+
+.pictures{ float: right; margin: 15px 0 0 0 ;}
+.pictures img{ margin-bottom: 15px;}
+.hotel_info{ width: 565px;  float: left;  margin-top: 60px;}
+th{ font-size: 12px; color: #857461; font-weight: bold; border-bottom: 8px solid white;}
+td{ font-size: 12px; color: #857461; padding-left: 20px;}
+tr{ background-color: #f8f6f2; width: 100%; }
+
+/* CHECKOUT  */
+
+
+
+.input_checkout{ width: 200px;}
+.checkout{ float: left; width: 835px}
+.checkout input{ margin-bottom: 15px;}
+.box_checkout{ width: 100%; float: left; padding: 15px; background-color: #faf9f7; margin-bottom: 30px;}
+
+.checkout_left{ float: left; }
+.checkout_center{ float: left; margin-left: 110px;}
+.checkout_right{ float: right;}
+
+
+/* FOOTER */
+.footer{ text-align: center; padding-bottom: 15px;}
+.footer img{ margin-top: 60px;}
