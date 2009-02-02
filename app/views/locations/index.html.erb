@@ -1,24 +1,16 @@
-<h1>Listing locations</h1>
+<%= render :partial => "layouts/main_banner"%>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Image</th>
-  </tr>
+<div class="blur">
+<h1>Locations</h1>
+<p>Select from one of our locations below</p>
+<table style="width: 100%;">
 
 <% for location in @locations %>
   <tr>
-    <td><%=h location.name %></td>
-    <td><%=h location.description %></td>
-    <td><%=h location.image %></td>
-    <td><%= link_to 'Show', location %></td>
-    <td><%= link_to 'Edit', edit_location_path(location) %></td>
-    <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="oscura"><%= link_to location.name, location %></td>
   </tr>
 <% end %>
 </table>
+</div>
 
-<br />
 
-<%= link_to 'New location', new_location_path %>
