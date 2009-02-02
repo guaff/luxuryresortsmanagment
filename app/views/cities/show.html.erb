@@ -1,4 +1,4 @@
-<%= render :partial => "layouts/main_banner"%>
+<%= render :partial => "layouts/main_banner", :locals => { :image => @city.image }%>
 
 <div class="blur">
 <h1><%=h @city.name %></h1>
