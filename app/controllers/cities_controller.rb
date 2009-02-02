@@ -1,8 +1,11 @@
 class CitiesController < ApplicationController
   # GET /cities
   # GET /cities.xml
+  in_place_edit_for :city, :name
+  
   def index
     @cities = City.find(:all)
+    @cities_count_divided = @cities.size/3
 
     respond_to do |format|
       format.html # index.html.erb
