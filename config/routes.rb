@@ -13,7 +13,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :locations
   
-  map.home '', :controller => 'home', :action => 'index'
+  map.home '', :controller => 'home', :action => 'splash'
 
   
   # The priority is based upon order of creation: first created -> highest priority.

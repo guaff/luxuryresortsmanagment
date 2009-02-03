@@ -1,4 +1,9 @@
 class HomeController < ApplicationController
+  
+  def splash
+    render :layout => "none"
+  end
+  
   def index
     @mailinglist = Mailinglist.new
   end
