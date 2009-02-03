@@ -6,6 +6,9 @@
 <%= link_to 'Back', locations_path %>
 </div>
 
+<% if @cities.empty? %>
+NO CITIES
+<% else %>
 
 <div class="boxes_down">
 	<h2>select one city:</h2>
@@ -38,5 +41,6 @@
 		<% end %>
 		</table>
 	</div>
-	
 </div>
+
+<% end %>

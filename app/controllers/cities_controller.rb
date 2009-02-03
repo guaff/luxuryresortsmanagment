@@ -1,7 +1,6 @@
 class CitiesController < ApplicationController
   # GET /cities
   # GET /cities.xml
-  in_place_edit_for :city, :name
   
   def index
     @cities = City.find(:all)

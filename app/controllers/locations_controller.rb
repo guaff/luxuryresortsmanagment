@@ -1,6 +1,8 @@
 class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.xml
+ layout "application", :except => [:new]
+  
   def index
     @locations = Location.find(:all)
 
@@ -15,9 +17,7 @@ class LocationsController < ApplicationController
   def show
     @location = Location.find(params[:id])
     @cities = @location.cities.find(:all)
-    
     @cities_count_divided = @cities.size/3
-    
 
     respond_to do |format|
       format.html # show.html.erb
@@ -29,7 +29,6 @@ class LocationsController < ApplicationController
   # GET /locations/new.xml
   def new
     @location = Location.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @location }
@@ -49,7 +48,7 @@ class LocationsController < ApplicationController
     respond_to do |format|
       if @location.save
         flash[:notice] = 'Location was successfully created.'
-        format.html { redirect_to(@location) }
+        format.html { redirect_to :controller => "admin", :action => "locations" }
         format.xml  { render :xml => @location, :status => :created, :location => @location }
       else
         format.html { render :action => "new" }
@@ -82,7 +81,7 @@ class LocationsController < ApplicationController
     @location.destroy
 
     respond_to do |format|
-      format.html { redirect_to(locations_url) }
+      format.html { redirect_to :controller => "admin", :action => "locations" }
       format.xml  { head :ok }
     end
   end
