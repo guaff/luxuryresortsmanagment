@@ -2,8 +2,8 @@ require "mt-capistrano"
 
 set :site,         "26593"
 set :application,  "lrm"
-set :webpath,      "luxuryresortmanagement.com/"
-set :domain,       "luxuryresortmanagement.com/"
+set :webpath,      "luxuryresortmanagement.com"
+set :domain,       "luxuryresortmanagement.com"
 set :user,         "serveradmin@sobebeats.com"
 set :password,     "01210323"
 
