@@ -1,18 +1,13 @@
 <h1>Listing cities</h1>
 
-<table>
+<table class="admin">
   <tr>
     <th>Name</th>
-    <th>Description</th>
-    <th>Image</th>
   </tr>
 
 <% for city in @cities %>
   <tr>
     <td><%=h city.name %></td>
-    <td><%=h city.description %></td>
-    <td><%=h city.image %></td>
-    <td><%= link_to 'Show', city %></td>
     <td><%= link_to 'Edit', edit_city_path(city) %></td>
     <td><%= link_to 'Destroy', city, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
