@@ -47,7 +47,7 @@ select, file{ border: 0px;  background: #f9f7f3; font-size: 12px; color: #857461
 
 .activities{ border: 1px solid #e8e6e1; width: 252px; height: 147px; float: left; margin-top: 1.3em; padding: 10px;}
 .featured{ border: 1px solid #e8e6e1; width: 252px; height: 147px;  float: left; margin-top: 1.3em; margin-left: 1em; padding: 10px}
-.join_club{ border: 1px solid #e8e6e1; width: 268px; height: 147px; float: right; margin-top: 1.3em; padding: 10px}
+.join_club{ border: 1px solid #e8e6e1; width: 268px; height: 158px; float: right; margin-top: 0; padding: 10px}
 .column_1{ width: 275px; height: 167px; float: left; margin-top: 1.3em; }
 .column_2{ width: 275px; height: 167px; float: left; margin-top: 1.3em; margin-left: 1em; }
 .column_3{ width: 288px; height: 167px; float: right; margin-top: 1.3em; }

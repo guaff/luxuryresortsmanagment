@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @mailinglist.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @mailinglist.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_mailinglist_path(@mailinglist) %> |
+<%= link_to 'Back', mailinglists_path %>

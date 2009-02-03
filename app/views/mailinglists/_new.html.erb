@@ -1,0 +1,16 @@
+<h3>JOIN THE CLUB</h3>
+<p class="no_margin">Subscribe to club and receive exclusive offers.</p>
+<% form_for(@mailinglist) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.text_field :name, :class => "input_colorado", :value => "Name", :onfocus => "if ( this.value == this.defaultValue ) this.value ='' ", :onblur=>"if ( this.value == '' ) this.value = this.defaultValue"%>
+  </p>
+  <p>
+    <%= f.text_field :email, :class => "input_colorado", :value => "E-mail", :onfocus => "if ( this.value == this.defaultValue ) this.value ='' ", :onblur=>"if ( this.value == '' ) this.value = this.defaultValue" %>
+  </p>
+  <p>
+    <%= f.submit "Join", :class => :submit %>
+  </p>
+<% end %>
+

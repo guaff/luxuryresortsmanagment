@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090203160339) do
+ActiveRecord::Schema.define(:version => 20090203163652) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(:version => 20090203160339) do
     t.string   "image_content_type"
     t.integer  "image_file_size",    :limit => 11
     t.datetime "image_updated_at"
+  end
+
+  create_table "mailinglists", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
