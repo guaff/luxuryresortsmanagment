@@ -1,0 +1,7 @@
+<div class="main_banner">
+	<% if @image.nil? %>
+	<img src="/images/main_banner/main_banner.jpg" alt="main banner"/>
+	<% else  %>
+	<%= image_tag @image, :alt => "relax" %>
+	<% end %>
+</div>

@@ -1,6 +1,6 @@
 <h1>Editing city</h1>
 
-<% form_for(@city) do |f| %>
+<% form_for @city, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -13,7 +13,7 @@
   </p>
   <p>
     <%= f.label :image %><br />
-    <%= f.text_field :image %>
+    <%= f.file_field :image %>
   </p>
   <p>
     <%= f.submit "Update" , :class => "submit" %>

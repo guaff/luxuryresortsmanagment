@@ -47,7 +47,7 @@ class CitiesController < ApplicationController
     respond_to do |format|
       if @city.save
         flash[:notice] = 'City was successfully created.'
-        format.html { redirect_to(@city) }
+        format.html { redirect_to :controller => "admin", :action => "cities" }
         format.xml  { render :xml => @city, :status => :created, :location => @city }
       else
         format.html { render :action => "new" }
@@ -64,7 +64,7 @@ class CitiesController < ApplicationController
     respond_to do |format|
       if @city.update_attributes(params[:city])
         flash[:notice] = 'City was successfully updated.'
-        format.html { redirect_to(@city) }
+        format.html { redirect_to :controller => "admin", :action => "cities" }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -80,7 +80,7 @@ class CitiesController < ApplicationController
     @city.destroy
 
     respond_to do |format|
-      format.html { redirect_to(cities_url) }
+      format.html { redirect_to :controller => "admin", :action => "cities" }
       format.xml  { head :ok }
     end
   end
