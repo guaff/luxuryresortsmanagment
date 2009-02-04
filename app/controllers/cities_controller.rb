@@ -28,16 +28,17 @@ class CitiesController < ApplicationController
   # GET /cities/new.xml
   def new
     @city = City.new
-
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :layout => "admin" }
       format.xml  { render :xml => @city }
     end
+    
   end
 
   # GET /cities/1/edit
   def edit
     @city = City.find(params[:id])
+    render :layout => "admin"
   end
 
   # POST /cities

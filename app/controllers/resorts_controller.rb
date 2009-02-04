@@ -45,7 +45,7 @@ class ResortsController < ApplicationController
     respond_to do |format|
       if @resort.save
         flash[:notice] = 'Resort was successfully created.'
-        format.html { redirect_to(@resort) }
+        format.html { redirect_to :controller => "admin", :action => "resorts" }
         format.xml  { render :xml => @resort, :status => :created, :location => @resort }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class ResortsController < ApplicationController
     respond_to do |format|
       if @resort.update_attributes(params[:resort])
         flash[:notice] = 'Resort was successfully updated.'
-        format.html { redirect_to(@resort) }
+        format.html { redirect_to :controller => "admin", :action => "resorts" }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

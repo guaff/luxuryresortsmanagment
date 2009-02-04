@@ -1,0 +1,19 @@
+<h2>Listing resorts</h2>
+
+<table class="admin">
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% for resort in @resorts %>
+  <tr>
+    <td><%=h resort.name %></td>
+    <td><%= link_to 'Edit', edit_resort_path(resort) %></td>
+    <td><%= link_to 'Destroy', resort, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New resort', new_resort_path %>
