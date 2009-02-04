@@ -1,0 +1,24 @@
+<h1>Listing resorts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>Description</th>
+  </tr>
+
+<% for resort in @resorts %>
+  <tr>
+    <td><%=h resort.name %></td>
+    <td><%=h resort.city_id %></td>
+    <td><%=h resort.description %></td>
+    <td><%= link_to 'Show', resort %></td>
+    <td><%= link_to 'Edit', edit_resort_path(resort) %></td>
+    <td><%= link_to 'Destroy', resort, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New resort', new_resort_path %>

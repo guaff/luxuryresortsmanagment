@@ -24,11 +24,11 @@ body{ background: url(../images/bg.jpg) fixed; margin: 0;}
 .right{ float: right;}
 .left{ float: left;}
 .main_banner{ width: 565px; height: 332px; float: left;}
-.main_blur{ width: 565px; height: 332px; float: left; text-align: justify;}
+.main_blur{ width: 565px; height: 332px; overflow: hidden; float: left; text-align: justify;}
 
-.line_height_35{ line-height: 35px;}
+.resort_description{ line-height: 30px; padding-right: 30px;}
 
-.blur{ width: 288px; float: right; margin-top: -6px; text-align: justify;}
+.blur{ width: 288px; height: 330px; float: right; margin-top: -6px; text-align: justify; overflow: hidden;}
 .blur p{ line-height: 20px;}
 .find_resort{ width: 268px; height: 160px; background-color: #f8f6f2; float: right; text-align: center; padding: 10px;}
 
@@ -48,7 +48,7 @@ select, file{ border: 0px;  background: #f9f7f3; font-size: 12px; color: #857461
 
 .activities{ border: 1px solid #e8e6e1; width: 252px; height: 147px; float: left; margin-top: 1.3em; padding: 10px;}
 .featured{ border: 1px solid #e8e6e1; width: 252px; height: 147px;  float: left; margin-top: 1.3em; margin-left: 1em; padding: 10px}
-.join_club{ border: 1px solid #e8e6e1; width: 268px; height: 158px; float: right; margin-top: 0; padding: 10px; line-height: 15px;}
+.join_club{ border: 1px solid #e8e6e1; width: 265px; height: 150px; float: right; margin-top: 0; padding: 10px; line-height: 10px;}
 .column_1{ width: 275px; height: 167px; float: left; margin-top: 1.3em; }
 .column_2{ width: 275px; height: 167px; float: left; margin-top: 1.3em; margin-left: 1em; }
 .column_3{ width: 288px; height: 167px; float: right; margin-top: 1.3em; }
@@ -69,6 +69,7 @@ featured p, activities p{ float: right; }
 th{ font-size: 12px; color: #857461; font-weight: bold; border-bottom: 8px solid white;}
 td{ font-size: 12px; color: #857461; padding-left: 20px;}
 tr{ background-color: #f8f6f2; width: 100%; }
+.amenities{ width: 500px; float: left; margin-top: 30px;}
 
 /* CHECKOUT  */
 

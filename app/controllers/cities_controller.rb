@@ -16,7 +16,8 @@ class CitiesController < ApplicationController
   # GET /cities/1.xml
   def show
     @city = City.find(params[:id])
-
+    @resorts = @city.resorts.find(:all)
+    @resorts_count_divided = @resorts.size/3
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @city }

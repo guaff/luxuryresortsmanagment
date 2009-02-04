@@ -1,5 +1,6 @@
 class City < ActiveRecord::Base
   belongs_to :location
+  has_many :resorts
   
   has_attached_file :image,
                     :url  => "/image/cities/:id/:style/:basename.:extension",
