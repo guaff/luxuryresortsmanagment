@@ -1,10 +1,8 @@
 <h2>Listing locations</h2>
 
-
 <table class="admin">
   <tr>
     <th>Name</th>
-
 		<th>Edit</th>
 		<th>Destroy</th>
   </tr>
@@ -12,7 +10,6 @@
 <% for location in @locations %>
   <tr>
     <td><%=h location.name %></td>
-
     <td><%= link_to 'Edit', edit_location_path(location) %></td>
     <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

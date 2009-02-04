@@ -1,8 +1,10 @@
-<h1>Listing cities</h1>
+<h2>Listing cities</h2>
 
 <table class="admin">
   <tr>
     <th>Name</th>
+		<th>Edit</th>
+		<th>Destroy</th>
   </tr>
 
 <% for city in @cities %>
@@ -14,6 +16,5 @@
 <% end %>
 </table>
 
-<br />
 
 <%= link_to 'New city', new_city_path %>
