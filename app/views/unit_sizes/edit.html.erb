@@ -1,0 +1,16 @@
+<h2>Editing unit_size</h2>
+
+<% form_for(@unit_size) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @unit_size %> |
+<%= link_to 'Back', unit_sizes_path %>

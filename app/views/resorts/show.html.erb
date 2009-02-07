@@ -3,15 +3,24 @@
   <h3 class="resort_description"><%=h @resort.description %></h3>
 </div>
 
-<div class="blur">
-	<%= render :partial => "mailinglists/new"%>
-	<h3>“Just wanted to drop a line to let you know how wonderful our 
-vacation was.  Your recommendation to stay at the Bayview Club El Presidente proved excellence.  The accommodations were fabulous and the food was top quality.”  
-	<p>Sonia Keath</p>
+<div class="blur_full_resorts">
+	<%= render :partial => "testimonials" %>
 </div>
 
+<div class="photos">
+	<%= image_tag @resort.photo_main.url %>
+	<%= image_tag @resort.photo1.url %>
+	<%= image_tag @resort.photo2.url %>
+	<%= image_tag @resort.photo3.url %>
+	<%= image_tag @resort.photo4.url %>
+</div>
 
-<div class="amenities">
-	<h6>Amenities</h6>
-	<p>• Beach • Car Rental Service • Fishing • Kiddie Pool • Laundry Facilities • Live Entertainment • Medical Services • Outdoor Pool • Restaurant • Scuba Classes • Snackbar • Tennis</p>
+<% render :partial => "amenities" %>
+
+<div class="rooms">
+	<% if @rooms.empty? %>
+		<%= render :partial => "new_room" %>
+	<% else %>
+		<%= render :partial => "show_rooms" %>
+	<% end %>
 </div>

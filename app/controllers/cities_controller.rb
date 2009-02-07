@@ -38,6 +38,7 @@ class CitiesController < ApplicationController
   # GET /cities/1/edit
   def edit
     @city = City.find(params[:id])
+    @locations = Location.find(:all)
     render :layout => "admin"
   end
 

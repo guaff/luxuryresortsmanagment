@@ -1,8 +1,11 @@
-<div class="menu"> <ul class="lista_menu">
-											<li><a href="/admin">Dashboard</a></li>
-											<li><a href="/admin/locations">Locations</a></li>
-											<li><a href="/admin/cities">Cities</a></li>
-											<li><a href="/admin/resorts/">Resorts</a></li>
-											<li><% if logged_in? %><%= link_to 'Log out', logout_path %><% end %></li>
-										</ul>
+<div class="menu"> 
+	<ul class="lista_menu">
+		<li><a href="/admin">Dashboard</a></li>
+		<li><a href="/admin/locations">Locations</a></li>
+		<li><a href="/admin/cities">Cities</a></li>
+		<li><a href="/admin/resorts/">Resorts</a></li>
+		<li><a href="/admin/unit_sizes">Unit Sizes</a></li>
+		<li><a href="/admin/rooms">Rooms</a></li>
+		<li><% if logged_in? %><%= link_to 'Log out', logout_path %><% end %></li>
+	</ul>
 </div>

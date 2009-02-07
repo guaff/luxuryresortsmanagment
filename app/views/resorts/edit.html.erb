@@ -1,6 +1,6 @@
 <h1>Editing resort</h1>
 
-<% form_for(@resort) do |f| %>
+<% form_for @resort, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -9,12 +9,37 @@
   </p>
   <p>
     <%= f.label :city_id %><br />
-    <%= f.text_field :city_id %>
+    <%= collection_select :resort, :city_id, City.find(:all), :id, :name %>
   </p>
   <p>
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
+	<p>
+		<%= f.label :photo_main %><br/>
+		<%= image_tag @resort.photo_main %><br/>
+		<%= f.file_field :photo_main %>
+	</p>
+	<p>
+		<%= f.label :photo_1 %><br/>
+		<%= image_tag @resort.photo1.url %><br/>
+		<%= f.file_field :photo1 %>
+	</p>
+	<p>
+		<%= f.label :photo_2 %><br/>
+		<%= image_tag @resort.photo2 %><br/>
+		<%= f.file_field :photo2 %>
+	</p>
+	<p>
+		<%= f.label :photo_3 %><br/>
+		<%= image_tag @resort.photo3 %><br/>
+		<%= f.file_field :photo3 %>
+	</p>
+	<p>
+		<%= f.label :photo_4 %><br/>
+		<%= image_tag @resort.photo4 %><br/>
+		<%= f.file_field :photo4 %>
+	</p>
   <p>
     <%= f.submit "Update", :class => "submit" %>
   </p>

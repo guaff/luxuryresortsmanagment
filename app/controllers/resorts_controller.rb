@@ -14,7 +14,9 @@ class ResortsController < ApplicationController
   # GET /resorts/1.xml
   def show
     @resort = Resort.find(params[:id])
-     @mailinglist = Mailinglist.new
+    @rooms = @resort.rooms.find(:all)
+    @room = Room.new
+    @mailinglist = Mailinglist.new
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @resort }
@@ -25,16 +27,14 @@ class ResortsController < ApplicationController
   # GET /resorts/new.xml
   def new
     @resort = Resort.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @resort }
-    end
+    render :layout => "admin"
+    
   end
 
   # GET /resorts/1/edit
   def edit
     @resort = Resort.find(params[:id])
+    render :layout => "admin"
   end
 
   # POST /resorts

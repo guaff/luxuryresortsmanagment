@@ -1,0 +1,18 @@
+<p>
+  <b>Code:</b>
+  <%=h @room.code %>
+</p>
+
+<p>
+  <b>Availability:</b>
+  <%=h @room.availability %>
+</p>
+
+<p>
+  <b>Sale or rent:</b>
+  <%=h @room.sale_or_rent %>
+</p>
+
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

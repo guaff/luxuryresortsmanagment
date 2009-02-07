@@ -1,0 +1,13 @@
+<h2>New unit_size</h2>
+
+<% form_for(@unit_size) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Create", :class => "submit" %>
+  </p>
+<% end %>

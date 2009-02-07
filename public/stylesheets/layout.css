@@ -55,7 +55,7 @@ select, file{ border: 0px;  background: #f9f7f3; font-size: 12px; color: #857461
 .column_1 .oscura, .column_2 .oscura, .column_3 .oscura{ background-color: #f8f6f2;  margin: 0px; padding: 10px 0 10px 10px;}
 .column_1 .clara, .column_2 .clara, .column_3 .clara{ background-color: #fdfcfb; width: 100%; margin: 0px; padding: 10px 0 10px 10px;}
 .featured img, .activities img{ float: left; margin-right: 10px;}
-featured p, activities p{ float: right; }
+.featured p, .activities p{ float: right; }
 
 .oscura{ padding: 8.5px;}
 .oscura a{ text-decoration: none;}
@@ -63,13 +63,20 @@ featured p, activities p{ float: right; }
 
 /* FULL VIEW */
 
-.pictures{ float: right; margin: 15px 0 0 0 ;}
+.pictures{ float: right; margin: 15px 0 0 0;}
 .pictures img{ margin-bottom: 15px;}
 .hotel_info{ width: 565px;  float: left;  margin-top: 60px;}
 th{ font-size: 12px; color: #857461; font-weight: bold; border-bottom: 8px solid white;}
 td{ font-size: 12px; color: #857461; padding-left: 20px;}
 tr{ background-color: #f8f6f2; width: 100%; }
 .amenities{ width: 500px; float: left; margin-top: 30px;}
+.testimonial{ text-align: left;}
+
+.photos{ float: right; width: 288px; margin-top: 10px; text-align: center;}
+.photos img{ margin-right: 3px; margin-bottom: 10px;}
+.photos{ color: white;}
+.blur_full_resorts{ width: 288px; float: right; margin-top: -6px; text-align: justify;}
+.rooms{ width: 565px; float: left;}
 
 /* CHECKOUT  */
 

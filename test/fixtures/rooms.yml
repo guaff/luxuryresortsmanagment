@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: MyString
+  availability: MyString
+  sale_or_rent: MyString
+
+two:
+  code: MyString
+  availability: MyString
+  sale_or_rent: MyString

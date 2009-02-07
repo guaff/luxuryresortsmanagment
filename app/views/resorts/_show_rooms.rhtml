@@ -1,0 +1,19 @@
+<table class="admin">
+  <tr>
+    <th>Unit ID</th>
+    <th>Availability</th>
+    <th>Sale or rent</th>
+		<th>Price</th>
+		<th>Image</th>
+  </tr>
+
+<% for room in @rooms %>
+  <tr>
+    <td><%=h room.code %></td>
+    <td><%=h room.availability %></td>
+    <td><%=h room.sale_or_rent %></td>
+		<td>$ <%=h room.price%></td>
+		<td><%= image_tag room.image.url %>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,20 @@
+<% form_for @room, :html => { :multipart => "true" } do |f| %>
+	<p>
+		<%= f.label :unit_Id %><br/>
+		<%= f.text_field :code %>
+	</p>
+	<p>
+		<%= f.label :availability %><br/>
+		<%= f.text_field :availability %>
+	</p>
+	<p>
+		<%= f.label :sale_Or_Rent %><br/>
+		<%= f.%>
+	</p>
+	<p>
+		<%= f.label :price %><br/>
+		<%= f.text_field :price%>
+	</p>
+	<p>
+		<%= f.label :image %>
+<% end %>

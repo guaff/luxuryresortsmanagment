@@ -1,0 +1,24 @@
+<h1>Editing room</h1>
+
+<% form_for(@room) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :code %><br />
+    <%= f.text_field :code %>
+  </p>
+  <p>
+    <%= f.label :availability %><br />
+    <%= f.text_field :availability %>
+  </p>
+  <p>
+    <%= f.label :sale_or_rent %><br />
+    <%= f.text_field :sale_or_rent %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @room %> |
+<%= link_to 'Back', rooms_path %>

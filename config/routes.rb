@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :rooms
+
+  map.resources :unit_sizes
+
   map.resources :resorts
 
   map.resources :mailinglists
