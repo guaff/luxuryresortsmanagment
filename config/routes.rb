@@ -14,13 +14,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
 
   map.resource :session
-
   map.resources :cities
-
   map.resources :locations
   
   map.home '', :controller => 'home', :action => 'index'
-
+  map.search_city '/search_city', :controller => 'home', :action => 'search_city'
   
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -59,6 +57,7 @@ ActionController::Routing::Routes.draw do |map|
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.
-  map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  map.connect ':controller/:action/:id'
+
 end

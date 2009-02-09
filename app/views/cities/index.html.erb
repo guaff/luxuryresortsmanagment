@@ -24,7 +24,7 @@
 	
 	<div class="right">
 		<table width="260px;" height="100%">
-		<% for city in @cities[@cities_count_divided..@cities_count_divided*2] %>
+		<% for city in @cities[@cities_count_divided+2..@cities_count_divided*2] %>
   	<tr>
     	<td class="oscura"><%= link_to city.name, city %></td>
   	</tr>

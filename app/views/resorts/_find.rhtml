@@ -1,0 +1,20 @@
+<div class="find_resort">
+	<h3>FIND A RESORT</h3>
+	<img src="images/find_resort_icon.jpg" alt="find a resort" /><br/>
+	   <select id="location[id]" name="location[id]">
+	   <% @locations.each do |location| %>
+	      <option value="<%= location.id %>"> <%= location.name %></option>
+	   <% end %>
+	   </select>
+			<% form_tag 'search_city', :method => 'get' do %>
+	<div id="city_container">
+			<select id="city_id" name="city_id" disabled="disabled">
+		  	<option value="">Select City</option>
+			</select>
+	    <%= observe_field("location[id]", :update => "city_container", :url => { :action => :update_city },
+																				:with => "'id='+value", :on => "changed") %>
+	</div>
+		<%= submit_tag "Find", :class => :submit %>
+		<% end %>
+
+</div>

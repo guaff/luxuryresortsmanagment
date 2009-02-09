@@ -74,9 +74,11 @@ tr{ background-color: #f8f6f2; width: 100%; }
 
 .photos{ float: right; width: 288px; margin-top: 10px; text-align: center;}
 .photos img{ margin-right: 3px; margin-bottom: 10px;}
-.photos{ color: white;}
+.photos{ }
 .blur_full_resorts{ width: 288px; float: right; margin-top: -6px; text-align: justify;}
-.rooms{ width: 565px; float: left;}
+.rooms{ width: 565px; float: left; margin-top: 30px;}
+
+.main_blur_full_resorts{ width: 565px; float: left; text-align: justify;}
 
 /* CHECKOUT  */
 

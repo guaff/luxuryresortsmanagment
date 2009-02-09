@@ -1,4 +1,4 @@
-<div class="main_blur">
+<div class="main_blur_full_resorts">
 	<h5><%=h @resort.name %></h5>
   <h3 class="resort_description"><%=h @resort.description %></h3>
 </div>
@@ -7,13 +7,7 @@
 	<%= render :partial => "testimonials" %>
 </div>
 
-<div class="photos">
-	<%= image_tag @resort.photo_main.url %>
-	<%= image_tag @resort.photo1.url %>
-	<%= image_tag @resort.photo2.url %>
-	<%= image_tag @resort.photo3.url %>
-	<%= image_tag @resort.photo4.url %>
-</div>
+<%= render :partial => "photos" %>
 
 <% render :partial => "amenities" %>
 
@@ -24,3 +18,5 @@
 		<%= render :partial => "show_rooms" %>
 	<% end %>
 </div>
+
+<%= generate_tags("images") %>

@@ -1,0 +1,10 @@
+<%= render :partial => "layouts/main_banner"%>
+
+<div class="blur">
+<h1><%=h @city.name %></h1>
+<p><%=h @city.description %></p>
+</div>
+
+<div class="boxes_down">
+	<%= render :partial => "cities/show_resorts" %>
+</div>
