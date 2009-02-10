@@ -25,7 +25,6 @@ class RoomsController < ApplicationController
   # GET /rooms/new.xml
   def new
     @room = Room.new
-    render :layout => "admin"
   end
 
   # GET /rooms/1/edit
@@ -44,6 +43,7 @@ class RoomsController < ApplicationController
         format.html { redirect_to :controller => "admin", :action => "rooms" }
         format.xml  { render :xml => @room, :status => :created, :location => @room }
       else
+        flash[:errors] = 'Ups. There are errors in your submission.'
         format.html { render :action => "new" }
         format.xml  { render :xml => @room.errors, :status => :unprocessable_entity }
       end

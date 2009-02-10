@@ -81,8 +81,5 @@ class ResortsController < ApplicationController
       format.html { redirect_to :controller => "admin", :action => "rooms" }
     end
   end
-  
-  def new_room_form
-    @room = Room.new
-  end
+
 end
