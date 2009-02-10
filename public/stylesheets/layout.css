@@ -79,7 +79,10 @@ tr{ background-color: #f8f6f2; width: 100%; }
 .rooms{ width: 565px; float: left; margin-top: 30px;}
 
 .main_blur_full_resorts{ width: 565px; float: left; text-align: justify;}
-
+.add_room{ float: left; width: 100%; margin-bottom: 30px;}
+#add_room_form{  float: left; width: 60%; margin-bottom: 30px;}
+#add_room_form fieldset{ border: 1px solid #ededed;}
+#add_room_form legend{ padding: 5px; background: #f8f6f2; color: #857461;}
 /* CHECKOUT  */
 
 .input_checkout{ width: 200px;}

@@ -3,7 +3,8 @@ class Room < ActiveRecord::Base
   
   has_attached_file :image,
                     :url  => "/image/rooms/:id/:style/:basename.:extension",
-                    :path => ":rails_root/public/image/rooms/:id/:style/:basename.:extension"
+                    :path => ":rails_root/public/image/rooms/:id/:style/:basename.:extension",
+                    :style => { :thumb => "99x59>" }
     
   validates_attachment_presence :image
   validates_attachment_size :image, :less_than => 1.megabytes

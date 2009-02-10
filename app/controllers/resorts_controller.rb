@@ -78,8 +78,11 @@ class ResortsController < ApplicationController
     @resort.destroy
 
     respond_to do |format|
-      format.html { redirect_to(resorts_url) }
-      format.xml  { head :ok }
+      format.html { redirect_to :controller => "admin", :action => "rooms" }
     end
+  end
+  
+  def new_room_form
+    @room = Room.new
   end
 end

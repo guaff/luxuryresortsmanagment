@@ -1,8 +1,7 @@
-require 'test_helper'
+require File.dirname(__FILE__) + "/../test_helper"
+require 'shoulda'
 
-class LocationTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  def test_truth
-    assert true
-  end
+class LocationTest < Test::Unit::TestCase
+  load_all_fixtures
+  should_require_attributes :name, :description
 end

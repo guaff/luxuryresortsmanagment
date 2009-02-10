@@ -15,8 +15,8 @@
 	<% if @rooms.empty? %>
 		<%= render :partial => "new_room" %>
 	<% else %>
+		<%= render :partial => "new_room" %>
 		<%= render :partial => "show_rooms" %>
 	<% end %>
 </div>
 
-<%= generate_tags("images") %>
