@@ -1,7 +1,6 @@
 class CitiesController < ApplicationController
   # GET /cities
   # GET /cities.xml
-  layout :application
   
   def index
     @cities = City.find(:all)
