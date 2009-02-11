@@ -1,6 +1,5 @@
 class CitiesController < ApplicationController
-  # GET /cities
-  # GET /cities.xml
+  layout "application"
   
   def index
     @cities = City.find(:all)
@@ -18,10 +17,6 @@ class CitiesController < ApplicationController
     @city = City.find(params[:id])
     @resorts = @city.resorts.find(:all)
     @resorts_count_divided = @resorts.size/3
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @city }
-    end
   end
 
   # GET /cities/new
