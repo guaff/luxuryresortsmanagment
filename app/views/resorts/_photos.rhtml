@@ -1,10 +1,10 @@
 <div class="photos">
 	<% if @resort.photo_main_file_name.nil? %>
-		<img src="/system/photo_mains/1/original/big.jpg" alt="Main Picture">
-		<img src="/system/photo1s/1/original/1.jpg" alt="Photo">
-		<img src="/system/photo2s/1/original/2.jpg" alt="Photo">
-		<img src="/system/photo3s/1/original/3.jpg" alt="Photo">
-		<img src="/system/photo4s/1/original/5.jpg" alt="Photo">
+		<img src="/images/full_view/big.jpg" alt="Main Picture">
+		<img src="/images/full_view/1.jpg" alt="Photo">
+		<img src="/images/full_view/2.jpg" alt="Photo">
+		<img src="/images/full_view/3.jpg" alt="Photo">
+		<img src="/images/full_view/5.jpg" alt="Photo">
 	<% else %>
 	<%= image_tag @resort.photo_main.url %>
 	<%= image_tag @resort.photo1.url %>
