@@ -1,24 +1,25 @@
-<h2>New location</h2>
+<div id="add_room_form">
+	<fieldset>
+		<legend>NEW LOCATION</legend>
+			<% form_for @location, :html => { :multipart => true } do |f| %>
 
-<% form_for @location, :html => { :multipart => true } do |f| %>
+			  <%= f.error_messages %>
 
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :image %><br />
-    <%= f.file_field :image %>
-  </p>
-  <p>
-    <%= f.submit "Create", :class => "submit" %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', locations_path %>
+			  <p>
+			    <%= f.label :name %><br />
+			    <%= f.text_field :name %>
+			  </p>
+			  <p>
+			    <%= f.label :description %><br />
+			    <%= f.text_area :description %>
+			  </p>
+			  <p>
+			    <%= f.label :image %><br />
+			    <%= f.file_field :image %>
+			  </p>
+			  <p>
+			    <%= f.submit "Create", :class => "submit" %>
+			  </p>
+			<% end %>
+	</fieldset>
+</div>

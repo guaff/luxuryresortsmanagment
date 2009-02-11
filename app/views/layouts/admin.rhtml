@@ -17,19 +17,19 @@
 <body>
 	
 	<div class="container">
-		<div style="width: 100%; text-align: center;"><img src="/images/logo.jpg" alt="resort luxury managment logo"/></div>
-		<div style="width: 100%; float: left; text-align: center; background-color: #fafafa; margin-bottom: 15px">
-			<ul class="lista_menu">
-				<li><a href="/admin">Dashboard</a></li>
-				<li><a href="/admin/locations">Locations</a></li>
-				<li><a href="/admin/cities">Cities</a></li>
-				<li><a href="/admin/resorts/">Resorts</a></li>
-				<li><a href="/admin/unit_sizes">Unit Sizes</a></li>
-				<li><a href="/admin/rooms">Rooms</a></li>
-				<li><% if logged_in? %><%= link_to 'Log out', logout_path %><% end %></li>
+		<div class="menu_top_new">
+			<ul>
+				<li><%= link_to 'New Location', new_location_path %></li>
+				<li><%= link_to 'New City', new_city_path %></li> 
+				<li><%= link_to 'New Resort', new_resort_path %></li>
+				<li><%= link_to 'New Room', new_room_path %></li>
+				<li><%= link_to 'New Room Size', new_unit_size_path %>
 			</ul>
 		</div>
-		<div style="width: 100%; float: left; text-align: left;">
+		
+		<div style="width: 100%; text-align: center;"><img src="/images/logo.jpg" alt="resort luxury managment logo"/></div>
+		<%= render :partial => "/admin/menu" %>
+		<div style="width: 100%; float: left; text-align: left;">			
 					<%= yield %>
 		</div>
 		

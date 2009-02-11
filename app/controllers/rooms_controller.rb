@@ -25,11 +25,13 @@ class RoomsController < ApplicationController
   # GET /rooms/new.xml
   def new
     @room = Room.new
+    render :layout => "admin"
   end
 
   # GET /rooms/1/edit
   def edit
     @room = Room.find(params[:id])
+    render :layout => "admin"    
   end
 
   # POST /rooms
@@ -56,7 +58,7 @@ class RoomsController < ApplicationController
     respond_to do |format|
       if @room.update_attributes(params[:room])
         flash[:notice] = 'Room was successfully updated.'
-        format.html { redirect_to(@room) }
+        format.html { redirect_to :controller => "admin", :action => "rooms" }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

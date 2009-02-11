@@ -1,25 +1,27 @@
-<h2>New city</h2>
+<div id="add_room_form">
+	<fieldset>
+		<legend>NEW CITY</legend>
+			<% form_for @city, :html => { :multipart => true } do |f| %>
+			  <%= f.error_messages %>
 
-<% form_for @city, :html => { :multipart => true } do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-	<p>
-		<% f.label :location %>
-		<%= collection_select :city, :location_id, Location.find(:all), :id, :name, :prompt => "Select a Location" %>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :image %><br />
-    <%= f.file_field :image %>
-  </p>
-  <p>
-    <%= f.submit "Create", :class => "submit" %>
-  </p>
-<% end %>
-
+			  <p>
+			    <%= f.label :name %><br />
+			    <%= f.text_field :name %>
+			  </p>
+				<p>
+					<% f.label :location %>
+					<%= collection_select :city, :location_id, Location.find(:all), :id, :name, :prompt => "Select a Location" %>
+			  <p>
+			    <%= f.label :description %><br />
+			    <%= f.text_area :description %>
+			  </p>
+			  <p>
+			    <%= f.label :image %><br />
+			    <%= f.file_field :image %>
+			  </p>
+			  <p>
+			    <%= f.submit "Create", :class => "submit" %>
+			  </p>
+			<% end %>
+	</fieldset>
+</div>

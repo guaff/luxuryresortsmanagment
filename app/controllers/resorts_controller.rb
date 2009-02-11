@@ -35,6 +35,7 @@ class ResortsController < ApplicationController
   # GET /resorts/1/edit
   def edit
     @resort = Resort.find(params[:id])
+    render :layout => "admin"
   end
 
   # POST /resorts

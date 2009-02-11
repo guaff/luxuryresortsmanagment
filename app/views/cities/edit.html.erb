@@ -9,7 +9,6 @@
   </p>
 	<p>
 		<%= f.label :location %><br/>
-		<%= @city.location_id %>
 		<%= collection_select :city,:location_id, Location.find(:all), :id, :name %>
 	</p>
   <p>

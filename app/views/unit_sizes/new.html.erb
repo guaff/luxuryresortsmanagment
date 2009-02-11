@@ -1,13 +1,16 @@
-<h2>New unit_size</h2>
+<div id="add_room_form">
+	<fieldset>
+		<legend>NEW ROOM SIZE</legend>
+			<% form_for(@unit_size) do |f| %>
+			  <%= f.error_messages %>
 
-<% form_for(@unit_size) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.submit "Create", :class => "submit" %>
-  </p>
-<% end %>
+			  <p>
+			    <%= f.label :name %><br />
+			    <%= f.text_field :name %>
+			  </p>
+			  <p>
+			    <%= f.submit "Create", :class => "submit" %>
+			  </p>
+			<% end %>
+	</fieldset>
+</div>

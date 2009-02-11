@@ -13,13 +13,17 @@ body{ background: url(../images/bg.jpg) fixed; margin: 0;}
 
 /* MENU */
 .menu{ float: right;}
-.lista_menu{ list-style: none; margin-top: .7em;}
+.lista_menu{ list-style: none; margin-top: .7em; width: 100%; text-align: center;}
 .lista_menu li{ display: inline; padding:  .7em; margin-top: 1em; }
 .lista_menu li:hover{  background: #ededed; padding: .7em;}
 .lista_menu a{ text-decoration: none;}
 
-.add_new_element{ position: fixed; top: 0px; padding: 10px; background: #f1f1f1; font-size: 16px; font-weight: bold;}
-.add_new_element:hover{ background: #ccc;}
+.menu_top_new{ }
+.menu_top_new ul{ margin-top: 0px; width: 770px; text-align: center;}
+.menu_top_new li{ display: inline; list-style: none; margin-top: 0px; background: #fafafa; padding: .7em; }
+.menu_top_new li:hover{ background: #ededed; padding: .7em;}
+.menu_top_new a{ text-decoration: none;}
+
 
 /* VARIOUS */
 .no_margin{ margin: 0px;}
@@ -84,11 +88,7 @@ tr{ background-color: #f8f6f2; width: 100%; }
 
 .main_blur_full_resorts{ width: 565px; float: left; text-align: justify;}
 .add_room{ float: left; width: 100%; margin-bottom: 30px;}
-#add_room_form{  float: left; width: 545px; margin-bottom: 30px; background: #f8f6f2;}
-#add_room_form fieldset{ border: 0; padding: 10px;}
-#add_room_form legend{ padding: 8px; font-size: 18px; background: #857461; color: white;}
-#add_room_form input, #room_image{ background: white;}
-#add_room_form select{ background: white;}
+
 
 .name{ width: 150px;}
 .price{ width: 80px;}
@@ -112,3 +112,9 @@ tr{ background-color: #f8f6f2; width: 100%; }
 
 .admin td{ height: 30px; width: 300px;}
 .admin tr:hover{ background-color: #fdfcfb;}
+
+#add_room_form{  float: left; width: 100%; margin-bottom: 30px; background: #f8f6f2;}
+#add_room_form fieldset{ border: 0; padding: 10px;}
+#add_room_form legend{ padding: 8px; font-size: 18px; background: #857461; color: white;}
+#add_room_form input, #add_room_form textarea, #room_image{ background: white;}
+#add_room_form select{ background: white;}

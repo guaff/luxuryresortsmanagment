@@ -13,7 +13,7 @@
     <td><%=h room.availability %></td>
     <td><%=h room.sale_or_rent %></td>
 		<td>$ <%=h room.price%></td>
-		<td><%= image_tag room.image.url %>
+		<td><%= image_tag room.image.url(:thumb) %>
   </tr>
 <% end %>
 </table>

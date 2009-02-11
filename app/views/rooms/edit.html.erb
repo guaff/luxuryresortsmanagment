@@ -1,24 +1,44 @@
-<h1>Editing room</h1>
+<div id="add_room_form">
+	<fieldset>
+		<legend>Let's list your unit here</legend>
+			<% form_for @room, :html => { :multipart => true } do |f| %>
+			  <%= f.error_messages %>
 
-<% form_for(@room) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :code %><br />
-    <%= f.text_field :code %>
-  </p>
-  <p>
-    <%= f.label :availability %><br />
-    <%= f.text_field :availability %>
-  </p>
-  <p>
-    <%= f.label :sale_or_rent %><br />
-    <%= f.text_field :sale_or_rent %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @room %> |
-<%= link_to 'Back', rooms_path %>
+			  <p>
+			    <%= f.label :code %><br />
+			    <%= f.text_field :code %>
+			  </p>
+			  <p>
+			    <%= f.label :availability %><br />
+			    <%= f.text_field :availability %>
+			  </p>
+			  <p>
+			    <%= f.label :sale_or_rent %><br />
+			  	<%= select :room, :sale_or_rent, %w[Sale Rent], {}, {:prompt => 'Select Person'} %>
+			  </p>
+				<p>
+					<%= f.label :price %><br/>
+					<%= f.text_field :price %>
+				</p>
+				<p>
+					<%= f.label :owner_name %><br/>
+					<%= f.text_field :owner_name %>
+				</p>
+				<p>
+					<%= f.label :unit_size %><br/>
+					<%= collection_select :room, :unit_size_id, UnitSize.find(:all), :id, :name %>
+				</p>
+				<p>
+					<%= f.label :resort %><br/>
+					<%= collection_select :room, :resort_id, Resort.find(:all), :id, :name %>
+				</p>
+				<p>
+					<%= f.label :image %><br/>
+					<%= f.file_field :image %>
+				</p>
+			  <p>
+			    <%= f.submit "Create", :class => "submit" %>
+			  </p>
+			<% end %>
+	</fieldset>
+</div>

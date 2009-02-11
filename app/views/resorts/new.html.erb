@@ -1,43 +1,45 @@
-<h2>New resort</h2>
+<div id="add_room_form">
+	<fieldset>
+		<legend>NEW RESORT</legend>
 
-<% form_for @resort, :html => { :multipart => true } do |f| %>
-  <%= f.error_messages %>
+			<% form_for @resort, :html => { :multipart => true } do |f| %>
+			  <%= f.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :city_id %><br />
-    <%= collection_select :resort, :city_id, City.find(:all), :id, :name %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-	<p>
-		<%= f.label :photo_main %><br/>
-		<%= f.file_field :photo_main %>
-	</p>
-	<p>
-		<%= f.label :photo_1 %><br/>
-		<%= f.file_field :photo1 %>
-	</p>
-	<p>
-		<%= f.label :photo_2 %><br/>
-		<%= f.file_field :photo2 %>
-	</p>
-	<p>
-		<%= f.label :photo_3 %><br/>
-		<%= f.file_field :photo3 %>
-	</p>
-	<p>
-		<%= f.label :photo_4 %><br/>
-		<%= f.file_field :photo4 %>
-	</p>
-  <p>
-    <%= f.submit "Create", :class => "submit" %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', resorts_path %>
+			  <p>
+			    <%= f.label :name %><br />
+			    <%= f.text_field :name %>
+			  </p>
+			  <p>
+			    <%= f.label :city_id %><br />
+			    <%= collection_select :resort, :city_id, City.find(:all), :id, :name %>
+			  </p>
+			  <p>
+			    <%= f.label :description %><br />
+			    <%= f.text_area :description %>
+			  </p>
+				<p>
+					<%= f.label :photo_main %><br/>
+					<%= f.file_field :photo_main %>
+				</p>
+				<p>
+					<%= f.label :photo_1 %><br/>
+					<%= f.file_field :photo1 %>
+				</p>
+				<p>
+					<%= f.label :photo_2 %><br/>
+					<%= f.file_field :photo2 %>
+				</p>
+				<p>
+					<%= f.label :photo_3 %><br/>
+					<%= f.file_field :photo3 %>
+				</p>
+				<p>
+					<%= f.label :photo_4 %><br/>
+					<%= f.file_field :photo4 %>
+				</p>
+			  <p>
+			    <%= f.submit "Create", :class => "submit" %>
+			  </p>
+			<% end %>
+	</fieldset>
+</div>
