@@ -2,6 +2,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.xml
  layout "application", :except => [:new]
+   
   
   def index
     @locations = Location.find(:all)
@@ -29,16 +30,12 @@ class LocationsController < ApplicationController
   # GET /locations/new.xml
   def new
     @location = Location.new
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @location }
-    end
+    render :layout => "admin"
   end
 
   # GET /locations/1/edit
   def edit
     @location = Location.find(params[:id])
-    render :layout => "admin"
   end
 
   # POST /locations

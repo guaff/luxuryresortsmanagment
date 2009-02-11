@@ -41,11 +41,9 @@ class RoomsController < ApplicationController
       if @room.save
         flash[:notice] = 'Room was successfully created.'
         format.html { redirect_to :controller => "admin", :action => "rooms" }
-        format.xml  { render :xml => @room, :status => :created, :location => @room }
       else
         flash[:errors] = 'Ups. There are errors in your submission.'
         format.html { render :action => "new" }
-        format.xml  { render :xml => @room.errors, :status => :unprocessable_entity }
       end
     end
   end

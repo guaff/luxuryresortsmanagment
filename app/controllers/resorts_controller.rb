@@ -1,6 +1,7 @@
 class ResortsController < ApplicationController
-  # GET /resorts
-  # GET /resorts.xml
+  layout  "admin", :except => [:show, :index]
+  layout "application", :except => [ :new, :edit, :update]
+
   def index
     @resorts = Resort.find(:all)
 
@@ -34,7 +35,6 @@ class ResortsController < ApplicationController
   # GET /resorts/1/edit
   def edit
     @resort = Resort.find(params[:id])
-    render :layout => "admin"
   end
 
   # POST /resorts

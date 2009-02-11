@@ -1,8 +1,11 @@
-require 'test_helper'
+require File.dirname(__FILE__) + "/../test_helper"
+require 'shoulda'
 
 class HomeControllerTest < ActionController::TestCase
-  # Replace this with your real tests.
-  def test_truth
-    assert true
+  context "on GET to :index" do
+    setup { get :index }
+    should_respond_with :succes
+    should_render_template :application
+    should_not_set_the_flash
   end
 end

@@ -2,7 +2,10 @@ class Room < ActiveRecord::Base
   belongs_to :resort
   has_many :unit_sizes
   
-  validates_presence_of :price, :unit_size_id, :sale_or_rent, :resort_id, :code, :availability
+  validates_presence_of :price, :unit_size_id, :sale_or_rent, :resort_id, :code, :availability, :owner_name
+  validates_numericality_of :unit_size_id
+  
+  #TODO: GENERATE A CODE GENERATOR
   
   
   has_attached_file :image,

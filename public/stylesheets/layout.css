@@ -18,6 +18,9 @@ body{ background: url(../images/bg.jpg) fixed; margin: 0;}
 .lista_menu li:hover{  background: #ededed; padding: .7em;}
 .lista_menu a{ text-decoration: none;}
 
+.add_new_element{ position: fixed; top: 0px; padding: 10px; background: #f1f1f1; font-size: 16px; font-weight: bold;}
+.add_new_element:hover{ background: #ccc;}
+
 /* VARIOUS */
 .no_margin{ margin: 0px;}
 

@@ -1,8 +1,18 @@
-require 'test_helper'
+require File.dirname(__FILE__) + "/../test_helper"
+require 'shoulda'
 
 class RoomTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  def test_truth
-    assert true
-  end
+  
+  should_belong_to :resort
+  
+  should_have_many :unit_sizes
+  
+  #TODO: GENERATE A CODE GENERATOR
+  
+  should_validate_presence_of  :code, :availability, :sale_or_rent, :price , :owner_name, :unit_size_id, :resort_id
+  
+  should_validate_numericality_of :unit_size_id
+  
+  should_have_attached_file :image
+    
 end
