@@ -8,7 +8,7 @@ class SourceTable < ActiveRecord::Base
     :host     => "localhost",
     :username => "root",
     #:password => "mypass",
-    :database => "cheapweeks"
+    :database => "cheapweeks_development"
   )
 end
 
@@ -16,10 +16,10 @@ class TargetTable < ActiveRecord::Base
   set_table_name 'locations'
   self.establish_connection(
     :adapter  => "mysql",
-    :host     => "localhost",
-    :username => "root",
-    #:password => "mypass",
-    :database => "cheapweeks_development"
+    :host     => "external-db.s26593.gridserver.com",
+    :username => "db26593",
+    :password => "N9U9ddjb",
+    :database => "db26593_lrm_production"
   )
 end
 
