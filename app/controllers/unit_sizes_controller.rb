@@ -19,6 +19,7 @@ class UnitSizesController < ApplicationController
   # GET /unit_sizes/1/edit
   def edit
     @unit_size = UnitSize.find(params[:id])
+    render :layout => "admin"
   end
 
   # POST /unit_sizes
@@ -46,7 +47,7 @@ class UnitSizesController < ApplicationController
     respond_to do |format|
       if @unit_size.update_attributes(params[:unit_size])
         flash[:notice] = 'UnitSize was successfully updated.'
-        format.html { redirect_to(@unit_size) }
+        format.html { redirect_to :controller => "admin", :action => "unit_sizes" }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
