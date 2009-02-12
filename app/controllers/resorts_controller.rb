@@ -1,4 +1,7 @@
 class ResortsController < ApplicationController
+    
+  before_filter :login_required, :except => [:show, :index]
+  
   layout  "admin", :except => [:show, :index]
   layout "application", :except => [ :new, :edit, :update]
 
@@ -79,7 +82,7 @@ class ResortsController < ApplicationController
     @resort.destroy
 
     respond_to do |format|
-      format.html { redirect_to :controller => "admin", :action => "rooms" }
+      format.html { redirect_to :controller => "admin", :action => "resorts" }
     end
   end
 

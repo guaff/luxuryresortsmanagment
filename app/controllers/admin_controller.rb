@@ -1,20 +1,17 @@
 class AdminController < ApplicationController
   before_filter :login_required
   
-  def index
-    
-  end
   
   def locations
-    @locations = Location.find(:all)
+    @locations = Location.paginate :page => params[:page], :order => 'name asc', :per_page => 10
   end
   
   def cities
-    @cities = City.find(:all)
+    @cities = City.paginate :page => params[:page], :order => 'name asc', :per_page => 10
   end
   
   def resorts
-    @resorts = Resort.find(:all)
+    @resorts = Resort.paginate :page => params[:page], :order => 'name asc', :per_page => 10
   end
   
   def unit_sizes
@@ -22,7 +19,7 @@ class AdminController < ApplicationController
   end
   
   def rooms
-    @rooms = Room.find(:all)
+    @rooms = Room.paginate :page => params[:page],  :per_page => 10
   end
   
 end

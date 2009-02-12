@@ -118,3 +118,7 @@ tr{ background-color: #f8f6f2; width: 100%; }
 #add_room_form legend{ padding: 8px; font-size: 18px; background: #857461; color: white;}
 #add_room_form input, #add_room_form textarea, #room_image{ background: white;}
 #add_room_form select{ background: white;}
+
+/* PAGINATION */
+
+.pagination{ color: #857461; margin-top: 30px;}

@@ -1,7 +1,8 @@
 class LocationsController < ApplicationController
-  # GET /locations
-  # GET /locations.xml
- layout "application", :except => [:new]
+  
+  before_filter :login_required, :except => [:show, :index]
+  
+  layout "application", :except => [:new]
    
   
   def index

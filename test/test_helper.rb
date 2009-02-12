@@ -1,9 +1,11 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
+require 'test/rails'
 require 'test_help'
 require 'shoulda'
+require 'factory_girl'
 
-class Test::Unit::TestCase
+class Test::Rails::TestCase
   # Transactional fixtures accelerate your tests by wrapping each test method
   # in a transaction that's rolled back on completion.  This ensures that the
   # test database remains unchanged so your fixtures don't have to be reloaded
@@ -33,7 +35,7 @@ class Test::Unit::TestCase
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
   # -- they do not yet inherit this setting
-  fixtures :all
+  fixtures :all  
 
 
   def self.should_have_attached_file(attachment)

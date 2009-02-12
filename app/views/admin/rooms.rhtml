@@ -3,6 +3,8 @@
     <th>Code</th>
     <th>Availability</th>
     <th>Sale or rent</th>
+		<th>Edit</th>
+		<th>Destroy</th>
   </tr>
 
 <% for room in @rooms %>
@@ -15,3 +17,8 @@
   </tr>
 <% end %>
 </table>
+
+
+<div class="pagination">
+	<%= will_paginate @rooms %>
+</div>

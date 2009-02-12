@@ -1,5 +1,8 @@
 class UnitSizesController < ApplicationController
 
+  before_filter :login_required
+  
+  
   def show
     @unit_size = UnitSize.find(params[:id])
 

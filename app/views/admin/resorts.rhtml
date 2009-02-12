@@ -4,6 +4,8 @@
 <table class="admin">
   <tr>
     <th>Name</th>
+		<th>Edit</th>
+		<th>Destroy</th>
   </tr>
 
 <% for resort in @resorts %>
@@ -14,3 +16,7 @@
   </tr>
 <% end %>
 </table>
+
+<div class="pagination">
+	<%= will_paginate @resorts %>
+</div>

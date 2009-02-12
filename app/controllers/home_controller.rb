@@ -7,19 +7,6 @@ class HomeController < ApplicationController
     @city = City.new
   end
   
-  def about
-    
-    
-  end
-  
-  def contact
-    
-  end
-  
-  def gracias_mailinglist
-    
-  end
-  
   def update_city
     @cities = City.find_all_by_location_id(params[:id])
     @html = "<select id='id' name='id'>"

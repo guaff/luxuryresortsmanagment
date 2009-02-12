@@ -30,7 +30,7 @@
 				</p>
 				<p>
 					<%= f.label :resort %><br/>
-					<%= collection_select :room, :resort_id, Resort.find(:all), :id, :name %>
+					<%= collection_select :room, :resort_id, Resort.find(:all, :order => "name asc"), :id, :name %>
 				</p>
 				<p>
 					<%= f.label :image %><br/>

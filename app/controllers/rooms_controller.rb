@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
-  # GET /rooms
-  # GET /rooms.xml
+
+  before_filter :login_required
+  
   def index
     @rooms = Room.find(:all)
 

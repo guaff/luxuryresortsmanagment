@@ -1,4 +1,8 @@
 class CitiesController < ApplicationController
+
+  
+  before_filter :login_required, :except => [:show, :index]
+  
   layout "application"
   
   def index
