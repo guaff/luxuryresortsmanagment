@@ -1,3 +1,8 @@
+REST_AUTH_SITE_KEY         = '30aca4461808b3e883476b9b2017386de1d5e89e'
+  
+REST_AUTH_DIGEST_STRETCHES = 10
+
+
 module Authentication
   module ByPassword
     # Stuff directives into including module
