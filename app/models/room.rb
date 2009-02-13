@@ -1,4 +1,6 @@
 class Room < ActiveRecord::Base
+  
+  belongs_to :client
   belongs_to :resort
   has_many :unit_sizes
   

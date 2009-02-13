@@ -1,0 +1,129 @@
+<div id="add_room_form">
+	<fieldset>
+		<legend>NEW CLIENT</legend>
+			<% form_for(@client) do |f| %>
+			  <%= f.error_messages %>
+			
+			<div class="left">
+			  <p>
+			    <%= f.label :full_name %><br />
+			    <%= f.text_field :full_name %>
+			  </p>
+			  <p>
+			    <%= f.label :full_name_second %><br />
+			    <%= f.text_field :full_name_second %>
+			  </p>
+			  <p>
+			    <%= f.label :address %><br />
+			    <%= f.text_field :address %>
+			  </p>
+			  <p>
+			    <%= f.label :city %><br />
+			    <%= f.text_field :city %>
+			  </p>
+			  <p>
+			    <%= f.label :state %><br />
+			    <%= f.text_field :state %>
+			  </p>
+			  <p>
+			    <%= f.label :zip %><br />
+			    <%= f.text_field :zip %>
+			  </p>
+			  <p>
+			    <%= f.label :home_phone %><br />
+			    <%= f.text_field :home_phone %>
+			  </p>
+			  <p>
+			    <%= f.label :work_phone %><br />
+			    <%= f.text_field :work_phone %>
+			  </p>
+			  <p>
+			    <%= f.label :email %><br />
+			    <%= f.text_field :email %>
+			  </p>
+			  <p>
+			    <%= f.label :start_date %><br />
+			    <%= f.date_select :start_date %>
+			  </p>
+			  <p>
+			    <%= f.label :contract_return_date %><br />
+			    <%= f.date_select :contract_return_date %>
+			  </p>
+			  <p>
+			    <%= f.label :cancellation_date %><br />
+			    <%= f.date_select :cancellation_date %>
+			  </p>
+			  <p>
+			    <%= f.label :charge_return_date %><br />
+			    <%= f.date_select :charge_return_date %>
+			  </p>
+			  <p>
+			    <%= f.label :tts_sale_person %><br />
+			    <%= f.text_field :tts_sale_person %>
+			  </p>
+				<p>
+			    <%= f.label :client_pin %><br />
+			    <%= f.text_field :client_pin %>
+			  </p>
+		</div>
+		<div class="right" style="margin-right: 150px">
+			  <p>
+			    <%= f.label :fee_paid %><br />
+			    <%= f.text_field :fee_paid %>
+			  </p>
+			  <p>
+			    <%= f.label :payment_type %><br />
+			    <%= select :client, :payment_type, %w[CreditCard Check MoneyOrder Comp Deposit Cash], {}, { :index => nil } %>
+			  </p>
+			  <p>
+			    <%= f.label :charge_date %><br />
+			    <%= f.date_select :charge_date %>
+			  </p>
+			  <p>
+			    <%= f.label :credit_card %><br />
+			    <%= f.text_field :credit_card %>
+			  </p>
+			  <p>
+			    <%= f.label :credit_card_type %><br />
+			    <%= select :client, :credit_card_type, %w[ Visa MasterCart AmericanExpress Discover], {} %> 
+			  </p>
+			  <p>
+			    <%= f.label :credit_card_expiration %><br />
+			    <%= f.text_field :credit_card_expiration %>
+			  </p>
+			  <p>
+			    <%= f.label :billing_name %><br />
+			    <%= f.text_field :billing_name %>
+			  </p>
+			  <p>
+			    <%= f.label :billing_address %><br />
+			    <%= f.text_field :billing_address %>
+			  </p>
+			  <p>
+			    <%= f.label :billing_city %><br />
+			    <%= f.text_field :billing_city %>
+			  </p>
+			  <p>
+			    <%= f.label :billing_state %><br />
+			    <%= f.text_field :billing_state %>
+			  </p>
+			  <p>
+			    <%= f.label :billing_zip %><br />
+			    <%= f.text_field :billing_zip %>
+			  </p>
+			  <p>
+			    <%= f.label :resort_sale_person %><br />
+			    <%= f.text_field :resort_sale_person %>
+			  </p>
+			  <p>
+			    <%= f.label :notes %><br />
+			    <%= f.text_area :notes, :cols => 30, :rows => 6 %>
+			  </p>
+
+			  <p>
+			    <%= f.submit "Create" , :class => "submit"%>
+			  </p>
+			</div>
+			<% end %>
+	</fieldset>
+</div>

@@ -1,6 +1,4 @@
-<div id="add_room_form">
-	<fieldset>
-		<legend>Let's list your unit here</legend>
+
 			<% form_for @room, :html => { :multipart => true } do |f| %>
 			  <%= f.error_messages %>
 
@@ -40,5 +38,3 @@
 			    <%= f.submit "Create", :class => "submit" %>
 			  </p>
 			<% end %>
-	</fieldset>
-</div>

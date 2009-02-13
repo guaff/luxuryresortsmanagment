@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090207204901) do
+ActiveRecord::Schema.define(:version => 20090213151244) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,39 @@ ActiveRecord::Schema.define(:version => 20090207204901) do
     t.string   "image_content_type"
     t.integer  "image_file_size",    :limit => 11
     t.datetime "image_updated_at"
+  end
+
+  create_table "clients", :force => true do |t|
+    t.string   "full_name"
+    t.string   "full_name_second"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip",                    :limit => 11
+    t.integer  "home_phone",             :limit => 11
+    t.integer  "work_phone",             :limit => 11
+    t.string   "email"
+    t.integer  "fee_paid",               :limit => 11
+    t.string   "payment_type"
+    t.date     "charge_date"
+    t.integer  "credit_card",            :limit => 11
+    t.string   "credit_card_type"
+    t.string   "credit_card_expiration"
+    t.string   "billing_name"
+    t.string   "billing_address"
+    t.string   "billing_city"
+    t.string   "billing_state"
+    t.integer  "billing_zip",            :limit => 11
+    t.date     "start_date"
+    t.date     "contract_return_date"
+    t.date     "cancellation_date"
+    t.date     "charge_return_date"
+    t.string   "tts_sale_person"
+    t.string   "resort_sale_person"
+    t.text     "notes"
+    t.string   "client_pin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "locations", :force => true do |t|
@@ -83,6 +116,7 @@ ActiveRecord::Schema.define(:version => 20090207204901) do
     t.string   "image_content_type"
     t.integer  "image_file_size",    :limit => 11
     t.datetime "image_updated_at"
+    t.string   "client_id"
   end
 
   create_table "unit_sizes", :force => true do |t|

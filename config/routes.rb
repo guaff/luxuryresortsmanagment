@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :clients
+
   map.resources :rooms
  
   map.resources :unit_sizes

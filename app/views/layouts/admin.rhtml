@@ -17,19 +17,11 @@
 <body>
 	
 	<div class="container">
-		<div class="menu_top_new">
-			<ul>
-				<li><%= link_to 'New Location', new_location_path %></li>
-				<li><%= link_to 'New City', new_city_path %></li> 
-				<li><%= link_to 'New Resort', new_resort_path %></li>
-				<li><%= link_to 'New Room', new_room_path %></li>
-				<li><%= link_to 'New Room Size', new_unit_size_path %>
-			</ul>
+		<div style="width: 100%; text-align: center;">
+			<img src="/images/logo.jpg" alt="resort luxury managment logo"/>
 		</div>
-		
-		<div style="width: 100%; text-align: center;"><img src="/images/logo.jpg" alt="resort luxury managment logo"/></div>
-		<%= render :partial => "/admin/menu" %>
 		<div style="width: 100%; float: left; text-align: left;">			
+					<%= render :partial => "/admin/menu" %>
 					<%= yield %>
 		</div>
 		
