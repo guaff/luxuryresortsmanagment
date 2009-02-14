@@ -17,12 +17,12 @@
 			  	<%= select :room, :sale_or_rent, %w[Sale Rent], {}, {:prompt => 'Select Person'} %>
 			  </p>
 				<p>
-					<%= f.label :price %><br/>
+					<%= f.label :price %> <label>or cero for negotiable</label><br/>
 					<%= f.text_field :price %>
 				</p>
 				<p>
 					<%= f.label :owner_name %><br/>
-					<%= f.text_field :owner_name %>
+					<%= collection_select :room, :client_id, Client.find(:all), :id, :full_name %>
 				</p>
 				<p>
 					<%= f.label :unit_size %><br/>

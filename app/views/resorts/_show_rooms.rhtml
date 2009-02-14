@@ -12,7 +12,13 @@
     <td><%=h room.code %></td>
     <td><%=h room.availability %></td>
     <td><%=h room.sale_or_rent %></td>
-		<td>$ <%=h room.price%></td>
+		<td> 
+			<% if room.price == 0 %>
+			negotiable
+			<% else %>
+				$<%=h room.price%>
+			<% end %>
+			</td>
 		<td><%= image_tag room.image.url(:thumb) %>
   </tr>
 <% end %>

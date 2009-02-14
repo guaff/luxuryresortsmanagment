@@ -1,7 +1,6 @@
 class AdminController < ApplicationController
   before_filter :login_required
   
-  
   def locations
     @locations = Location.paginate :page => params[:page], :order => 'name asc', :per_page => 10
   end
