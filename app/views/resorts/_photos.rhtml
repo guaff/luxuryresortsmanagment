@@ -6,7 +6,7 @@
 		<img src="/images/full_view/3.jpg" alt="Photo">
 		<img src="/images/full_view/5.jpg" alt="Photo">
 	<% else %>
-	<%= image_tag @resort.photo_main.url(:big) %>
+	<%= image_tag @resort.photo_main.url(:thumb) %>
 	<%= image_tag @resort.photo1.url(:thumb) %>
 	<%= image_tag @resort.photo2.url(:thumb) %>
 	<%= image_tag @resort.photo3.url(:thumb) %>
