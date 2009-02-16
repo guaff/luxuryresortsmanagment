@@ -73,7 +73,7 @@
 			  </p>
 			  <p>
 			    <%= f.label :payment_type %><br />
-			    <%= select :client, :payment_type, %w[CreditCard Check MoneyOrder Comp Deposit Cash], {}, { :index => nil } %>
+					<%= f.text_field :payment_type %>
 			  </p>
 			  <p>
 			    <%= f.label :charge_date %><br />
@@ -85,7 +85,7 @@
 			  </p>
 			  <p>
 			    <%= f.label :credit_card_type %><br />
-			    <%= select :client, :credit_card_type, %w[ Visa MasterCart AmericanExpress Discover], {} %> 
+					<%= f.text_field :credit_card_type%>
 			  </p>
 			  <p>
 			    <%= f.label :credit_card_expiration %><br />
