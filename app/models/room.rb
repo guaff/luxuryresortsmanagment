@@ -15,7 +15,6 @@ class Room < ActiveRecord::Base
                     :path => ":rails_root/public/image/rooms/:id/:style/:basename.:extension",
                     :style => { :thumb => "99x59>" }
     
-  validates_attachment_presence :image  
   validates_attachment_size :image, :less_than => 1.megabytes
   validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
 end

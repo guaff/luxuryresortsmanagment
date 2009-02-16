@@ -18,7 +18,7 @@ class LocationsController < ApplicationController
   # GET /locations/1.xml
   def show
     @location = Location.find(params[:id])
-    @cities = @location.cities.find(:all)
+    @cities = @location.cities.find(:all, :order => 'name asc')
     @cities_count_divided = @cities.size/3
 
     respond_to do |format|
