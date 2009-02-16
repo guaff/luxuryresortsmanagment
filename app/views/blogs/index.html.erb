@@ -1,0 +1,10 @@
+<h1>Welcome to our Blog</h1>
+
+
+<% for blog in @blogs %>
+	<h2><%=h blog.title %></h2>
+	<p><%= blog.body %></p>
+<% end %>
+
+
+

@@ -25,4 +25,8 @@ class AdminController < ApplicationController
     @clients = Client.paginate :page => params[:page], :order => 'full_name asc', :per_page => 10
   end
   
+  def blogs
+    @blogs = Blog.paginate :page => params[:page], :per_page => 10
+  end
+  
 end
