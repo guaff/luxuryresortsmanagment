@@ -7,23 +7,23 @@ class Resort < ActiveRecord::Base
   validates_numericality_of :city_id
   
   has_attached_file :photo_main, :whiny_thumbnails => true,
-                    :styles => { :big => "289×218>",
+                    :style => { :big => "289×218>",
                                 :thumb => "138x106>"}
   
   has_attached_file :photo1, :whiny_thumbnails => true,
-                    :styles => { :big => "289×218>",
+                    :style => { :big => "289×218>",
                                 :thumb => "138x106>"}
 
   has_attached_file :photo2, :whiny_thumbnails => true,
-                    :styles => { :big => "289×218>",
+                    :style => { :big => "289×218>",
                                 :thumb => "138x106>"}
                                 
   has_attached_file :photo3, :whiny_thumbnails => true,
-                    :styles => { :big => "289×218>",
+                    :style => { :big => "289×218>",
                                 :thumb => "138x106>"}
   
   has_attached_file :photo4, :whiny_thumbnails => true,
-                    :styles => { :big => "289×218>",
+                    :style => { :big => "289×218>",
                                 :thumb => "138x106>"}
   
   validates_attachment_presence :photo_main
