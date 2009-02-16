@@ -19,7 +19,13 @@
 				$<%=h room.price%>
 			<% end %>
 			</td>
-		<td><%= image_tag room.image.url(:thumb) %>
+		<td>
+			<% if room.image_file_name.nil? %>
+			n/a
+			<% else %>
+			<%= image_tag room.image.url(:thumb) %>
+			<% end%>
+		</td>
   </tr>
 <% end %>
 </table>
