@@ -6,6 +6,7 @@
     <th>Contract return date</th>
     <th>Cancellation date</th>
     <th>Charge return date</th>
+		<th>show</th>
 		<th>edit</th>
 		<th>destroy</th>
   </tr>
@@ -17,7 +18,7 @@
     <td><%=h client.contract_return_date %></td>
     <td><%=h client.cancellation_date %></td>
     <td><%=h client.charge_return_date %></td>
-
+		<td><%= link_to 'show', client %></td>
     <td><%= link_to 'Edit', edit_client_path(client) %></td>
     <td><%= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

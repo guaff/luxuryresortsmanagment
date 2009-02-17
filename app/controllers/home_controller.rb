@@ -24,4 +24,8 @@ class HomeController < ApplicationController
     @resorts_count_divided = @resorts.size/3
   end
   
+  def concierge
+    
+  end
+  
 end
