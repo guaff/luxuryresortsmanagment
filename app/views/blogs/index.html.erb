@@ -2,8 +2,11 @@
 
 
 <% for blog in @blogs %>
-	<h2><%=h blog.title %></h2>
-	<p><%= blog.body %></p>
+	<div class="wraper_blog">
+		<h2 class="title_blog"><%=h blog.title %></h2>
+		<span class="date_blog"><span>
+		<p class="body_blog"><%= blog.body %></p>
+	</div>
 <% end %>
 
 

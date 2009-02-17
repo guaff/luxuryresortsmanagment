@@ -122,3 +122,11 @@ tr{ background-color: #f8f6f2; width: 100%; }
 /* PAGINATION */
 
 .pagination{ color: #857461; margin-top: 30px;}
+
+/* BLOG */ 
+
+.wraper_blog{ width: 600px;}
+
+.title_blog{ margin-top: 15px; font-weight: bold; background: #fafafa; padding: 10px;}
+.body_blog{ line-height: 25px; text-align: justify; margin-bottom: 60px;}
+.date_blog{ font-size: 10px;}
