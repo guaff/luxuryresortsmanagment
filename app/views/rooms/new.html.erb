@@ -17,7 +17,7 @@
 			  	<%= select :room, :sale_or_rent, %w[Sale Rent], {}, {:prompt => 'Select Person'} %>
 			  </p>
 				<p>
-					<%= f.label :price %> <label>or cero for negotiable</label><br/>
+					<%= f.label :price %> <label>or 0 for negotiable</label><br/>
 					<%= f.text_field :price %>
 				</p>
 				<p>
