@@ -2,8 +2,6 @@ RAILS_GEM_VERSION = '2.1.0' unless defined? RAILS_GEM_VERSION
 
 require File.join(File.dirname(__FILE__), 'boot')
 
-
-
 Rails::Initializer.run do |config|
 
   config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
@@ -14,6 +12,16 @@ Rails::Initializer.run do |config|
   }
 
 end
+
+ActionMailer::Base.smtp_settings = {
+  :address  => "smtp.google.com",
+  :port  => 25, 
+  :domain  => "www.luxuryresortmanagement.com",
+  :user_name  => "ivan@luxuryresortmanagement.com",
+  :password  => "01201323",
+  :authentication  => :login
+}
+    
 require "will_paginate" 
 ExceptionNotifier.exception_recipients = %w(ivan@bakedweb.net)
 
