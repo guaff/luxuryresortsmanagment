@@ -13,8 +13,7 @@ Rails::Initializer.run do |config|
 
 end
 
-ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.server_settings = {
+ActionMailer::Base.smtp_settings = {
   :address => "smtp.gmail.com",
   :port => 587,
   :domain => "luxuryresortmanagement.com",

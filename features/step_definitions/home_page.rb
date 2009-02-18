@@ -2,7 +2,6 @@ Given /^I am on the "home" page$/ do
   visit '/'
 end
 
-
 Given /^I am on the "about us" page$/ do
   visit 'home/about'
 end
