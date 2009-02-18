@@ -1,6 +1,11 @@
 class HomeController < ApplicationController
   
-
+  def index
+    @mailinglist = Mailinglist.new
+    @locations = Location.find(:all)
+    @cities = []
+    @city = City.new
+  end
   
   def update_city
     @cities = City.find_all_by_location_id(params[:id])
