@@ -14,7 +14,7 @@ Rails::Initializer.run do |config|
 end
 
 ActionMailer::Base.smtp_settings = {
-  :address  => "smtp.google.com",
+  :address  => "smtp.gmail.com",
   :port  => 25, 
   :domain  => "www.luxuryresortmanagement.com",
   :user_name  => "ivan@luxuryresortmanagement.com",
