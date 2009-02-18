@@ -1,0 +1,22 @@
+<% form_for(@people) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+		<%= f.hidden_field :where, :value => "concierge" %>
+  </p>
+    
+
+  <p>
+    <%= f.submit "let me know when it launches", :class => 'submit' %>
+  </p>
+<% end %>

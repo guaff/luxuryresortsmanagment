@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090216145903) do
+ActiveRecord::Schema.define(:version => 20090218160722) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -77,6 +77,15 @@ ActiveRecord::Schema.define(:version => 20090216145903) do
   create_table "mailinglists", :force => true do |t|
     t.string   "name"
     t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "peoples", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "phone",      :limit => 11
+    t.string   "where"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

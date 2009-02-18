@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :peoples
+
   map.resources :blogs
 
   map.resources :clients

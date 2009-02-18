@@ -25,6 +25,14 @@ class HomeController < ApplicationController
   end
   
   def concierge
+    @people = People.new
+  end
+  
+  def contact
+    @people = People.new
+  end
+  
+  def thank_contact
     
   end
   
