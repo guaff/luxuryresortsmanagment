@@ -148,4 +148,8 @@
 			</div>
 		</fieldset>
 	</div>
-<%= link_to 'Edit', edit_client_path(@client) %>
+<%= link_to 'Edit', edit_client_path(@client) %> | 
+<%= link_to 'Print Contract', :action => 'print', :id => @client.id  %>
+
+
+

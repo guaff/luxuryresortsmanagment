@@ -75,7 +75,7 @@ class RoomsController < ApplicationController
     @room.destroy
 
     respond_to do |format|
-      format.html { redirect_to(rooms_url) }
+      format.html { redirect_to :controller => 'admin', :action => 'rooms' }
       format.xml  { head :ok }
     end
   end

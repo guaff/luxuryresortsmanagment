@@ -11,8 +11,7 @@ class ClientsController < ApplicationController
     end
   end
 
-  # GET /clients/new
-  # GET /clients/new.xml
+
   def new
     @client = Client.new
     @payment_types = ['Credit Card', 'Money Order', 'Cash']
@@ -23,13 +22,11 @@ class ClientsController < ApplicationController
     end
   end
 
-  # GET /clients/1/edit
+
   def edit
     @client = Client.find(params[:id])
   end
 
-  # POST /clients
-  # POST /clients.xml
   def create
     @client = Client.new(params[:client])
 
@@ -45,8 +42,6 @@ class ClientsController < ApplicationController
     end
   end
 
-  # PUT /clients/1
-  # PUT /clients/1.xml
   def update
     @client = Client.find(params[:id])
 
@@ -62,15 +57,20 @@ class ClientsController < ApplicationController
     end
   end
 
-  # DELETE /clients/1
-  # DELETE /clients/1.xml
   def destroy
     @client = Client.find(params[:id])
     @client.destroy
 
     respond_to do |format|
-      format.html { redirect_to(clients_url) }
-      format.xml  { head :ok }
+      format.html { redirect_to :controller => 'admin', :action => 'clients' }
     end
+  end
+  
+  def print
+    @client = Client.find(params[:id])
+    @rooms = @client.rooms.find(:all)
+    #@resorts = @rooms.resort(:all)
+    @date = Date.today
+    render :layout => false
   end
 end
