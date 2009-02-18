@@ -13,13 +13,14 @@ Rails::Initializer.run do |config|
 
 end
 
-ActionMailer::Base.smtp_settings = {
-  :address  => "smtp.gmail.com",
-  :port  => 25, 
-  :domain  => "www.luxuryresortmanagement.com",
-  :user_name  => "ivan@luxuryresortmanagement.com",
-  :password  => "01201323",
-  :authentication  => :login
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.server_settings = {
+  :address => "smtp.gmail.com",
+  :port => 587,
+  :domain => "luxuryresortmanagement.com",
+  :authentication => :plain,
+  :user_name => "ivan@luxuryresortmanagement.com",
+  :password => "01210323"
 }
     
 require "will_paginate" 

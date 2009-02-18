@@ -54595,3 +54595,1247 @@ b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--60d2ec5b230ef9acac19c870e3
 Rendering clients/print
 Completed in 0.01219 (82 reqs/sec) | Rendering: 0.00522 (42%) | DB: 0.00091 (7%) | 200 OK [http://www.example.com/clients/print/13]
   [4;35;1mSQL (0.000750)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: dd8e7444fd5665b4713c47d187b35e57
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mMailinglist Columns (0.002940)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.000350)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (0.002018)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00023)
+Rendered resorts/_find (0.00176)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00002)
+Completed in 0.03210 (31 reqs/sec) | Rendering: 0.00863 (26%) | DB: 0.00564 (17%) | 200 OK [http://www.example.com/]
+  [4;35;1mSQL (0.000161)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET home/about with {} and HTTP headers {}
+
+
+Processing HomeController#about (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: dc744b9dd43990e41cc67ded6263e529
+  Parameters: {"action"=>"about", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/about
+Rendered layouts/_static_banner (0.00014)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00221 (452 reqs/sec) | Rendering: 0.00190 (85%) | DB: 0.00025 (11%) | 200 OK [http://www.example.com/home/about]
+  [4;35;1mSQL (0.000129)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /home/concierge with {} and HTTP headers {}
+
+
+Processing HomeController#concierge (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: cbb3b7910604cc3d1b76b4f5339c118a
+  Parameters: {"action"=>"concierge", "controller"=>"home"}
+  [4;35;1mPeople Columns (0.002807)[0m   [0mSHOW FIELDS FROM `peoples`[0m
+Rendering template within layouts/application
+Rendering home/concierge
+Rendered layouts/_static_banner (0.00020)
+Rendered home/_form_concierge (0.00351)
+Rendered layouts/_navegacion (0.00003)
+Rendered layouts/_footer (0.00001)
+Completed in 0.01504 (66 reqs/sec) | Rendering: 0.00887 (58%) | DB: 0.00302 (20%) | 200 OK [http://www.example.com/home/concierge]
+  [4;36;1mSQL (0.000141)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET /blogs with {} and HTTP headers {}
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: 06cfae016ab0ea769a4feeafa1ba813d
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;36;1mBlog Load (0.000233)[0m   [0;1mSELECT * FROM `blogs` [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00734 (136 reqs/sec) | Rendering: 0.00183 (24%) | DB: 0.00047 (6%) | 200 OK [http://www.example.com/blogs]
+  [4;35;1mSQL (0.000141)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /home/contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: 330db9ed76e089bfd3cab93a705695f4
+  Parameters: {"action"=>"contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/contact
+Rendered layouts/_static_banner (0.00014)
+Rendered home/_form_contact (0.00097)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00409 (244 reqs/sec) | Rendering: 0.00395 (96%) | DB: 0.00023 (5%) | 200 OK [http://www.example.com/home/contact]
+  [4;35;1mSQL (0.000133)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002726)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000276)[0m   [0;1mSELECT `login` FROM `users` WHERE (`users`.login = 'ivan') [0m
+  [4;35;1mSQL (0.000230)[0m   [0mSELECT `email` FROM `users` WHERE (`users`.email = 'ivan@example.com') [0m
+  [4;36;1mUser Create (0.000224)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `updated_at`, `crypted_password`, `remember_token_expires_at`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '23561fdded3ca95e74c81a28b2d19d91ad32609b', '2009-02-18 22:06:57', 'f33c961a478098cc6918ea093950370b6477e8ae', NULL, NULL, 'ivan', 'ivan@example.com', '2009-02-18 22:06:57')[0m
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: 94ff693f4606d8f2604b19ebbe8ff21e
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00471 (212 reqs/sec) | Rendering: 0.00254 (54%) | DB: 0.00368 (78%) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /session with {"commit"=>"Log in", "password"=>"generic", "login"=>"ivan"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-02-18 17:06:57) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Log in", "action"=>"create", "controller"=>"sessions", "login"=>"ivan", "password"=>"generic"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.000348)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'ivan') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://www.example.com/
+Completed in 0.00171 (583 reqs/sec) | DB: 0.00035 (20%) | 302 Found [http://www.example.com/session]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/session"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkgOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CEY=--25b3aa96a680162c100822ad41ef5428b115f421
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mLocation Load (0.000212)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00008)
+Rendered resorts/_find (0.00064)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00286 (350 reqs/sec) | Rendering: 0.00230 (80%) | DB: 0.00021 (7%) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /blogs/new with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkgOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CFQ=--b27ada61f6bb2a17e6c9bd78c7e862fee5f6696a
+  Parameters: {"action"=>"new", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.000339)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 27) LIMIT 1[0m
+  [4;36;1mBlog Columns (0.002082)[0m   [0;1mSHOW FIELDS FROM `blogs`[0m
+Rendering template within layouts/admin
+Rendering blogs/new
+Rendered admin/_menu (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.01111 (90 reqs/sec) | Rendering: 0.00731 (65%) | DB: 0.00242 (21%) | 200 OK [http://www.example.com/blogs/new]
+REQUESTING PAGE: POST /blogs with {"commit"=>"Create", "blog"=>{"body"=>"body 1", "title"=>"title 1"}} and HTTP headers {"HTTP_REFERER"=>"/blogs/new"}
+
+
+Processing BlogsController#create (for 127.0.0.1 at 2009-02-18 17:06:57) [POST]
+  Session ID: BAh7CDoMdXNlcl9pZGkgOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--58437d80e14b905d433a4cc5ab52bebf9d6884c3
+  Parameters: {"commit"=>"Create", "blog"=>{"body"=>"body 1", "title"=>"title 1"}, "action"=>"create", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.000309)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 27) LIMIT 1[0m
+  [4;36;1mBlog Create (0.000181)[0m   [0;1mINSERT INTO `blogs` (`updated_at`, `title`, `body`, `created_at`) VALUES('2009-02-18 22:06:57', 'title 1', 'body 1', '2009-02-18 22:06:57')[0m
+Redirected to http://www.example.com/admin/blogs
+Completed in 0.00272 (367 reqs/sec) | DB: 0.00049 (17%) | 302 Found [http://www.example.com/blogs]
+REQUESTING PAGE: GET http://www.example.com/admin/blogs with {} and HTTP headers {"HTTP_REFERER"=>"/blogs"}
+
+
+Processing AdminController#blogs (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkgOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIjQmxvZyB3
+YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsIRg==--b34c1d06532f6a20f858746549c2dae57802b9dc
+  Parameters: {"action"=>"blogs", "controller"=>"admin"}
+  [4;35;1mUser Load (0.000533)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 27) LIMIT 1[0m
+  [4;36;1mBlog Load (0.000240)[0m   [0;1mSELECT * FROM `blogs` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering admin/blogs
+Rendered admin/_menu (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00635 (157 reqs/sec) | Rendering: 0.00238 (37%) | DB: 0.00077 (12%) | 200 OK [http://www.example.com/admin/blogs]
+  [4;35;1mSQL (0.010893)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET home/contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: fe5c0a323151905e48ac2cf0f0f186ba
+  Parameters: {"action"=>"contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/contact
+Rendered layouts/_static_banner (0.00010)
+Rendered home/_form_contact (0.00137)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00351 (284 reqs/sec) | Rendering: 0.00333 (94%) | DB: 0.01106 (315%) | 200 OK [http://www.example.com/home/contact]
+REQUESTING PAGE: POST /peoples with {"commit"=>"Contact Me", "people"=>{"where"=>"contact", "name"=>"Ivan Acosta-Rubio", "phone"=>"3055984873", "email"=>"ivan@bakedweb.net"}} and HTTP headers {"HTTP_REFERER"=>"home/contact"}
+
+
+Processing PeoplesController#create (for 127.0.0.1 at 2009-02-18 17:06:57) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Contact Me", "action"=>"create", "controller"=>"peoples", "people"=>{"where"=>"contact", "name"=>"Ivan Acosta-Rubio", "phone"=>"3055984873", "email"=>"ivan@bakedweb.net"}}
+  [4;35;1mPeople Create (0.000267)[0m   [0mINSERT INTO `peoples` (`name`, `where`, `updated_at`, `phone`, `email`, `created_at`) VALUES('Ivan Acosta-Rubio', 'contact', '2009-02-18 22:06:57', 3055984873, 'ivan@bakedweb.net', '2009-02-18 22:06:57')[0m
+Redirected to http://www.example.com/home/thank_contact
+Completed in 0.00427 (233 reqs/sec) | DB: 0.00027 (6%) | 302 Found [http://www.example.com/peoples]
+REQUESTING PAGE: GET http://www.example.com/home/thank_contact with {} and HTTP headers {"HTTP_REFERER"=>"/peoples"}
+
+
+Processing HomeController#thank_contact (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"action"=>"thank_contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/thank_contact
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00161 (620 reqs/sec) | Rendering: 0.00154 (95%) | DB: 0.00000 (0%) | 200 OK [http://www.example.com/home/thank_contact]
+  [4;36;1mSQL (0.000788)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000159)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET home/concierge/ with {} and HTTP headers {}
+
+
+Processing HomeController#concierge (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: 63887be989266812b292ce50db1b9828
+  Parameters: {"action"=>"concierge", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/concierge
+Rendered layouts/_static_banner (0.00012)
+Rendered home/_form_concierge (0.00167)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00002)
+Completed in 0.00432 (231 reqs/sec) | Rendering: 0.00411 (95%) | DB: 0.00095 (21%) | 200 OK [http://www.example.com/home/concierge/]
+REQUESTING PAGE: POST /peoples with {"commit"=>"let me know when it launches", "people"=>{"where"=>"concierge", "name"=>"Ivan Acosta-Rubio", "phone"=>"30499573830", "email"=>"ivan@bakedweb.net"}} and HTTP headers {"HTTP_REFERER"=>"home/concierge/"}
+
+
+Processing PeoplesController#create (for 127.0.0.1 at 2009-02-18 17:06:57) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"let me know when it launches", "action"=>"create", "controller"=>"peoples", "people"=>{"where"=>"concierge", "name"=>"Ivan Acosta-Rubio", "phone"=>"30499573830", "email"=>"ivan@bakedweb.net"}}
+  [4;36;1mPeople Create (0.000253)[0m   [0;1mINSERT INTO `peoples` (`name`, `where`, `updated_at`, `phone`, `email`, `created_at`) VALUES('Ivan Acosta-Rubio', 'concierge', '2009-02-18 22:06:57', 30499573830, 'ivan@bakedweb.net', '2009-02-18 22:06:57')[0m
+Redirected to http://www.example.com/home/thank_contact
+Completed in 0.00187 (534 reqs/sec) | DB: 0.00025 (13%) | 302 Found [http://www.example.com/peoples]
+REQUESTING PAGE: GET http://www.example.com/home/thank_contact with {} and HTTP headers {"HTTP_REFERER"=>"/peoples"}
+
+
+Processing HomeController#thank_contact (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"action"=>"thank_contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/thank_contact
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00121 (826 reqs/sec) | Rendering: 0.00114 (93%) | DB: 0.00000 (0%) | 200 OK [http://www.example.com/home/thank_contact]
+  [4;35;1mSQL (0.000866)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000207)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000294)[0m   [0mSELECT `login` FROM `users` WHERE (`users`.login = 'ivan') [0m
+  [4;36;1mSQL (0.000197)[0m   [0;1mSELECT `email` FROM `users` WHERE (`users`.email = 'ivan@example.com') [0m
+  [4;35;1mUser Create (0.000219)[0m   [0mINSERT INTO `users` (`name`, `salt`, `updated_at`, `crypted_password`, `remember_token_expires_at`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '4e185ca087e3680d954820e915cefe42b9d7c5ba', '2009-02-18 22:06:57', '3f324e837087d66da81e1f34f82555d263208aae', NULL, NULL, 'ivan', 'ivan@example.com', '2009-02-18 22:06:57')[0m
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: 822ee607ab935837f3ebcdfc5453b2ac
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00199 (501 reqs/sec) | Rendering: 0.00189 (95%) | DB: 0.00178 (89%) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /session with {"commit"=>"Log in", "password"=>"generic", "login"=>"ivan"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-02-18 17:06:57) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Log in", "action"=>"create", "controller"=>"sessions", "login"=>"ivan", "password"=>"generic"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.000324)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'ivan') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://www.example.com/
+Completed in 0.00154 (647 reqs/sec) | DB: 0.00032 (20%) | 302 Found [http://www.example.com/session]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/session"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkhOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CEY=--a3a806267e863e3af3bf0014e81fae696bf1caf3
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mLocation Load (0.000195)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00007)
+Rendered resorts/_find (0.00055)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00262 (381 reqs/sec) | Rendering: 0.00211 (80%) | DB: 0.00019 (7%) | 200 OK [http://www.example.com/]
+  [4;36;1mClient Columns (0.002340)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Create (0.000302)[0m   [0mINSERT INTO `clients` (`city`, `work_phone`, `start_date`, `charge_return_date`, `zip`, `updated_at`, `credit_card_expiration`, `resort_sale_person`, `credit_card_type`, `credit_card`, `billing_name`, `billing_city`, `tts_sale_person`, `notes`, `client_pin`, `full_name_second`, `billing_state`, `home_phone`, `charge_date`, `billing_zip`, `payment_type`, `full_name`, `address`, `fee_paid`, `billing_address`, `contract_return_date`, `state`, `email`, `cancellation_date`, `created_at`) VALUES('miami', 30493094820, '2008-01-01', '2004-02-02', 33132, '2009-02-18 22:06:57', '12/02', 'pedro', 'visa', 1234567890, 'ivan', 'cuba', 'pedro', 'he is doing detox', '2323', 'bellatrix', 'HA', 3053349348, '2002-01-01', 33132, 'cash', 'ivan', 'our address 33132', 35000, 'my address', '2007-02-02', 'FL', 'ivan@bakedweb.net', '3004-02-02', '2009-02-18 22:06:57')[0m
+REQUESTING PAGE: GET /clients/14 with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkhOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CFQ=--8aeeb42dcf6cb38acb5b8c79a986f4c5d4b45bb4
+  Parameters: {"action"=>"show", "id"=>"14", "controller"=>"clients"}
+  [4;36;1mUser Load (0.000291)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 28) LIMIT 1[0m
+  [4;35;1mClient Load (0.000299)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 14) [0m
+Rendering template within layouts/admin
+Rendering clients/show
+Rendered admin/_menu (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.01019 (98 reqs/sec) | Rendering: 0.00641 (62%) | DB: 0.00323 (31%) | 200 OK [http://www.example.com/clients/14]
+REQUESTING PAGE: GET /clients/print/14 with {} and HTTP headers {"HTTP_REFERER"=>"/clients/14"}
+
+
+Processing ClientsController#print (for 127.0.0.1 at 2009-02-18 17:06:57) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkhOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--04505b88e82624a4fc12e2ba45e1335808060018
+  Parameters: {"action"=>"print", "id"=>"14", "controller"=>"clients"}
+  [4;36;1mUser Load (0.000306)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 28) LIMIT 1[0m
+  [4;35;1mClient Load (0.000308)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 14) [0m
+  [4;36;1mRoom Load (0.000279)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.client_id = 14) [0m
+Rendering clients/print
+Completed in 0.01127 (88 reqs/sec) | Rendering: 0.00489 (43%) | DB: 0.00089 (7%) | 200 OK [http://www.example.com/clients/print/14]
+  [4;35;1mSQL (0.000836)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000245)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: 52e2397dc7c87d9fcff10535a997f431
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mMailinglist Columns (0.002928)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.000395)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (0.002353)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00031)
+Rendered resorts/_find (0.00244)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.03537 (28 reqs/sec) | Rendering: 0.01197 (33%) | DB: 0.00601 (16%) | 200 OK [http://www.example.com/]
+  [4;35;1mSQL (0.000163)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000068)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET home/about with {} and HTTP headers {}
+
+
+Processing HomeController#about (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: 4075e8d820b74a96450ec3580ba7c3b3
+  Parameters: {"action"=>"about", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/about
+Rendered layouts/_static_banner (0.00015)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00235 (425 reqs/sec) | Rendering: 0.00202 (85%) | DB: 0.00023 (9%) | 200 OK [http://www.example.com/home/about]
+  [4;35;1mSQL (0.000107)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /home/concierge with {} and HTTP headers {}
+
+
+Processing HomeController#concierge (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: 024ac3d996079f986fb1b7a15181ed2e
+  Parameters: {"action"=>"concierge", "controller"=>"home"}
+  [4;35;1mPeople Columns (0.178580)[0m   [0mSHOW FIELDS FROM `peoples`[0m
+Rendering template within layouts/application
+Rendering home/concierge
+Rendered layouts/_static_banner (0.00022)
+Rendered home/_form_concierge (0.00268)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.18852 (5 reqs/sec) | Rendering: 0.00662 (3%) | DB: 0.17874 (94%) | 200 OK [http://www.example.com/home/concierge]
+  [4;36;1mSQL (0.001831)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000063)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET /blogs with {} and HTTP headers {}
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: 689eb90f3151a4fab0e1c3457fe9ee3b
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;36;1mBlog Load (0.000239)[0m   [0;1mSELECT * FROM `blogs` [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00814 (122 reqs/sec) | Rendering: 0.00198 (24%) | DB: 0.00213 (26%) | 200 OK [http://www.example.com/blogs]
+  [4;35;1mSQL (0.000213)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000063)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /home/contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: 2e77a84be9519914d3c741e71b91b167
+  Parameters: {"action"=>"contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/contact
+Rendered layouts/_static_banner (0.00015)
+Rendered home/_form_contact (0.00118)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00496 (201 reqs/sec) | Rendering: 0.00480 (96%) | DB: 0.00028 (5%) | 200 OK [http://www.example.com/home/contact]
+  [4;35;1mSQL (0.000114)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000059)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.001906)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000483)[0m   [0;1mSELECT `login` FROM `users` WHERE (`users`.login = 'ivan') [0m
+  [4;35;1mSQL (0.000117)[0m   [0mSELECT `email` FROM `users` WHERE (`users`.email = 'ivan@example.com') [0m
+  [4;36;1mUser Create (0.000380)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `updated_at`, `crypted_password`, `remember_token_expires_at`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '0f108d5ed29c8236c05c78b7ee602c18b3ce41ee', '2009-02-18 22:07:02', '089a8737aae79f8a1d8203bc809b13c9af18abb2', NULL, NULL, 'ivan', 'ivan@example.com', '2009-02-18 22:07:02')[0m
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: c6ad484b16a14d281ad79a855ec6127b
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00584 (171 reqs/sec) | Rendering: 0.00367 (62%) | DB: 0.00306 (52%) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /session with {"commit"=>"Log in", "password"=>"generic", "login"=>"ivan"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-02-18 17:07:02) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Log in", "action"=>"create", "controller"=>"sessions", "login"=>"ivan", "password"=>"generic"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.000336)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'ivan') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://www.example.com/
+Completed in 0.00185 (540 reqs/sec) | DB: 0.00034 (18%) | 302 Found [http://www.example.com/session]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/session"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkiOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CEY=--c7bfb99ba0439fb88bbff8d65e5d90fa54cdbbbd
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mLocation Load (0.000208)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00008)
+Rendered resorts/_find (0.00074)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00298 (335 reqs/sec) | Rendering: 0.00240 (80%) | DB: 0.00021 (6%) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /blogs/new with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkiOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CFQ=--fca7e86afa3fbf5ac4d075b28f624d791604fe26
+  Parameters: {"action"=>"new", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.000318)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 29) LIMIT 1[0m
+  [4;36;1mBlog Columns (0.001402)[0m   [0;1mSHOW FIELDS FROM `blogs`[0m
+Rendering template within layouts/admin
+Rendering blogs/new
+Rendered admin/_menu (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00832 (120 reqs/sec) | Rendering: 0.00547 (65%) | DB: 0.00172 (20%) | 200 OK [http://www.example.com/blogs/new]
+REQUESTING PAGE: POST /blogs with {"commit"=>"Create", "blog"=>{"body"=>"body 1", "title"=>"title 1"}} and HTTP headers {"HTTP_REFERER"=>"/blogs/new"}
+
+
+Processing BlogsController#create (for 127.0.0.1 at 2009-02-18 17:07:02) [POST]
+  Session ID: BAh7CDoMdXNlcl9pZGkiOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--0a05ab9210f1d817790fe5e90dd3289b65a9b799
+  Parameters: {"commit"=>"Create", "blog"=>{"body"=>"body 1", "title"=>"title 1"}, "action"=>"create", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.000373)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 29) LIMIT 1[0m
+  [4;36;1mBlog Create (0.000188)[0m   [0;1mINSERT INTO `blogs` (`updated_at`, `title`, `body`, `created_at`) VALUES('2009-02-18 22:07:02', 'title 1', 'body 1', '2009-02-18 22:07:02')[0m
+Redirected to http://www.example.com/admin/blogs
+Completed in 0.00304 (328 reqs/sec) | DB: 0.00056 (18%) | 302 Found [http://www.example.com/blogs]
+REQUESTING PAGE: GET http://www.example.com/admin/blogs with {} and HTTP headers {"HTTP_REFERER"=>"/blogs"}
+
+
+Processing AdminController#blogs (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkiOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIjQmxvZyB3
+YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsIRg==--9873833cb7da1f6f2357be6f73e94fa06e319a3a
+  Parameters: {"action"=>"blogs", "controller"=>"admin"}
+  [4;35;1mUser Load (0.000314)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 29) LIMIT 1[0m
+  [4;36;1mBlog Load (0.000260)[0m   [0;1mSELECT * FROM `blogs` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering admin/blogs
+Rendered admin/_menu (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00798 (125 reqs/sec) | Rendering: 0.00389 (48%) | DB: 0.00057 (7%) | 200 OK [http://www.example.com/admin/blogs]
+  [4;35;1mSQL (0.000914)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000065)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET home/contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: f827b34640db872fe9dcaa7069d78585
+  Parameters: {"action"=>"contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/contact
+Rendered layouts/_static_banner (0.00008)
+Rendered home/_form_contact (0.00108)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00296 (337 reqs/sec) | Rendering: 0.00281 (94%) | DB: 0.00098 (33%) | 200 OK [http://www.example.com/home/contact]
+REQUESTING PAGE: POST /peoples with {"commit"=>"Contact Me", "people"=>{"where"=>"contact", "name"=>"Ivan Acosta-Rubio", "phone"=>"3055984873", "email"=>"ivan@bakedweb.net"}} and HTTP headers {"HTTP_REFERER"=>"home/contact"}
+
+
+Processing PeoplesController#create (for 127.0.0.1 at 2009-02-18 17:07:02) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Contact Me", "action"=>"create", "controller"=>"peoples", "people"=>{"where"=>"contact", "name"=>"Ivan Acosta-Rubio", "phone"=>"3055984873", "email"=>"ivan@bakedweb.net"}}
+  [4;35;1mPeople Create (0.000287)[0m   [0mINSERT INTO `peoples` (`name`, `where`, `updated_at`, `phone`, `email`, `created_at`) VALUES('Ivan Acosta-Rubio', 'contact', '2009-02-18 22:07:02', 3055984873, 'ivan@bakedweb.net', '2009-02-18 22:07:02')[0m
+Redirected to http://www.example.com/home/thank_contact
+Completed in 0.00438 (228 reqs/sec) | DB: 0.00029 (6%) | 302 Found [http://www.example.com/peoples]
+REQUESTING PAGE: GET http://www.example.com/home/thank_contact with {} and HTTP headers {"HTTP_REFERER"=>"/peoples"}
+
+
+Processing HomeController#thank_contact (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"action"=>"thank_contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/thank_contact
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00149 (672 reqs/sec) | Rendering: 0.00141 (94%) | DB: 0.00000 (0%) | 200 OK [http://www.example.com/home/thank_contact]
+  [4;36;1mSQL (0.000963)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000206)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET home/concierge/ with {} and HTTP headers {}
+
+
+Processing HomeController#concierge (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: 9d3645fb2c1d57c4d5acc83452a3738d
+  Parameters: {"action"=>"concierge", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/concierge
+Rendered layouts/_static_banner (0.00011)
+Rendered home/_form_concierge (0.00144)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00002)
+Completed in 0.00384 (260 reqs/sec) | Rendering: 0.00365 (95%) | DB: 0.00117 (30%) | 200 OK [http://www.example.com/home/concierge/]
+REQUESTING PAGE: POST /peoples with {"commit"=>"let me know when it launches", "people"=>{"where"=>"concierge", "name"=>"Ivan Acosta-Rubio", "phone"=>"30499573830", "email"=>"ivan@bakedweb.net"}} and HTTP headers {"HTTP_REFERER"=>"home/concierge/"}
+
+
+Processing PeoplesController#create (for 127.0.0.1 at 2009-02-18 17:07:02) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"let me know when it launches", "action"=>"create", "controller"=>"peoples", "people"=>{"where"=>"concierge", "name"=>"Ivan Acosta-Rubio", "phone"=>"30499573830", "email"=>"ivan@bakedweb.net"}}
+  [4;36;1mPeople Create (0.000264)[0m   [0;1mINSERT INTO `peoples` (`name`, `where`, `updated_at`, `phone`, `email`, `created_at`) VALUES('Ivan Acosta-Rubio', 'concierge', '2009-02-18 22:07:02', 30499573830, 'ivan@bakedweb.net', '2009-02-18 22:07:02')[0m
+Redirected to http://www.example.com/home/thank_contact
+Completed in 0.00203 (491 reqs/sec) | DB: 0.00026 (12%) | 302 Found [http://www.example.com/peoples]
+REQUESTING PAGE: GET http://www.example.com/home/thank_contact with {} and HTTP headers {"HTTP_REFERER"=>"/peoples"}
+
+
+Processing HomeController#thank_contact (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"action"=>"thank_contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/thank_contact
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00123 (810 reqs/sec) | Rendering: 0.00116 (93%) | DB: 0.00000 (0%) | 200 OK [http://www.example.com/home/thank_contact]
+  [4;35;1mSQL (0.000827)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000202)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000333)[0m   [0mSELECT `login` FROM `users` WHERE (`users`.login = 'ivan') [0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSELECT `email` FROM `users` WHERE (`users`.email = 'ivan@example.com') [0m
+  [4;35;1mUser Create (0.000279)[0m   [0mINSERT INTO `users` (`name`, `salt`, `updated_at`, `crypted_password`, `remember_token_expires_at`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '7cc85223909209ec9b913219795a25b66916d48b', '2009-02-18 22:07:02', 'ee850df09fc0475d1db89df6159945b149288b1b', NULL, NULL, 'ivan', 'ivan@example.com', '2009-02-18 22:07:02')[0m
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: 54ca5a413abb13ade892b794b1a7cede
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00230 (434 reqs/sec) | Rendering: 0.00219 (95%) | DB: 0.00182 (79%) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /session with {"commit"=>"Log in", "password"=>"generic", "login"=>"ivan"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-02-18 17:07:02) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Log in", "action"=>"create", "controller"=>"sessions", "login"=>"ivan", "password"=>"generic"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.000387)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'ivan') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://www.example.com/
+Completed in 0.00158 (632 reqs/sec) | DB: 0.00039 (24%) | 302 Found [http://www.example.com/session]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/session"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkjOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CEY=--f3a56f82889a48b10671ea083b12758ae7ab3053
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mLocation Load (0.000216)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00008)
+Rendered resorts/_find (0.00056)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00270 (370 reqs/sec) | Rendering: 0.00208 (77%) | DB: 0.00022 (8%) | 200 OK [http://www.example.com/]
+  [4;36;1mClient Columns (0.004094)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Create (0.000430)[0m   [0mINSERT INTO `clients` (`city`, `work_phone`, `start_date`, `charge_return_date`, `zip`, `updated_at`, `credit_card_expiration`, `resort_sale_person`, `credit_card_type`, `credit_card`, `billing_name`, `billing_city`, `tts_sale_person`, `notes`, `client_pin`, `full_name_second`, `billing_state`, `home_phone`, `charge_date`, `billing_zip`, `payment_type`, `full_name`, `address`, `fee_paid`, `billing_address`, `contract_return_date`, `state`, `email`, `cancellation_date`, `created_at`) VALUES('miami', 30493094820, '2008-01-01', '2004-02-02', 33132, '2009-02-18 22:07:02', '12/02', 'pedro', 'visa', 1234567890, 'ivan', 'cuba', 'pedro', 'he is doing detox', '2323', 'bellatrix', 'HA', 3053349348, '2002-01-01', 33132, 'cash', 'ivan', 'our address 33132', 35000, 'my address', '2007-02-02', 'FL', 'ivan@bakedweb.net', '3004-02-02', '2009-02-18 22:07:02')[0m
+REQUESTING PAGE: GET /clients/15 with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkjOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CFQ=--3f30b5711a672c468208214f75a7da0450eff82c
+  Parameters: {"action"=>"show", "id"=>"15", "controller"=>"clients"}
+  [4;36;1mUser Load (0.000404)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 30) LIMIT 1[0m
+  [4;35;1mClient Load (0.000333)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 15) [0m
+Rendering template within layouts/admin
+Rendering clients/show
+Rendered admin/_menu (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.01136 (88 reqs/sec) | Rendering: 0.00668 (58%) | DB: 0.00526 (46%) | 200 OK [http://www.example.com/clients/15]
+REQUESTING PAGE: GET /clients/print/15 with {} and HTTP headers {"HTTP_REFERER"=>"/clients/15"}
+
+
+Processing ClientsController#print (for 127.0.0.1 at 2009-02-18 17:07:02) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkjOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ebde078feb431f497409a2489f1099a030ff70ab
+  Parameters: {"action"=>"print", "id"=>"15", "controller"=>"clients"}
+  [4;36;1mUser Load (0.000335)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 30) LIMIT 1[0m
+  [4;35;1mClient Load (0.000318)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 15) [0m
+  [4;36;1mRoom Load (0.000277)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.client_id = 15) [0m
+Rendering clients/print
+Completed in 0.01132 (88 reqs/sec) | Rendering: 0.00502 (44%) | DB: 0.00093 (8%) | 200 OK [http://www.example.com/clients/print/15]
+  [4;35;1mSQL (0.000865)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: e11c69e7b0958f38e228f2965f56d007
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mMailinglist Columns (0.002274)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.000259)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (0.002965)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00022)
+Rendered resorts/_find (0.00170)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.03069 (32 reqs/sec) | Rendering: 0.00944 (30%) | DB: 0.00583 (18%) | 200 OK [http://www.example.com/]
+  [4;35;1mSQL (0.000139)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000061)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET home/about with {} and HTTP headers {}
+
+
+Processing HomeController#about (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: 1c8ad372335777734855140f64146207
+  Parameters: {"action"=>"about", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/about
+Rendered layouts/_static_banner (0.00021)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00228 (437 reqs/sec) | Rendering: 0.00195 (85%) | DB: 0.00020 (8%) | 200 OK [http://www.example.com/home/about]
+  [4;35;1mSQL (0.000120)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000062)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /home/concierge with {} and HTTP headers {}
+
+
+Processing HomeController#concierge (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: bff2e75f80a324335da5dd6eb72369e8
+  Parameters: {"action"=>"concierge", "controller"=>"home"}
+  [4;35;1mPeople Columns (0.001491)[0m   [0mSHOW FIELDS FROM `peoples`[0m
+Rendering template within layouts/application
+Rendering home/concierge
+Rendered layouts/_static_banner (0.00015)
+Rendered home/_form_concierge (0.00271)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.01093 (91 reqs/sec) | Rendering: 0.00635 (58%) | DB: 0.00167 (15%) | 200 OK [http://www.example.com/home/concierge]
+  [4;36;1mSQL (0.001685)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000066)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET /blogs with {} and HTTP headers {}
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: 907d79a6e707a9e56fe9dfebcec2e80d
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;36;1mBlog Load (0.000913)[0m   [0;1mSELECT * FROM `blogs` [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.01483 (67 reqs/sec) | Rendering: 0.00202 (13%) | DB: 0.00266 (17%) | 200 OK [http://www.example.com/blogs]
+  [4;35;1mSQL (0.000158)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /home/contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: 54fe910096640c21129f0c661d3fbae4
+  Parameters: {"action"=>"contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/contact
+Rendered layouts/_static_banner (0.00016)
+Rendered home/_form_contact (0.00108)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00457 (218 reqs/sec) | Rendering: 0.00440 (96%) | DB: 0.00022 (4%) | 200 OK [http://www.example.com/home/contact]
+  [4;35;1mSQL (0.000176)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.001648)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.002155)[0m   [0;1mSELECT `login` FROM `users` WHERE (`users`.login = 'ivan') [0m
+  [4;35;1mSQL (0.000127)[0m   [0mSELECT `email` FROM `users` WHERE (`users`.email = 'ivan@example.com') [0m
+  [4;36;1mUser Create (0.000198)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `updated_at`, `crypted_password`, `remember_token_expires_at`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '92d68d64b2dd91a9dcefb3abd8bd84255a7a9332', '2009-02-18 22:07:07', '63f029fec358dc17ce567cb1d7aa8cc85964e77f', NULL, NULL, 'ivan', 'ivan@example.com', '2009-02-18 22:07:07')[0m
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: f7df835170f113d14e0ca7fde8294c32
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00567 (176 reqs/sec) | Rendering: 0.00323 (57%) | DB: 0.00436 (76%) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /session with {"commit"=>"Log in", "password"=>"generic", "login"=>"ivan"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-02-18 17:07:07) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Log in", "action"=>"create", "controller"=>"sessions", "login"=>"ivan", "password"=>"generic"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.000381)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'ivan') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://www.example.com/
+Completed in 0.00197 (508 reqs/sec) | DB: 0.00038 (19%) | 302 Found [http://www.example.com/session]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/session"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkkOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CEY=--5780024de9db2bb7065da13f872dfad7fbb48616
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mLocation Load (0.000256)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00009)
+Rendered resorts/_find (0.00327)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00608 (164 reqs/sec) | Rendering: 0.00539 (88%) | DB: 0.00026 (4%) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /blogs/new with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkkOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CFQ=--63922371a84acbad9c90930de4b1d68194929dd8
+  Parameters: {"action"=>"new", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.000443)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 31) LIMIT 1[0m
+  [4;36;1mBlog Columns (0.001959)[0m   [0;1mSHOW FIELDS FROM `blogs`[0m
+Rendering template within layouts/admin
+Rendering blogs/new
+Rendered admin/_menu (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00958 (104 reqs/sec) | Rendering: 0.00603 (62%) | DB: 0.00240 (25%) | 200 OK [http://www.example.com/blogs/new]
+REQUESTING PAGE: POST /blogs with {"commit"=>"Create", "blog"=>{"body"=>"body 1", "title"=>"title 1"}} and HTTP headers {"HTTP_REFERER"=>"/blogs/new"}
+
+
+Processing BlogsController#create (for 127.0.0.1 at 2009-02-18 17:07:07) [POST]
+  Session ID: BAh7CDoMdXNlcl9pZGkkOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--169e4bcaf9b8fa3c41aefcb9536379abb9278ec2
+  Parameters: {"commit"=>"Create", "blog"=>{"body"=>"body 1", "title"=>"title 1"}, "action"=>"create", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.000306)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 31) LIMIT 1[0m
+  [4;36;1mBlog Create (0.000215)[0m   [0;1mINSERT INTO `blogs` (`updated_at`, `title`, `body`, `created_at`) VALUES('2009-02-18 22:07:07', 'title 1', 'body 1', '2009-02-18 22:07:07')[0m
+Redirected to http://www.example.com/admin/blogs
+Completed in 0.00279 (358 reqs/sec) | DB: 0.00052 (18%) | 302 Found [http://www.example.com/blogs]
+REQUESTING PAGE: GET http://www.example.com/admin/blogs with {} and HTTP headers {"HTTP_REFERER"=>"/blogs"}
+
+
+Processing AdminController#blogs (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkkOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIjQmxvZyB3
+YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsIRg==--616d64bf11484c94e0cc88bdcffcb87da71e8877
+  Parameters: {"action"=>"blogs", "controller"=>"admin"}
+  [4;35;1mUser Load (0.000305)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 31) LIMIT 1[0m
+  [4;36;1mBlog Load (0.000211)[0m   [0;1mSELECT * FROM `blogs` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering admin/blogs
+Rendered admin/_menu (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00607 (164 reqs/sec) | Rendering: 0.00256 (42%) | DB: 0.00052 (8%) | 200 OK [http://www.example.com/admin/blogs]
+  [4;35;1mSQL (0.000871)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET home/contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: b6a1da30c5c0d294c4a8671cf8bedcb2
+  Parameters: {"action"=>"contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/contact
+Rendered layouts/_static_banner (0.00014)
+Rendered home/_form_contact (0.00173)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00002)
+Completed in 0.00495 (202 reqs/sec) | Rendering: 0.00475 (95%) | DB: 0.00109 (21%) | 200 OK [http://www.example.com/home/contact]
+REQUESTING PAGE: POST /peoples with {"commit"=>"Contact Me", "people"=>{"where"=>"contact", "name"=>"Ivan Acosta-Rubio", "phone"=>"3055984873", "email"=>"ivan@bakedweb.net"}} and HTTP headers {"HTTP_REFERER"=>"home/contact"}
+
+
+Processing PeoplesController#create (for 127.0.0.1 at 2009-02-18 17:07:07) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Contact Me", "action"=>"create", "controller"=>"peoples", "people"=>{"where"=>"contact", "name"=>"Ivan Acosta-Rubio", "phone"=>"3055984873", "email"=>"ivan@bakedweb.net"}}
+  [4;35;1mPeople Create (0.000264)[0m   [0mINSERT INTO `peoples` (`name`, `where`, `updated_at`, `phone`, `email`, `created_at`) VALUES('Ivan Acosta-Rubio', 'contact', '2009-02-18 22:07:07', 3055984873, 'ivan@bakedweb.net', '2009-02-18 22:07:07')[0m
+Redirected to http://www.example.com/home/thank_contact
+Completed in 0.00445 (224 reqs/sec) | DB: 0.00026 (5%) | 302 Found [http://www.example.com/peoples]
+REQUESTING PAGE: GET http://www.example.com/home/thank_contact with {} and HTTP headers {"HTTP_REFERER"=>"/peoples"}
+
+
+Processing HomeController#thank_contact (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"action"=>"thank_contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/thank_contact
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00198 (504 reqs/sec) | Rendering: 0.00184 (93%) | DB: 0.00000 (0%) | 200 OK [http://www.example.com/home/thank_contact]
+  [4;36;1mSQL (0.000842)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000203)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET home/concierge/ with {} and HTTP headers {}
+
+
+Processing HomeController#concierge (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: 1b4a39bb6735f1bfd9d9c271c9159506
+  Parameters: {"action"=>"concierge", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/concierge
+Rendered layouts/_static_banner (0.00012)
+Rendered home/_form_concierge (0.00173)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00002)
+Completed in 0.00443 (225 reqs/sec) | Rendering: 0.00422 (95%) | DB: 0.00104 (23%) | 200 OK [http://www.example.com/home/concierge/]
+REQUESTING PAGE: POST /peoples with {"commit"=>"let me know when it launches", "people"=>{"where"=>"concierge", "name"=>"Ivan Acosta-Rubio", "phone"=>"30499573830", "email"=>"ivan@bakedweb.net"}} and HTTP headers {"HTTP_REFERER"=>"home/concierge/"}
+
+
+Processing PeoplesController#create (for 127.0.0.1 at 2009-02-18 17:07:07) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"let me know when it launches", "action"=>"create", "controller"=>"peoples", "people"=>{"where"=>"concierge", "name"=>"Ivan Acosta-Rubio", "phone"=>"30499573830", "email"=>"ivan@bakedweb.net"}}
+  [4;36;1mPeople Create (0.000279)[0m   [0;1mINSERT INTO `peoples` (`name`, `where`, `updated_at`, `phone`, `email`, `created_at`) VALUES('Ivan Acosta-Rubio', 'concierge', '2009-02-18 22:07:07', 30499573830, 'ivan@bakedweb.net', '2009-02-18 22:07:07')[0m
+Redirected to http://www.example.com/home/thank_contact
+Completed in 0.00201 (497 reqs/sec) | DB: 0.00028 (13%) | 302 Found [http://www.example.com/peoples]
+REQUESTING PAGE: GET http://www.example.com/home/thank_contact with {} and HTTP headers {"HTTP_REFERER"=>"/peoples"}
+
+
+Processing HomeController#thank_contact (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"action"=>"thank_contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/thank_contact
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00121 (827 reqs/sec) | Rendering: 0.00114 (94%) | DB: 0.00000 (0%) | 200 OK [http://www.example.com/home/thank_contact]
+  [4;35;1mSQL (0.008296)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000225)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000300)[0m   [0mSELECT `login` FROM `users` WHERE (`users`.login = 'ivan') [0m
+  [4;36;1mSQL (0.000188)[0m   [0;1mSELECT `email` FROM `users` WHERE (`users`.email = 'ivan@example.com') [0m
+  [4;35;1mUser Create (0.000202)[0m   [0mINSERT INTO `users` (`name`, `salt`, `updated_at`, `crypted_password`, `remember_token_expires_at`, `remember_token`, `login`, `email`, `created_at`) VALUES('', 'ccf2eedb4a30a71f90c2dadcff2ba61aa60ccfc3', '2009-02-18 22:07:07', 'e08f2e589cbbff19e9404e8455a57c21b4bb05a3', NULL, NULL, 'ivan', 'ivan@example.com', '2009-02-18 22:07:07')[0m
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: 358aa5372a79a49bc1598129e1c09b8b
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00178 (560 reqs/sec) | Rendering: 0.00169 (94%) | DB: 0.00921 (516%) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /session with {"commit"=>"Log in", "password"=>"generic", "login"=>"ivan"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-02-18 17:07:07) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Log in", "action"=>"create", "controller"=>"sessions", "login"=>"ivan", "password"=>"generic"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.000359)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'ivan') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://www.example.com/
+Completed in 0.00160 (624 reqs/sec) | DB: 0.00036 (22%) | 302 Found [http://www.example.com/session]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/session"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGklOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CEY=--a920a52e0f30faf8a29747adb64960eba6b47d11
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mLocation Load (0.000221)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00008)
+Rendered resorts/_find (0.00056)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00272 (368 reqs/sec) | Rendering: 0.00215 (78%) | DB: 0.00022 (8%) | 200 OK [http://www.example.com/]
+  [4;36;1mClient Columns (0.003780)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Create (0.000309)[0m   [0mINSERT INTO `clients` (`city`, `work_phone`, `start_date`, `charge_return_date`, `zip`, `updated_at`, `credit_card_expiration`, `resort_sale_person`, `credit_card_type`, `credit_card`, `billing_name`, `billing_city`, `tts_sale_person`, `notes`, `client_pin`, `full_name_second`, `billing_state`, `home_phone`, `charge_date`, `billing_zip`, `payment_type`, `full_name`, `address`, `fee_paid`, `billing_address`, `contract_return_date`, `state`, `email`, `cancellation_date`, `created_at`) VALUES('miami', 30493094820, '2008-01-01', '2004-02-02', 33132, '2009-02-18 22:07:07', '12/02', 'pedro', 'visa', 1234567890, 'ivan', 'cuba', 'pedro', 'he is doing detox', '2323', 'bellatrix', 'HA', 3053349348, '2002-01-01', 33132, 'cash', 'ivan', 'our address 33132', 35000, 'my address', '2007-02-02', 'FL', 'ivan@bakedweb.net', '3004-02-02', '2009-02-18 22:07:07')[0m
+REQUESTING PAGE: GET /clients/16 with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-02-18 17:07:07) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGklOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CFQ=--d90bdb62f51fe973692fbb1da2309c3d4fd6572d
+  Parameters: {"action"=>"show", "id"=>"16", "controller"=>"clients"}
+  [4;36;1mUser Load (0.000292)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 32) LIMIT 1[0m
+  [4;35;1mClient Load (0.000292)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 16) [0m
+Rendering template within layouts/admin
+Rendering clients/show
+Rendered admin/_menu (0.00002)
+Rendered layouts/_footer (0.00002)
+Completed in 0.01064 (93 reqs/sec) | Rendering: 0.00685 (64%) | DB: 0.00467 (43%) | 200 OK [http://www.example.com/clients/16]
+REQUESTING PAGE: GET /clients/print/16 with {} and HTTP headers {"HTTP_REFERER"=>"/clients/16"}
+
+
+Processing ClientsController#print (for 127.0.0.1 at 2009-02-18 17:07:08) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGklOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ead9e4c6dec01ae022991460999469cba683642d
+  Parameters: {"action"=>"print", "id"=>"16", "controller"=>"clients"}
+  [4;36;1mUser Load (0.000291)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 32) LIMIT 1[0m
+  [4;35;1mClient Load (0.000276)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 16) [0m
+  [4;36;1mRoom Load (0.000289)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.client_id = 16) [0m
+Rendering clients/print
+Completed in 0.01122 (89 reqs/sec) | Rendering: 0.00488 (43%) | DB: 0.00086 (7%) | 200 OK [http://www.example.com/clients/print/16]
+  [4;35;1mSQL (0.000878)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000277)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000057)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:07:13) [GET]
+  Session ID: 3ff47a8945794361538be5f50b8e52ec
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mMailinglist Columns (0.010075)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.001449)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (0.001439)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00026)
+Rendered resorts/_find (0.00177)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.04569 (21 reqs/sec) | Rendering: 0.00864 (18%) | DB: 0.01330 (29%) | 200 OK [http://www.example.com/]
+  [4;35;1mSQL (0.000404)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000060)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET home/about with {} and HTTP headers {}
+
+
+Processing HomeController#about (for 127.0.0.1 at 2009-02-18 17:07:13) [GET]
+  Session ID: 0eaca7108355f49d0f8dbb4891d02119
+  Parameters: {"action"=>"about", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/about
+Rendered layouts/_static_banner (0.00015)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00221 (452 reqs/sec) | Rendering: 0.00188 (85%) | DB: 0.00046 (21%) | 200 OK [http://www.example.com/home/about]
+  [4;35;1mSQL (0.000496)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000060)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /home/concierge with {} and HTTP headers {}
+
+
+Processing HomeController#concierge (for 127.0.0.1 at 2009-02-18 17:07:13) [GET]
+  Session ID: a5c182099f5ba4fdafdecb30e4b05a00
+  Parameters: {"action"=>"concierge", "controller"=>"home"}
+  [4;35;1mPeople Columns (0.001485)[0m   [0mSHOW FIELDS FROM `peoples`[0m
+Rendering template within layouts/application
+Rendering home/concierge
+Rendered layouts/_static_banner (0.00017)
+Rendered home/_form_concierge (0.00264)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.01133 (88 reqs/sec) | Rendering: 0.00651 (57%) | DB: 0.00204 (18%) | 200 OK [http://www.example.com/home/concierge]
+  [4;36;1mSQL (0.001666)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000062)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET /blogs with {} and HTTP headers {}
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-02-18 17:07:13) [GET]
+  Session ID: 560cbf6bb80626a6f7a27efb1f79915f
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;36;1mBlog Load (0.000483)[0m   [0;1mSELECT * FROM `blogs` [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00822 (121 reqs/sec) | Rendering: 0.00216 (26%) | DB: 0.00221 (26%) | 200 OK [http://www.example.com/blogs]
+  [4;35;1mSQL (0.000120)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000054)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /home/contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2009-02-18 17:07:13) [GET]
+  Session ID: b59902de3cd4dfe5dcb6f5d30a9fa28e
+  Parameters: {"action"=>"contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/contact
+Rendered layouts/_static_banner (0.00015)
+Rendered home/_form_contact (0.00105)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00438 (228 reqs/sec) | Rendering: 0.00416 (94%) | DB: 0.00017 (3%) | 200 OK [http://www.example.com/home/contact]
+  [4;35;1mSQL (0.000097)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000054)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.002274)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000565)[0m   [0;1mSELECT `login` FROM `users` WHERE (`users`.login = 'ivan') [0m
+  [4;35;1mSQL (0.000130)[0m   [0mSELECT `email` FROM `users` WHERE (`users`.email = 'ivan@example.com') [0m
+  [4;36;1mUser Create (0.000247)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `updated_at`, `crypted_password`, `remember_token_expires_at`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '8809d4f6bc62c16725971cc18c40f7b3d9e7dee6', '2009-02-18 22:07:13', 'ba8f1cc80127c2263409d74fe26b18f16dd8d7fa', NULL, NULL, 'ivan', 'ivan@example.com', '2009-02-18 22:07:13')[0m
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-02-18 17:07:13) [GET]
+  Session ID: 74d8ec7cf235b6f96b7bedb5a03f9a0c
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00527 (189 reqs/sec) | Rendering: 0.00307 (58%) | DB: 0.00337 (63%) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /session with {"commit"=>"Log in", "password"=>"generic", "login"=>"ivan"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-02-18 17:07:13) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Log in", "action"=>"create", "controller"=>"sessions", "login"=>"ivan", "password"=>"generic"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.000342)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'ivan') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://www.example.com/
+Completed in 0.00178 (561 reqs/sec) | DB: 0.00034 (19%) | 302 Found [http://www.example.com/session]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/session"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:07:13) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkmOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CEY=--c2bb61fa2bb7097b758e4792fe91d3bde96f4953
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mLocation Load (0.000198)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00009)
+Rendered resorts/_find (0.00058)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00297 (336 reqs/sec) | Rendering: 0.00241 (81%) | DB: 0.00020 (6%) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /blogs/new with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2009-02-18 17:07:14) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkmOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CFQ=--e65754c26b5ad03b428d9406b1bbe94840fd2760
+  Parameters: {"action"=>"new", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.000326)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 33) LIMIT 1[0m
+  [4;36;1mBlog Columns (0.052455)[0m   [0;1mSHOW FIELDS FROM `blogs`[0m
+Rendering template within layouts/admin
+Rendering blogs/new
+Rendered admin/_menu (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.06046 (16 reqs/sec) | Rendering: 0.00655 (10%) | DB: 0.05278 (87%) | 200 OK [http://www.example.com/blogs/new]
+REQUESTING PAGE: POST /blogs with {"commit"=>"Create", "blog"=>{"body"=>"body 1", "title"=>"title 1"}} and HTTP headers {"HTTP_REFERER"=>"/blogs/new"}
+
+
+Processing BlogsController#create (for 127.0.0.1 at 2009-02-18 17:07:14) [POST]
+  Session ID: BAh7CDoMdXNlcl9pZGkmOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--e6a754a27e54350ddb34cabef966018978a4d9c4
+  Parameters: {"commit"=>"Create", "blog"=>{"body"=>"body 1", "title"=>"title 1"}, "action"=>"create", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.000307)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 33) LIMIT 1[0m
+  [4;36;1mBlog Create (0.000167)[0m   [0;1mINSERT INTO `blogs` (`updated_at`, `title`, `body`, `created_at`) VALUES('2009-02-18 22:07:14', 'title 1', 'body 1', '2009-02-18 22:07:14')[0m
+Redirected to http://www.example.com/admin/blogs
+Completed in 0.00295 (338 reqs/sec) | DB: 0.00047 (16%) | 302 Found [http://www.example.com/blogs]
+REQUESTING PAGE: GET http://www.example.com/admin/blogs with {} and HTTP headers {"HTTP_REFERER"=>"/blogs"}
+
+
+Processing AdminController#blogs (for 127.0.0.1 at 2009-02-18 17:07:14) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkmOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIjQmxvZyB3
+YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsIRg==--960bd75fa124e8d39c6ef07607b56d1eb50a3f36
+  Parameters: {"action"=>"blogs", "controller"=>"admin"}
+  [4;35;1mUser Load (0.001013)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 33) LIMIT 1[0m
+  [4;36;1mBlog Load (0.000274)[0m   [0;1mSELECT * FROM `blogs` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering admin/blogs
+Rendered admin/_menu (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00780 (128 reqs/sec) | Rendering: 0.00289 (37%) | DB: 0.00129 (16%) | 200 OK [http://www.example.com/admin/blogs]
+  [4;35;1mSQL (0.002405)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET home/contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2009-02-18 17:07:14) [GET]
+  Session ID: 92934286c4cdd34696d6592cb95ee76d
+  Parameters: {"action"=>"contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/contact
+Rendered layouts/_static_banner (0.00008)
+Rendered home/_form_contact (0.00110)
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00295 (339 reqs/sec) | Rendering: 0.00279 (94%) | DB: 0.00249 (84%) | 200 OK [http://www.example.com/home/contact]
+REQUESTING PAGE: POST /peoples with {"commit"=>"Contact Me", "people"=>{"where"=>"contact", "name"=>"Ivan Acosta-Rubio", "phone"=>"3055984873", "email"=>"ivan@bakedweb.net"}} and HTTP headers {"HTTP_REFERER"=>"home/contact"}
+
+
+Processing PeoplesController#create (for 127.0.0.1 at 2009-02-18 17:07:14) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Contact Me", "action"=>"create", "controller"=>"peoples", "people"=>{"where"=>"contact", "name"=>"Ivan Acosta-Rubio", "phone"=>"3055984873", "email"=>"ivan@bakedweb.net"}}
+  [4;35;1mPeople Create (0.000345)[0m   [0mINSERT INTO `peoples` (`name`, `where`, `updated_at`, `phone`, `email`, `created_at`) VALUES('Ivan Acosta-Rubio', 'contact', '2009-02-18 22:07:14', 3055984873, 'ivan@bakedweb.net', '2009-02-18 22:07:14')[0m
+Redirected to http://www.example.com/home/thank_contact
+Completed in 0.00481 (207 reqs/sec) | DB: 0.00034 (7%) | 302 Found [http://www.example.com/peoples]
+REQUESTING PAGE: GET http://www.example.com/home/thank_contact with {} and HTTP headers {"HTTP_REFERER"=>"/peoples"}
+
+
+Processing HomeController#thank_contact (for 127.0.0.1 at 2009-02-18 17:07:14) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"action"=>"thank_contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/thank_contact
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00165 (606 reqs/sec) | Rendering: 0.00157 (95%) | DB: 0.00000 (0%) | 200 OK [http://www.example.com/home/thank_contact]
+  [4;36;1mSQL (0.000731)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000062)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET home/concierge/ with {} and HTTP headers {}
+
+
+Processing HomeController#concierge (for 127.0.0.1 at 2009-02-18 17:07:14) [GET]
+  Session ID: 114f8befdfc7f28448440171ff0719c4
+  Parameters: {"action"=>"concierge", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/concierge
+Rendered layouts/_static_banner (0.00008)
+Rendered home/_form_concierge (0.00105)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00288 (346 reqs/sec) | Rendering: 0.00274 (94%) | DB: 0.00079 (27%) | 200 OK [http://www.example.com/home/concierge/]
+REQUESTING PAGE: POST /peoples with {"commit"=>"let me know when it launches", "people"=>{"where"=>"concierge", "name"=>"Ivan Acosta-Rubio", "phone"=>"30499573830", "email"=>"ivan@bakedweb.net"}} and HTTP headers {"HTTP_REFERER"=>"home/concierge/"}
+
+
+Processing PeoplesController#create (for 127.0.0.1 at 2009-02-18 17:07:14) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"let me know when it launches", "action"=>"create", "controller"=>"peoples", "people"=>{"where"=>"concierge", "name"=>"Ivan Acosta-Rubio", "phone"=>"30499573830", "email"=>"ivan@bakedweb.net"}}
+  [4;36;1mPeople Create (0.000239)[0m   [0;1mINSERT INTO `peoples` (`name`, `where`, `updated_at`, `phone`, `email`, `created_at`) VALUES('Ivan Acosta-Rubio', 'concierge', '2009-02-18 22:07:14', 30499573830, 'ivan@bakedweb.net', '2009-02-18 22:07:14')[0m
+Redirected to http://www.example.com/home/thank_contact
+Completed in 0.00186 (536 reqs/sec) | DB: 0.00024 (12%) | 302 Found [http://www.example.com/peoples]
+REQUESTING PAGE: GET http://www.example.com/home/thank_contact with {} and HTTP headers {"HTTP_REFERER"=>"/peoples"}
+
+
+Processing HomeController#thank_contact (for 127.0.0.1 at 2009-02-18 17:07:14) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"action"=>"thank_contact", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/thank_contact
+Rendered layouts/_navegacion (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00149 (669 reqs/sec) | Rendering: 0.00142 (94%) | DB: 0.00000 (0%) | 200 OK [http://www.example.com/home/thank_contact]
+  [4;35;1mSQL (0.001679)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000060)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000188)[0m   [0mSELECT `login` FROM `users` WHERE (`users`.login = 'ivan') [0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mSELECT `email` FROM `users` WHERE (`users`.email = 'ivan@example.com') [0m
+  [4;35;1mUser Create (0.000151)[0m   [0mINSERT INTO `users` (`name`, `salt`, `updated_at`, `crypted_password`, `remember_token_expires_at`, `remember_token`, `login`, `email`, `created_at`) VALUES('', 'e3542fd7363f720c6d5839717d39f2d2361e5396', '2009-02-18 22:07:14', 'cf038bb15ee43303a6b87a287ab8670260a8c65c', NULL, NULL, 'ivan', 'ivan@example.com', '2009-02-18 22:07:14')[0m
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-02-18 17:07:14) [GET]
+  Session ID: 21b6aa7d3f8b61aa8368e6bbf6b0de2d
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00164 (609 reqs/sec) | Rendering: 0.00156 (94%) | DB: 0.00219 (133%) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /session with {"commit"=>"Log in", "password"=>"generic", "login"=>"ivan"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-02-18 17:07:14) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8cb29992088e3f034098113a49acd56151d5643a
+  Parameters: {"commit"=>"Log in", "action"=>"create", "controller"=>"sessions", "login"=>"ivan", "password"=>"generic"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.000289)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'ivan') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://www.example.com/
+Completed in 0.00232 (431 reqs/sec) | DB: 0.00029 (12%) | 302 Found [http://www.example.com/session]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/session"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 17:07:14) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGknOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CEY=--484af990e92143f9582495cf508c846de3db3961
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mLocation Load (0.000199)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.00008)
+Rendered resorts/_find (0.00057)
+Rendered layouts/_navegacion (0.00001)
+Rendered layouts/_footer (0.00001)
+Completed in 0.00271 (368 reqs/sec) | Rendering: 0.00217 (80%) | DB: 0.00020 (7%) | 200 OK [http://www.example.com/]
+  [4;36;1mClient Columns (0.004340)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Create (0.003552)[0m   [0mINSERT INTO `clients` (`city`, `work_phone`, `start_date`, `charge_return_date`, `zip`, `updated_at`, `credit_card_expiration`, `resort_sale_person`, `credit_card_type`, `credit_card`, `billing_name`, `billing_city`, `tts_sale_person`, `notes`, `client_pin`, `full_name_second`, `billing_state`, `home_phone`, `charge_date`, `billing_zip`, `payment_type`, `full_name`, `address`, `fee_paid`, `billing_address`, `contract_return_date`, `state`, `email`, `cancellation_date`, `created_at`) VALUES('miami', 30493094820, '2008-01-01', '2004-02-02', 33132, '2009-02-18 22:07:14', '12/02', 'pedro', 'visa', 1234567890, 'ivan', 'cuba', 'pedro', 'he is doing detox', '2323', 'bellatrix', 'HA', 3053349348, '2002-01-01', 33132, 'cash', 'ivan', 'our address 33132', 35000, 'my address', '2007-02-02', 'FL', 'ivan@bakedweb.net', '3004-02-02', '2009-02-18 22:07:14')[0m
+REQUESTING PAGE: GET /clients/17 with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2009-02-18 17:07:14) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGknOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIbTG9nZ2Vk
+IGluIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CFQ=--24b7b381498411604d25e52c1ad1c892707e92f9
+  Parameters: {"action"=>"show", "id"=>"17", "controller"=>"clients"}
+  [4;36;1mUser Load (0.000359)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 34) LIMIT 1[0m
+  [4;35;1mClient Load (0.000383)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 17) [0m
+Rendering template within layouts/admin
+Rendering clients/show
+Rendered admin/_menu (0.00002)
+Rendered layouts/_footer (0.00001)
+Completed in 0.01425 (70 reqs/sec) | Rendering: 0.01012 (71%) | DB: 0.00863 (60%) | 200 OK [http://www.example.com/clients/17]
+REQUESTING PAGE: GET /clients/print/17 with {} and HTTP headers {"HTTP_REFERER"=>"/clients/17"}
+
+
+Processing ClientsController#print (for 127.0.0.1 at 2009-02-18 17:07:14) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGknOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--a4fd1a218e2b814e538c0a548ba8168fb0529b8b
+  Parameters: {"action"=>"print", "id"=>"17", "controller"=>"clients"}
+  [4;36;1mUser Load (0.000335)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 34) LIMIT 1[0m
+  [4;35;1mClient Load (0.001815)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 17) [0m
+  [4;36;1mRoom Load (0.000273)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.client_id = 17) [0m
+Rendering clients/print
+Completed in 0.01495 (66 reqs/sec) | Rendering: 0.00667 (44%) | DB: 0.00242 (16%) | 200 OK [http://www.example.com/clients/print/17]
+  [4;35;1mSQL (0.000657)[0m   [0mROLLBACK[0m
