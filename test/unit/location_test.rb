@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + "/../test_helper"
 require 'shoulda'
 
-class LocationTest < Test::Unit::TestCase
+class TestLocation < Test::Unit::TestCase
 
   should_have_many :cities
   should_validate_uniqueness_of :name

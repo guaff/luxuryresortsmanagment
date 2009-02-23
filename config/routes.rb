@@ -20,6 +20,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   
   map.print '/print', :controller => 'clients', :action => 'print'
+  map.search_client 'search_client', :controller => 'admin', :action => 'search_client'
   map.resource :session
   map.resources :cities
   map.resources :locations

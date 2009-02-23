@@ -22,6 +22,7 @@ class AdminController < ApplicationController
   end
   
   def clients
+    @client = Client.new
     @clients = Client.paginate :page => params[:page], :order => 'full_name asc', :per_page => 10
   end
   
@@ -29,4 +30,7 @@ class AdminController < ApplicationController
     @blogs = Blog.paginate :page => params[:page], :per_page => 10
   end
   
+  def search_client
+    @clients = Client.find(:all, :conditions => ['full_name like ?', params[:search] ])
+  end
 end

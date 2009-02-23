@@ -149,6 +149,7 @@
 		</fieldset>
 	</div>
 <%= link_to 'Edit', edit_client_path(@client) %> | 
+<%=	link_to 'Add Room', :controller => 'rooms', :action => 'new', :room_client_id => @client.id %> |
 <%= link_to 'Print Contract', :action => 'print', :id => @client.id  %>
 
 

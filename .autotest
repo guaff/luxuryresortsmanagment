@@ -1,0 +1,6 @@
+Autotest.add_hook :initialize do |at|
+  unless ARGV.empty?
+    at.find_directories = ARGV.dup
+  end
+end
+

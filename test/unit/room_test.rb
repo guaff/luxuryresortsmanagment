@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + "/../test_helper"
 require 'shoulda'
 
-class RoomTest < ActiveSupport::TestCase
+class TestRoom < ActiveSupport::TestCase
   
   should_belong_to :resort
   

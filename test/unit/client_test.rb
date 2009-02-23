@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class ClientTest < ActiveSupport::TestCase
+class TestClient < ActiveSupport::TestCase
   
   should_have_many :rooms
   should_validate_presence_of :full_name, :full_name_second, :address, :city, :state,

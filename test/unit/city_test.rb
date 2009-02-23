@@ -1,10 +1,10 @@
 require File.dirname(__FILE__) + "/../test_helper"
 require 'shoulda'
 
-class CityTest < ActiveSupport::TestCase
+class TestCity < ActiveSupport::TestCase
   
   should_belong_to :location
-  should_have_many :resorts
+  should_have_many :resortsbb
   should_validate_uniqueness_of :name
   
   should_validate_presence_of :name, :description, :location_id
