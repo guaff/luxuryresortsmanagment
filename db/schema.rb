@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090218160722) do
+ActiveRecord::Schema.define(:version => 20090303153059) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20090218160722) do
     t.string   "location_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
-    t.integer  "image_file_size",    :limit => 11
+    t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
 
@@ -36,21 +36,21 @@ ActiveRecord::Schema.define(:version => 20090218160722) do
     t.string   "address"
     t.string   "city"
     t.string   "state"
-    t.integer  "zip",                    :limit => 11
-    t.integer  "home_phone",             :limit => 11
-    t.integer  "work_phone",             :limit => 11
+    t.integer  "zip"
+    t.integer  "home_phone"
+    t.integer  "work_phone"
     t.string   "email"
-    t.integer  "fee_paid",               :limit => 11
+    t.integer  "fee_paid"
     t.string   "payment_type"
     t.date     "charge_date"
-    t.integer  "credit_card",            :limit => 11
+    t.string   "credit_card",            :limit => 20
     t.string   "credit_card_type"
     t.string   "credit_card_expiration"
     t.string   "billing_name"
     t.string   "billing_address"
     t.string   "billing_city"
     t.string   "billing_state"
-    t.integer  "billing_zip",            :limit => 11
+    t.integer  "billing_zip"
     t.date     "start_date"
     t.date     "contract_return_date"
     t.date     "cancellation_date"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20090218160722) do
     t.datetime "updated_at"
     t.string   "image_file_name"
     t.string   "image_content_type"
-    t.integer  "image_file_size",    :limit => 11
+    t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
 
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(:version => 20090218160722) do
   create_table "peoples", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.integer  "phone",      :limit => 11
+    t.integer  "phone"
     t.string   "where"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -92,29 +92,29 @@ ActiveRecord::Schema.define(:version => 20090218160722) do
 
   create_table "resorts", :force => true do |t|
     t.string   "name"
-    t.integer  "city_id",                 :limit => 11
+    t.integer  "city_id"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_main_file_name"
     t.string   "photo_main_content_type"
-    t.integer  "photo_main_file_size",    :limit => 11
+    t.integer  "photo_main_file_size"
     t.datetime "photo_main_updated_at"
     t.string   "photo1_file_name"
     t.string   "photo1_content_type"
-    t.integer  "photo1_file_size",        :limit => 11
+    t.integer  "photo1_file_size"
     t.datetime "photo1_updated_at"
     t.string   "photo2_file_name"
     t.string   "photo2_content_type"
-    t.integer  "photo2_file_size",        :limit => 11
+    t.integer  "photo2_file_size"
     t.datetime "photo2_updated_at"
     t.string   "photo3_file_name"
     t.string   "photo3_content_type"
-    t.integer  "photo3_file_size",        :limit => 11
+    t.integer  "photo3_file_size"
     t.datetime "photo3_updated_at"
     t.string   "photo4_file_name"
     t.string   "photo4_content_type"
-    t.integer  "photo4_file_size",        :limit => 11
+    t.integer  "photo4_file_size"
     t.datetime "photo4_updated_at"
   end
 
@@ -122,15 +122,15 @@ ActiveRecord::Schema.define(:version => 20090218160722) do
     t.string   "code"
     t.string   "availability"
     t.string   "sale_or_rent"
-    t.integer  "price",              :limit => 11
+    t.integer  "price"
     t.string   "owner_name"
-    t.integer  "unit_size_id",       :limit => 11
-    t.integer  "resort_id",          :limit => 11
+    t.integer  "unit_size_id"
+    t.integer  "resort_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
     t.string   "image_content_type"
-    t.integer  "image_file_size",    :limit => 11
+    t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "client_id"
   end

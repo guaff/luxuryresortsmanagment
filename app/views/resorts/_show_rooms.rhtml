@@ -1,6 +1,7 @@
 <table class="admin">
   <tr>
     <th>Unit ID</th>
+		<th>Unit Size</th>
     <th>Availability</th>
     <th>Sale or rent</th>
 		<th>Price</th>
@@ -10,6 +11,7 @@
 <% for room in @rooms %>
   <tr>
     <td><%=h room.code %></td>
+		<td><%=h room.unit_size_id %></td>
     <td><%=h room.availability %></td>
     <td><%=h room.sale_or_rent %></td>
 		<td> 
