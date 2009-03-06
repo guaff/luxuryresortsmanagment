@@ -10,4 +10,12 @@ class Client < ActiveRecord::Base
                         :notes, :client_pin
                         
   validates_numericality_of  :zip, :home_phone, :work_phone, :fee_paid, :billing_zip, :fee_paid
+  
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['full_name LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
+  end
 end

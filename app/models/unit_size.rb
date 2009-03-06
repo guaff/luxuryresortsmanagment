@@ -1,4 +1,4 @@
 class UnitSize < ActiveRecord::Base
-  belongs_to :room
+  has_many :rooms
   validates_presence_of :name
 end

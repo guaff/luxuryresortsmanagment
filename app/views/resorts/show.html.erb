@@ -11,7 +11,7 @@
 <% render :partial => "amenities" %>
 
 <div class="rooms">
-	<% if @rooms.empty? %>
+	<% if @resort.rooms.empty? %>
 	<% else %>
 		<%= render :partial => "show_rooms" %>
 	<% end %>

@@ -18,7 +18,7 @@ class AdminController < ApplicationController
   end
   
   def rooms
-    @rooms = Room.paginate :page => params[:page],  :per_page => 10
+    @rooms = Room.paginate :page => params[:page],  :per_page => 10, :include => [:unit_size]
   end
   
   def clients
@@ -31,6 +31,6 @@ class AdminController < ApplicationController
   end
   
   def search_client
-    @clients = Client.find(:all, :conditions => ['full_name like ?', params[:search] ])
+    @clients = Client.search(params[:search])
   end
 end

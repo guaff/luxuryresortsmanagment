@@ -18,7 +18,7 @@ class ResortsController < ApplicationController
   # GET /resorts/1.xml
   def show
     @resort = Resort.find(params[:id])
-    @rooms = @resort.rooms.find(:all)
+    @rooms = @resort.rooms.find(:all, :include => [:unit_size])
     @room = Room.new
     @mailinglist = Mailinglist.new
     respond_to do |format|

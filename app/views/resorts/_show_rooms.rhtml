@@ -8,10 +8,10 @@
 		<th>Image</th>
   </tr>
 
-<% for room in @rooms %>
+<% for room in @resort.rooms %>
   <tr>
     <td><%=h room.code %></td>
-		<td><%=h room.unit_size_id %></td>
+		<td><%=h room.unit_size.name%></td>
     <td><%=h room.availability %></td>
     <td><%=h room.sale_or_rent %></td>
 		<td> 
