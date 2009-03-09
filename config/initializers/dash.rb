@@ -1,0 +1,1 @@
+Fiveruns::Dash::Rails.start(:production => '3bc14bc489874621f4df7ee4bc0f3a9b7b861156') if defined?(Fiveruns::Dash)
