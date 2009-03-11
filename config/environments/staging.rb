@@ -1,1 +1,1 @@
-including ENV['RAILS_ENV'] = 'staging'
+ENV['RAILS_ENV'] = 'staging'
