@@ -1,13 +1,13 @@
 <% if @resorts.empty? %>
 	<h4>Ups, we didn't find a resort for this city </h4>
-<% elsif @resorts.size < 6 %>
+<% elsif @resorts.size < 3 %>
 
 	<h2>Select one resort:</h2>
 	<div class="left">
 	<table width="260px" height="100%">
-	<% for city in @resorts %>
+	<% for resort in @resorts %>
   	<tr>
-    	<td class="oscura"><%= link_to city.name, city %></td>
+    	<td class="oscura"><%= link_to resort.name, resort %></td>
   	</tr>
 		<% end %>
 	</table>
@@ -18,9 +18,9 @@
 	<h2>Select one resort:</h2>
 	<div class="left">
 	<table width="260px" height="100%">
-	<% for city in @resorts[0..@resorts_count_divided] %>
+	<% for resort in @resorts[0..@resorts_count_divided] %>
   	<tr>
-    	<td class="oscura"><%= link_to city.name, city %></td>
+    	<td class="oscura"><%= link_to resort.name, resort %></td>
   	</tr>
 		<% end %>
 	</table>
@@ -28,9 +28,9 @@
 	
 	<div class="right" style="margin-left: 40px;">
 		<table width="260px" height="100%" float="right;">
-		<% for city in @resorts[@resorts_count_divided*2+1..@resorts_count_divided*3] %>
+		<% for resort in @resorts[@resorts_count_divided+1..@resorts_count_divided*2] %>
   	<tr>
-    	<td class="oscura"><%= link_to city.name, city %></td>
+    	<td class="oscura"><%= link_to resort.name, resort %></td>
   	</tr>
 		<% end %>
 		</table>
@@ -38,9 +38,9 @@
 	
 	<div class="right">
 		<table width="260px;" height="100%">
-		<% for city in @resorts[@resorts_count_divided*2+1..@resorts_count_divided*2] %>
+		<% for resort in @resorts[@resorts_count_divided*2+1..@resorts_count_divided*6] %>
   	<tr>
-    	<td class="oscura"><%= link_to city.name, city %></td>
+    	<td class="oscura"><%= link_to resort.name, resort %></td>
   	</tr>
 		<% end %>
 		</table>

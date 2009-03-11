@@ -7,6 +7,30 @@ Factory.define :city do |u|
   u.description 'This is the shit'
 end
 
+Factory.define :resort do |u|
+  u.city_id '1'
+  u.description 'wicked resort'
+  u.photo_main_file_name 'main'
+  u.photo_main_content_type 'image/jpeg'
+  u.photo_main_file_size '99999'
+  u.photo_main_updated_at
+  u.photo1_file_name 'main2'
+  u.photo1_content_type 'image/jpeg'
+  u.photo1_file_size '99999'
+  u.photo1_updated_at
+  u.photo2_file_name 'main3'
+  u.photo2_content_type 'image/jpeg'
+  u.photo2_file_size '99999'
+  u.photo2_updated_at
+  u.photo3_file_name 'main4'
+  u.photo3_content_type 'image/jpeg'
+  u.photo3_file_size '99999'
+  u.photo3_updated_at 
+   u.photo4_file_name 'main6'
+  u.photo4_content_type 'image/jpeg'
+  u.photo4_file_size
+  u.photo4_updated_at
+end
 
 Factory.define :user do |u|
   u.id
