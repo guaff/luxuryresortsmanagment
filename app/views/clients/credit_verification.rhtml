@@ -1,0 +1,14 @@
+<div style="width: 930px; margin: 0 auto;">
+<center><img src="/images/logo.jpg"></center>
+<center><h1>Credit Card Verification</h1></center>
+<p>I hereby authorize Luxury Resort Management to charge my credit card</p>
+<p>I understand that the one time lifetime administration charges in my credit card will appear as: Resort Advertising Network</p>
+<p>My credit card number is: <%= @client.credit_card %></p>
+<p>My credit card expires on: <%= @client.credit_card_expiration %></p>
+<p>The name which appears on my credit card is: <%= @client.billing_name %></p>
+<p>My Credit Card Billing Address is <%= @client.billing_address %>, <%= @client.billing_city%> <%= @client.billing_state %> <%= @client.billing_zip %></p>
+<p>I am an authorized signer on this account. By signing below I understand that the data services contracted for, will be signed immediately to expedite services for me and payment for the services. For email reply I certify that I am the person named above and I am signing this electronic document by typing in my name</p>
+<p style="margin-top: 140px;">authorized signature</p>
+<p>Date <%= @date %></p>
+
+<%= render :partial => 'layouts/footer'%> 

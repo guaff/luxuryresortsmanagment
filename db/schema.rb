@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090303153059) do
+ActiveRecord::Schema.define(:version => 20090316201405) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20090303153059) do
     t.string   "address"
     t.string   "city"
     t.string   "state"
-    t.integer  "zip"
+    t.string   "zip"
     t.integer  "home_phone"
     t.integer  "work_phone"
     t.string   "email"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(:version => 20090303153059) do
     t.string   "billing_address"
     t.string   "billing_city"
     t.string   "billing_state"
-    t.integer  "billing_zip"
+    t.string   "billing_zip"
     t.date     "start_date"
     t.date     "contract_return_date"
     t.date     "cancellation_date"
@@ -124,7 +124,7 @@ ActiveRecord::Schema.define(:version => 20090303153059) do
     t.string   "sale_or_rent"
     t.integer  "price"
     t.string   "owner_name"
-    t.integer  "unit_size_id"
+    t.integer  "unit_sizes_id"
     t.integer  "resort_id"
     t.datetime "created_at"
     t.datetime "updated_at"

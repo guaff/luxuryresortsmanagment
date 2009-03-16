@@ -9,7 +9,7 @@ class Client < ActiveRecord::Base
                         :cancellation_date, :charge_return_date, :tts_sale_person, :resort_sale_person,
                         :notes, :client_pin
                         
-  validates_numericality_of  :zip, :home_phone, :work_phone, :fee_paid, :billing_zip, :fee_paid
+  validates_numericality_of  :home_phone, :work_phone, :fee_paid, :fee_paid
   
   def self.search(search)
     if search

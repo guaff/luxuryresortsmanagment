@@ -73,4 +73,11 @@ class ClientsController < ApplicationController
     @date = Date.today
     render :layout => false
   end
+  
+  def credit_verification
+    @client = Client.find(params[:id])
+    @date = Date.today
+    render  :layout => false
+  end
+  
 end
