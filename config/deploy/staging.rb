@@ -21,7 +21,7 @@ set :git_enable_submodules, 1
 set :checkout, "export"
 
 # which environment to work in
-set :rails_env,    "staging"
+set :rails_env, "staging"
 
 # necessary for functioning on the (gs)
 default_run_options[:pty] = true
