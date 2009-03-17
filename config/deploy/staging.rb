@@ -33,7 +33,7 @@ role :db,  "#{domain}", :primary => true
 
 
 after "deploy:update_code".to_sym do
-  put File.read("config/database.yml.mt"), "#{release_path}/config/database.yml", :mode => 0444
+  put File.read("config/staging.yml"), "#{release_path}/config/database.yml", :mode => 0444
 end
 
 # update .htaccess rules after new version is deployed
