@@ -27,9 +27,19 @@ ActionMailer::Base.smtp_settings = {
   :user_name => "ivan@luxuryresortmanagement.com",
   :password => "01210323"
 }
-    
-require "will_paginate" 
-ExceptionNotifier.exception_recipients = %w(ivan@bakedweb.net)
 
+
+require "will_paginate" 
+
+# EXCEPTIONS NOTIFICATIONS CONFIGURATIONS
+ExceptionNotifier.exception_recipients = %w(ivan@bakedweb.net)
 ExceptionNotifier.sender_address = %("LRM Application Error" <apps_errors@bakedweb.net>)    
 ExceptionNotifier.email_prefix = "[APP] "  
+
+
+# FORMATING DATES 
+ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(
+  :default => '%m/%d/%Y',
+  :date_time12  => "%m/%d/%Y %I:%M%p",
+  :date_time24  => "%m/%d/%Y %H:%M"
+)
