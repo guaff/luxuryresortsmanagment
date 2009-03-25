@@ -70,3 +70,20 @@ Factory.define :client do |u|
     u.notes 'he is doing detox'
     u.client_pin '2323'
 end
+
+Factory.define :room do |u|
+  u.code '33137'
+  u.availability 'all year'
+  u.sale_or_rent  'rent'
+  u.price '500000'
+  u.owner_name 'Ivan Acosta-Rubio'
+  u.unit_size_id  '2'
+  u.resort_id '1'
+  u.created_at '2009-12-12'
+  u.updated_at '2009-12-12'
+  u.image_file_name 'main3'
+  u.image_content_type 'image/jpeg'
+  u.image_file_size '9999'
+  u.image_updated_at '2009-12-12'
+  u.client_id '1'
+end

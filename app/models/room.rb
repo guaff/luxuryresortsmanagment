@@ -17,4 +17,22 @@ class Room < ActiveRecord::Base
     
   validates_attachment_size :image, :less_than => 1.megabytes
   validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
+  
+  
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['full_name LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
+  end
+  
+  
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['code like ?', "%#{search}%"])
+    else
+      find(:all)
+    end
+  end
 end

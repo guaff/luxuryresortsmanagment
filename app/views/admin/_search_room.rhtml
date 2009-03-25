@@ -1,0 +1,6 @@
+<div class="search">
+	<% form_tag "/admin/search_room", :method => 'get' do  %>
+		<label>Search by room code:</label>
+		 <%= text_field :search, params[:search] %> <%= submit_tag 'search', :name => nil, :class => 'submit' %>
+	<% end %>
+</div>

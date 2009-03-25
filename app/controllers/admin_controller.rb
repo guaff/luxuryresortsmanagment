@@ -33,4 +33,9 @@ class AdminController < ApplicationController
   def search_client
     @clients = Client.search(params[:search])
   end
+  
+  def search_room
+    @rooms = Room.search(params[:search])
+    
+  end
 end
