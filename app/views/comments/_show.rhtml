@@ -1,0 +1,15 @@
+<table class="table_comments">
+  <tbody>
+    <tr>
+      <th width="150px">Who</th>
+      <th width="200px">When</th>
+      <th width="650px">Comment</th>
+    </tr>
+<% for comment in @comments %>
+    <tr>
+      <td><%= comment.author %></td>
+      <td><%= comment.created_at.to_formatted_s(:short)  %></td>
+      <td><%= comment.comment %></td>
+    </tr>
+<% end %>
+</table>

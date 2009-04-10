@@ -1,0 +1,8 @@
+<div class="lista_menu">
+  <ul>
+    <li><%= link_to 'Edit', edit_client_path(@client) %></li>
+    <li><%=	link_to 'Add Room', :controller => 'rooms', :action => 'new', :room_client_id => @client.id %></li> 
+    <li><%= link_to 'Print Contract', :action => 'print', :id => @client.id  %></li>
+    <li><%= link_to	'Credit Card Verification',	:action=>	'credit_verification',	:id	=>	@client.id	%></li>
+  </ul>
+</div>

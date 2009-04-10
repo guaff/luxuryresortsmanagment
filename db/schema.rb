@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090317155540) do
+ActiveRecord::Schema.define(:version => 20090410184553) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -59,6 +59,14 @@ ActiveRecord::Schema.define(:version => 20090317155540) do
     t.string   "resort_sale_person"
     t.text     "notes"
     t.string   "client_pin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "client_id"
+    t.string   "comment"
+    t.string   "author"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

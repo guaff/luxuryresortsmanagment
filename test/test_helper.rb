@@ -4,6 +4,7 @@ require 'test/rails'
 require 'test_help'
 require 'shoulda'
 require 'factory_girl'
+require 'redgreen'
 
 class Test::Rails::TestCase
   # Transactional fixtures accelerate your tests by wrapping each test method

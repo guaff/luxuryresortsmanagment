@@ -35,7 +35,7 @@ class AdminController < ApplicationController
   end
   
   def search_room
-    @rooms = Room.search(params[:search])
+    @rooms = Room.search(params[:room_number])
     
   end
 end
