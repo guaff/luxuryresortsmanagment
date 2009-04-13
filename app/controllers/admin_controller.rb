@@ -24,6 +24,7 @@ class AdminController < ApplicationController
   def clients
     @client = Client.new
     @clients = Client.paginate :page => params[:page], :order => 'full_name asc', :per_page => 10
+    @today = Date.today
   end
   
   def blogs

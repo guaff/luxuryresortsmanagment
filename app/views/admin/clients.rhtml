@@ -11,10 +11,16 @@
 		<th>show</th>
 		<th>edit</th>
 		<th>destroy</th>
+
   </tr>
 
 <% for client in @clients %>
-  <tr>
+     <!-- should we refactor this into the model -->
+     <% if client.concierge_accepted == true && client.concierge_renewal < @today  %>
+      <tr class="expired">
+     <% else %>
+      <tr>
+     <% end %>
     <td><%=h client.full_name %></td>
     <td><%=h client.start_date %></td>
     <td><%=h client.contract_return_date %></td>
@@ -23,6 +29,7 @@
 		<td><%= link_to 'show', client %></td>
     <td><%= link_to 'Edit', edit_client_path(client) %></td>
     <td><%= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete %></td>
+
   </tr>
 <% end %>
 </table>

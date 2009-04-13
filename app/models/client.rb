@@ -19,4 +19,6 @@ class Client < ActiveRecord::Base
       find(:all)
     end
   end
+  
+  
 end

@@ -135,5 +135,6 @@ legend{ padding: 8px; font-size: 18px; background: #857461; color: white;}
 
 /* CLIENTS */
 
+.expired{ background-color: #ffb1ab;}
 .table_comments{ margin-top: 15px;}
 .table_comments td, .table_comments th{ padding: 15px;}
