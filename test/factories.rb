@@ -41,6 +41,7 @@ Factory.define :user do |u|
 end
 
 Factory.define :client do |u|
+    u.id 
     u.full_name  "ivan"
     u.full_name_second  "bellatrix"
     u.address  "our address 33132"
@@ -69,6 +70,8 @@ Factory.define :client do |u|
     u.resort_sale_person 'pedro'
     u.notes 'he is doing detox'
     u.client_pin '2323'
+    u.concierge_accepted '1'
+    u.concierge_renewal '2008-1-1'
 end
 
 Factory.define :room do |u|
@@ -86,4 +89,8 @@ Factory.define :room do |u|
   u.image_file_size '9999'
   u.image_updated_at '2009-12-12'
   u.client_id '1'
+end
+
+Factory.define :unit_size do |u|
+  u.name 'PentHouse'
 end

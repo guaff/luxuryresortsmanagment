@@ -82,4 +82,24 @@ class ClientsController < ApplicationController
     render  :layout => false
   end
   
+  def email_welcome_package
+    @client = Client.find(params[:id])
+    @rooms = @client.rooms.find(:all)
+    
+    if @rooms == nil 
+      flash[:notice] = "You must have a room associated with this client"
+      redirect_to :back
+    else 
+      @date = Date.today
+
+      ClientMailer.deliver_welcome_package(@client)
+      ClientMailer.deliver_contract(@client, @rooms)
+      ClientMailer.deliver_credit_card_verification(@client)
+
+      flash[:notice] = "Welcome Package was email suscesfully"
+      redirect_to :back
+    end
+
+  end
+  
 end

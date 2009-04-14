@@ -1,0 +1,108 @@
+<table style="border-collapse: collapse;" id="AutoNumber5" align="center" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" width="650">
+  <tbody>
+		<tr>
+    	<td width="100%">
+    		<table style="border-collapse: collapse;" id="AutoNumber1" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" height="17" width="100%">
+      		<tbody>
+						<tr>
+							<td rowspan="2" height="1" width="50%"><b>
+								<font face="Arial" size="3"><%= select_tag :company, "<option>select one</option<option>Luxury Resort Mgmt</option><option>thetimeshared</option><option>Royal Marketing Group</option><option>Resort Advertising Network</option>", :style => "height: 20px; border: 0px; font-size: 16px; margin-left: -3px", :onBlur => "setName()" %></font>
+								</b><font face="Arial" size="2"><br>
+        				101 N Riverside Drive <br/>
+								Lighthouse Point FL 33064<br/>
+	 							Phone 866.932.7918 Fax 954.773.2135</font>
+							</td>
+        			<td rowspan="2" height="1" width="16%"></td>
+        			<td height="1" width="84%">
+        			<p align="left"><font face="Arial" size="4"><b>Listing Confirmation</b></font></p></td>
+      		</tr>
+      		<tr>
+        		<td height="28" width="84%">
+        			<table id="AutoNumber2" style="border-collapse: collapse;" border="1" bordercolor="#000000" cellpadding="0" cellspacing="0" width="100%">
+          			<tbody>
+									<tr>
+            				<td align="center"><b><font face="Arial" size="2">DATE</font></b></td>
+          </tr>
+          <tr align="center">
+            <td align="center&quot;"><input type="text" value='<%= @date %>' style="border: 0px;"></td>
+          </tr>
+        </tbody></table>
+        </td>
+      </tr>
+    </tbody></table>
+<br>
+    <table style="border-collapse: collapse;" id="AutoNumber3" border="1" bordercolor="#111111" cellpadding="5" cellspacing="0" height="44" width="28%">
+      <tbody><tr>
+        <td height="26" width="100%"><b><font size="2">&nbsp;BILL 
+        TO</font></b></td>
+      </tr>
+      <tr>
+        <td height="17" width="100%"><font face="arial" size="2"><%= @client.full_name %><br><%= @client.address %>, <%= @client.city %>.<br/><%= @client.state %>. <%= @client.zip%> </font></td>
+      </tr>
+    </tbody></table>
+<br>
+    <table style="border-collapse: collapse;" id="AutoNumber4" border="1" bordercolor="#111111" cellpadding="3" cellspacing="1" width="100%">
+      <tbody><tr>
+        <td align="center" width="11%"><font face="Arial" size="1">ACCOUNT #</font></td>
+        <td align="center" width="8%"><font face="Arial" size="1">RESORT</font></td>
+        <td align="center" width="11%"><font face="Arial" size="1">UNIT</font></td>
+        <td align="center" width="11%"><font face="Arial" size="1">SEASON</font></td>
+        <td align="center" width="11%"><font face="Arial" size="1">AMOUNT</font></td>
+        <td align="center" width="12%"><font face="Arial" size="1">SALE/RENT</font></td>
+      </tr>
+      <!-- TODO: REFACTOR THIS TO ADD ROOMS => file => room_refactor  -->
+      <% for room in @rooms %>
+      	<% resort = Resort.find(room.resort_id)%>
+      	<% unit_size = UnitSize.find(room.unit_size_id)%>
+      <tr align="center">
+        <td width="11%"><font face="Arial" size="1"><%= room.code %></font></td>
+        <td width="8%"><font face="Arial" size="1"><%= resort.name %></font></td>
+        <td width="11%"><font face="Arial" size="1"><%= unit_size.name %></font></td>
+        <td width="11%"><font face="Arial" size="1"><%= room.availability %></font></td>
+        <td width="11%"><font face="Arial" size="1"><%= room.price %></font></td>
+        <td width="12%"><font face="Arial" size="1"><%= room.sale_or_rent %></font></td>
+      </tr>
+      <% end %>
+      <tr>
+        <td colspan="2" width="26%"><font face="Arial" size="1">CREDIT CARD NUMBER</font></td>
+        <td colspan="2" width="52%"><font face="Arial" size="1">NOTES</font></td>
+        <td colspan="2" width="23%"><font face="Arial" size="1">FEE PAID</font></td>
+      </tr>
+      <tr>
+        <td colspan="2" width="26%"><font face="Arial" size="1"><%= @client.credit_card %></font></td>
+        <td colspan="2" width="52%"><font face="Arial" size="1"><%= @client.notes %></font></td>
+        <td colspan="2" width="23%"><font face="Arial" size="1"><%= @client.fee_paid %></font></td>
+      </tr>
+    </tbody>
+</table>
+<br>
+    <center><font face="Arial" size="2"><b>This is a computerized description of your advertised listing. If any of the information is incorrect please make changes and return it by Mail or FAX.</b></font></center><p></p>
+<br>
+
+		<center><p><strong>Dear customer please note that the charge on your credit card will appear as:<br/> RESORT ADVERTISING NETWORK.</strong></p></center>
+    <font face="Arial" size="3"><b><center>TERMS AND CONDITIONS OF ADVERTISING AGREEMENT</center></b></font>
+    <ol style="font-size: 12px; line-height: 25px">
+			<li>I am aware that <input type="text" id="company_r" name="company" style="border:0px"> is an advertising and marketing company and is not a real estate broker. That any and all business contracted is for the sole purpose of advertising and marketing said product.</li>
+			<li>The above Fee is a one-time Fee and is for the sole purpose of including my product listing information in the <input type="text" id="company_rr" name="company" style="border: 0px;"> travel industry database and used in conjunction with <input type="text" id="company_rrr" name="company" style="border: 0px;"> for 60 days. I may extend the service at no additional costs by notifying Resorts Advertising Network (RAN). Resorts Advertising Network (RAN) does not earn a commission on these services and there will not be any additional fees. I realize that no one can guarantee my product will be sold or rented in any specific amount of time. </li>
+			<li><input type="text" id="company_rrrr" name="company" style="border: 0px;"> realizes that circumstances change and therefore if I decide not to market my product I will notify <input type="text" id="company_rrrrr" name="company" style="border: 0px;"> in writing within 14 days of the above date to withdraw my property. I understand that there is a $50 cancellation fee for the costs of creating the listing. </li>
+			<li>This agreement constitutes the complete and final agreement with <input type="text" id="company_rrrrrr" name="company" style="border: 0px;"> and supersedes all prior proposals, agreements, communications or other representations. I acknowledge that the advertising Fee was paid by the credit card referenced above, and will constitute all Fees paid and due <input type="text" id="company_rrrrrrr" name="company" style="border: 0px;">.</li>
+			<li>As a VIP member of Luxury Resort Management you will receive with your package the Luxury Concierge service membership card. For the Luxury Concierge services please check below for an annual fee of $69.99 to receive our world class premier 24 hour concierge service which will be automatically renewed annually for the above guaranteed promotional rate. Exclusive benefits available with this service include: airline tickets, worldwide car rentals, Premier cruises, luxury yachts, etc…… for a complete list of services or additional program information please call us at 877-237-1291. <input type="checkbox" name="team" value="team" checked></li>
+			</ol>
+
+
+
+</td></tr></tbody></table>
+
+<script type="text/javascript">
+	function setName()
+	{
+		$name = document.getElementById("company").value;
+		document.getElementById("company_r").value = $name;
+		document.getElementById("company_rr").value = $name;
+		document.getElementById("company_rrr").value = $name;
+		document.getElementById("company_rrrr").value = $name;
+		document.getElementById("company_rrrrr").value = $name;
+		document.getElementById("company_rrrrrr").value = $name;
+		document.getElementById("company_rrrrrrr").value = $name;
+	}
+</script>

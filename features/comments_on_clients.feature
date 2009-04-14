@@ -6,5 +6,9 @@ Feature: comments in client records
  Scenario: Adding a comment to a client
    Given a user is logged in as "admin"
    Given I am on the client show page
-   When I fill in "comment_comment" with "title 1"
+   When I fill in "comment_comment" with "This is my comment"
+   And I press "create"
+   Then I should see "This is my comment"
+   
+   
    

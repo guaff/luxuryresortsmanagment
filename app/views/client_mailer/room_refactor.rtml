@@ -1,0 +1,12 @@
+<% for room in @rooms %>
+	<% resort = Resort.find(room.resort_id)%>
+	<% unit_size = UnitSize.find(room.unit_size_id)%>
+<tr align="center">
+  <td width="11%"><font face="Arial" size="1"><%= room.code %></font></td>
+  <td width="8%"><font face="Arial" size="1"><%= resort.name %></font></td>
+  <td width="11%"><font face="Arial" size="1"><%= unit_size.name %></font></td>
+  <td width="11%"><font face="Arial" size="1"><%= room.availability %></font></td>
+  <td width="11%"><font face="Arial" size="1"><%= room.price %></font></td>
+  <td width="12%"><font face="Arial" size="1"><%= room.sale_or_rent %></font></td>
+</tr>
+<% end %>
