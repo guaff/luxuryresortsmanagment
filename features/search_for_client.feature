@@ -12,11 +12,12 @@ Feature: Searching function in admin
 		
 	Scenario: Searching for a room
   	Given a user is logged in as "admin"
-		Given I am on the admin room page
-		Then I should see "search"
+		And I am on the admin room page
+	  And there is a room with code "33137"
+	  Then I should see "Search by room code"
 	  When I fill in "search_" with "33137"
 		And I press "search"
-		Then I should see "ivan"
+		Then I should see "33137"
 		
 	
 

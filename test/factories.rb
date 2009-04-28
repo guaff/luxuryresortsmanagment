@@ -87,3 +87,7 @@ Factory.define :room do |u|
   u.image_updated_at '2009-12-12'
   u.client_id '1'
 end
+
+Factory.define :unit_size do |u|
+  u.name 'penthouse'
+end

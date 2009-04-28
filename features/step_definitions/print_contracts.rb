@@ -1,6 +1,4 @@
 Given /^I am on the show client page$/ do
-  #client = Factory.create(:client, :full_name => "pedro")
-  #Factory.create(:client, :full_name => 'ivan')
   @client = Client.create!(
     :full_name => "ivan",
     :full_name_second => "bellatrix",

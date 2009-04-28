@@ -1,3 +1,12 @@
+Given /^I am on the full view of a resort$/ do
+  florida = Factory(:city, :name => "florida", :id => '1')
+  resort = Factory(:resort, :name => 'resort1', :id => '1',  :resort_id => '1')
+  unit_size = Factory(:unit_size, :id => '1')
+  rooom = Factory(:room, :id => '1', :resort_id => '1')
+  visit '/resorts/1/'
+end
+
+
 Given /^I am showing florida with one resort$/ do
   florida = Factory(:city, :name => "florida", :id => '1')
   resort1 = Factory(:resort, :name => 'resort1')

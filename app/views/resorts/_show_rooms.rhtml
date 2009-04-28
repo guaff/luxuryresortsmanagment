@@ -6,6 +6,7 @@
     <th>Sale or rent</th>
 		<th>Price</th>
 		<th>Image</th>
+		<th>Interested?</th>
   </tr>
 
 <% for room in @resort.rooms %>
@@ -28,6 +29,7 @@
 			<%= image_tag room.image.url(:thumb) %>
 			<% end%>
 		</td>
+		<td>more info</td>
   </tr>
 <% end %>
 </table>
