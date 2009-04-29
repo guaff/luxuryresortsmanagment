@@ -148,10 +148,13 @@
 			</div>
 		</fieldset>
 	</div>
-<%= link_to 'Edit', edit_client_path(@client) %>
-<%=	link_to 'Add Room', :controller => 'rooms', :action => 'new', :room_client_id => @client.id %> 
-<%= link_to 'Print Contract', :action => 'print', :id => @client.id  %>
-<%= link_to	'Credit Card Verification',	:action=>	'credit_verification',	:id	=>	@client.id	%>
+<%= render :partial => 'bottom_menu' %>
+
+<fieldset>
+  <legend>Comments:</legend>  
+  <%= render :partial => 'comments/new' %>
+  <%= render :partial => 'comments/show' %>
+</fieldset>
 
 
 

@@ -11,4 +11,14 @@ class Notifier < ActionMailer::Base
           :body => render_message("concierge")
   end
   
+  def send_express_interest(room)
+    subject         "Somebody is interested"
+    recipients      "contracts@luxuryresortmanagement.com"
+    from            "contracts@luxuryresortmanagement.com"
+    sent_on         Time.now
+    body            :room => room
+    content_type    "text/html"
+  
+  end
+  
 end

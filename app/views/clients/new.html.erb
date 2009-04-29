@@ -67,6 +67,14 @@
 			  </p>
 		</div>
 		<div class="right" style="margin-right: 150px">
+		    <p>
+		      <%= f.label :concierge_service, 'Accepted Concierge Service' %><br/>
+		      <%= f.check_box :concierge_accepted %>
+		    </p>
+		    <p>
+		      <%= f.label :concierge_renewal, 'Reweal date for concierge service' %><br/>
+		      <%= f.date_select :concierge_renewal %>
+		    </p>
 			  <p>
 			    <%= f.label :fee_paid %><br />
 			    <%= f.text_field :fee_paid %>

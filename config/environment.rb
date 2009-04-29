@@ -19,17 +19,16 @@ Rails::Initializer.run do |config|
 
 end
 
+# EMAIL ACCOUNT CONFIG 
+
 ActionMailer::Base.smtp_settings = {
   :address => "smtp.gmail.com",
   :port => 587,
   :domain => "luxuryresortmanagement.com",
   :authentication => :plain,
-  :user_name => "ivan@luxuryresortmanagement.com",
-  :password => "01210323"
+  :user_name => "contracts@luxuryresortmanagement.com",
+  :password => "letmein"
 }
-
-
-require "will_paginate" 
 
 # EXCEPTIONS NOTIFICATIONS CONFIGURATIONS
 ExceptionNotifier.exception_recipients = %w(ivan@bakedweb.net)
@@ -43,3 +42,6 @@ ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(
   :date_time12  => "%m/%d/%Y %I:%M%p",
   :date_time24  => "%m/%d/%Y %H:%M"
 )
+
+
+require "will_paginate" 

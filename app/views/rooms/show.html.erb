@@ -22,5 +22,5 @@
   <%=h @room.price %>
 </p>
 
-<%= link_to 'Express Interest', :controller => 'rooms', :action => :express_interest %>
+<%= link_to 'Express Interest', :controller => 'rooms', :action => :express_interest, :id => @room.id %>
 <%= link_to 'Back', :back %>

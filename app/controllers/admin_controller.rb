@@ -24,6 +24,7 @@ class AdminController < ApplicationController
   def clients
     @client = Client.new
     @clients = Client.paginate :page => params[:page], :order => 'full_name asc', :per_page => 10
+    @today = Date.today
   end
   
   def blogs
@@ -35,7 +36,7 @@ class AdminController < ApplicationController
   end
   
   def search_room
-    @rooms = Room.search(params[:search])
+    @rooms = Room.search(params[:room_number])
     
   end
 end

@@ -18,4 +18,3 @@ Feature: People have to register on contact and concierge
 		And I fill in "phone" with "30499573830"
 		And I press "let me know when it launches"
 		Then I should see "Thank you for contacting us, We'll be in touch"
-

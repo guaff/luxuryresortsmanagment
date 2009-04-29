@@ -81,6 +81,9 @@ class RoomsController < ApplicationController
   end
   
   def express_interest
+    @room = Room.find(params[:id])
+    
+    Notifier.deliver_send_express_interest(@room)
     flash[:notice] = "Thank you for expressing interest in this property. We've been notified about it"
     redirect_to :back
   end

@@ -1,6 +1,7 @@
 class Client < ActiveRecord::Base
 
   has_many :rooms
+  has_many :comments
   
   validates_presence_of :full_name, :full_name_second, :address, :city, :state, :zip, :home_phone, 
                         :work_phone, :email, :fee_paid, :payment_type, :charge_date, :credit_card, 
@@ -18,4 +19,6 @@ class Client < ActiveRecord::Base
       find(:all)
     end
   end
+  
+  
 end

@@ -7,5 +7,5 @@ Feature: Add a room from full client view
     Given a user is logged in as "admin"
 		Given I am on the show client page
 		And I click "Add Room"
-		#And I fill 
+		
   

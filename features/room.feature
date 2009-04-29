@@ -11,3 +11,6 @@ Feature: Ability to express interest in a room
     Then I should see "Back"
     When I follow "express interest"
     Then I should see "Thank you for expressing interest in this property. We've been notified about it"
+    Then I should receive an emails
+    When I open the email
+    Then I should see "33137"

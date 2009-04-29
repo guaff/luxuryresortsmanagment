@@ -119,6 +119,9 @@ tr{ background-color: #f8f6f2; width: 100%; }
 #add_room_form input, #add_room_form textarea, #room_image{ background: white;}
 #add_room_form select{ background: white;}
 
+fieldset{ border: 0; padding: 10px;}
+legend{ padding: 8px; font-size: 18px; background: #857461; color: white;}
+
 /* PAGINATION */
 
 .pagination{ color: #857461; margin-top: 30px;}
@@ -126,7 +129,12 @@ tr{ background-color: #f8f6f2; width: 100%; }
 /* BLOG */ 
 
 .wraper_blog{ width: 600px;}
-
 .title_blog{ margin-top: 15px; font-weight: bold; background: #fafafa; padding: 10px;}
 .body_blog{ line-height: 25px; text-align: justify; margin-bottom: 60px;}
 .date_blog{ font-size: 10px;}
+
+/* CLIENTS */
+
+.expired{ background-color: #ffb1ab;}
+.table_comments{ margin-top: 15px;}
+.table_comments td, .table_comments th{ padding: 15px;}
