@@ -28,6 +28,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.home '', :controller => 'home', :action => 'index'
   map.search_city '/search_city', :controller => 'home', :action => 'search_city'
+  map.express_interest '/express_interest', :controller => 'rooms', :action => 'express_interest'
   
   # The priority is based upon order of creation: first created -> highest priority.
  

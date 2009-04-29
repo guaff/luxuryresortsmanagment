@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
 
-  before_filter :login_required
+  before_filter :login_required, :except => ['show', 'express_interest']
   
   def index
     @rooms = Room.find(:all)
@@ -78,5 +78,10 @@ class RoomsController < ApplicationController
       format.html { redirect_to :controller => 'admin', :action => 'rooms' }
       format.xml  { head :ok }
     end
+  end
+  
+  def express_interest
+    flash[:notice] = "Thank you for expressing interest in this property. We've been notified about it"
+    redirect_to :back
   end
 end

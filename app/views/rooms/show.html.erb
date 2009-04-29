@@ -1,4 +1,8 @@
 <p>
+  <b>Owner:</b>
+  <%=h @room.client.full_name %>
+</p>
+<p>
   <b>Code:</b>
   <%=h @room.code %>
 </p>
@@ -13,6 +17,10 @@
   <%=h @room.sale_or_rent %>
 </p>
 
+<p>
+  <b>Price:</b>
+  <%=h @room.price %>
+</p>
 
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+<%= link_to 'Express Interest', :controller => 'rooms', :action => :express_interest %>
+<%= link_to 'Back', :back %>
