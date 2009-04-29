@@ -9,7 +9,10 @@ Feature: Ability to express interest in a room
     When I follow "more info"
     Then I should see "Ivan Acosta-Rubio"
     Then I should see "Back"
-    When I follow "express interest"
+    When I fill in "interested_name" with "Bellatrix"
+    And I fill in "interested_email" with "bellatrix@bakedweb.net"
+    And I fill in "interested_phone_number" with "305555555"
+    When I press "express interest"
     Then I should see "Thank you for expressing interest in this property. We've been notified about it"
     Then I should receive an emails
     When I open the email

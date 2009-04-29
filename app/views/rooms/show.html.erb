@@ -1,26 +1,39 @@
-<p>
-  <b>Owner:</b>
-  <%=h @room.client.full_name %>
-</p>
-<p>
-  <b>Code:</b>
-  <%=h @room.code %>
-</p>
+<fieldset>
+  <legend>Full Room Information</legend>  
+    <p>
+      <b>Owner:</b>
+      <%=h @room.client.full_name %>
+    </p>
+    <p>
+      <b>Code:</b>
+      <%=h @room.code %>
+    </p>
 
-<p>
-  <b>Availability:</b>
-  <%=h @room.availability %>
-</p>
+    <p>
+      <b>Availability:</b>
+      <%=h @room.availability %>
+    </p>
 
-<p>
-  <b>Sale or rent:</b>
-  <%=h @room.sale_or_rent %>
-</p>
+    <p>
+      <b>Sale or rent:</b>
+      <%=h @room.sale_or_rent %>
+    </p>
 
-<p>
-  <b>Price:</b>
-  <%=h @room.price %>
-</p>
+    <p>
+      <b>Price:</b>
+      <%=h @room.price %>
+    </p>
 
-<%= link_to 'Express Interest', :controller => 'rooms', :action => :express_interest, :id => @room.id %>
-<%= link_to 'Back', :back %>
+    <%= link_to 'Back', :back %>
+</fieldset>
+
+<fieldset>
+  <legend>Are you interest in this unit?</legend>  
+  <% form_tag '/express_interest' do%>
+    <p><label>Your Name:</label><br/><%= text_field :interested, 'name' %></p>
+    <p><label>Your Email:</label><br/><%= text_field :interested, 'email' %></p>
+    <p><label>Phone Number:</label><br/><%= text_field :interested, 'phone_number' %></p>
+    <p><%= hidden_field :room, 'id', :value => @room.id %>
+      <%= submit_tag 'express interest'%></p>
+  <% end %>
+</fieldet>

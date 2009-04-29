@@ -17,7 +17,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { }
       format.xml  { render :xml => @room }
     end
   end
@@ -81,9 +81,12 @@ class RoomsController < ApplicationController
   end
   
   def express_interest
-    @room = Room.find(params[:id])
+    @room = Room.find(params[:room][:id])
+    @name = params[:interested][:name]
+    @phone = params[:interested][:phone]
+    @email = params[:interested][:email]
     
-    Notifier.deliver_send_express_interest(@room)
+    Notifier.deliver_send_express_interest(@room, @name, @email, @phone)
     flash[:notice] = "Thank you for expressing interest in this property. We've been notified about it"
     redirect_to :back
   end
