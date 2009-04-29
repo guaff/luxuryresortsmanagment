@@ -83,10 +83,10 @@ class RoomsController < ApplicationController
   def express_interest
     @room = Room.find(params[:room][:id])
     @name = params[:interested][:name]
-    @phone = params[:interested][:phone]
+    @phone_number = params[:interested][:phone_number]
     @email = params[:interested][:email]
     
-    Notifier.deliver_send_express_interest(@room, @name, @email, @phone)
+    Notifier.deliver_send_express_interest(@room, @name, @email, @phone_number)
     flash[:notice] = "Thank you for expressing interest in this property. We've been notified about it"
     redirect_to :back
   end

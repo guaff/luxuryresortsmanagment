@@ -6316,3 +6316,56 @@ Rendering rooms/show
 Rendered layouts/_navegacion (0.5ms)
 Rendered layouts/_footer (0.4ms)
 Completed in 47ms (View: 35, DB: 4) | 200 OK [http://127.0.0.1/rooms/1]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-04-29 12:17:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (2.0ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (1.0ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 1) [0m
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 35ms (View: 24, DB: 4) | 200 OK [http://127.0.0.1/rooms/1]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-04-29 12:17:52) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"Ivan", "phone_number"=>"30555555", "email"=>"ivan@bakedweb.net"}, "authenticity_token"=>"94089b304f692785d3b80da46e7196e66a9a55a3", "room"=>{"id"=>"1"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.4ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 1) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Wed, 29 Apr 2009 12:17:52 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33137</b></p>
+<p>Name: Ivan</p>
+<p>Email: ivan@bakedweb.net</p>
+<p>Phone: </p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/1
+Completed in 3557ms (DB: 4) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-04-29 12:17:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.3ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (1.6ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 1) [0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 43ms (View: 31, DB: 4) | 200 OK [http://127.0.0.1/rooms/1]
