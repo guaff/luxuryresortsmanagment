@@ -1,0 +1,96 @@
+<div id="add_room_form">
+	<fieldset>
+		<legend>Please fill out the form as accurately as possible.</legend>
+			<% form_for(@client) do |f| %>
+			  <%= f.error_messages %>
+			
+			<div class="left">
+			  <p>
+			    <%= f.label :full_name %><br />
+			    <%= f.text_field :full_name %>
+			  </p>
+			  <p>
+			    <%= f.label :address %><br />
+			    <%= f.text_field :address %>
+			  </p>
+			  <p>
+			    <%= f.label :city %><br />
+			    <%= f.text_field :city %>
+			  </p>
+			  <p>
+			    <%= f.label :state %><br />
+			    <%= f.text_field :state %>
+			  </p>
+			  <p>
+			    <%= f.label :zip %><br />
+			    <%= f.text_field :zip %>
+			  </p>			  
+			    			
+		</div>
+		<div class="right" style="margin-right: 150px">
+		      
+		      <%= f.hidden_field :start_date, :value => Date.today %>
+			  
+			    <%= f.hidden_field :contract_return_date, :value => Date.today %>
+			  
+			    <%= f.hidden_field :cancellation_date, :value => Date.today + 1.year %>
+			
+			    <%= f.hidden_field :charge_return_date, :value => Date.today + 1.year %>
+			    
+			    <%= f.hidden_field :tts_sale_person, :value => "physical card" %>
+			  
+			    <%= f.hidden_field :client_pin, :value => "physical card" %>
+          
+          
+		      <%= f.hidden_field :concierge_accepted, :checked => "checked" %>
+
+		      <%= f.hidden_field :concierge_renewal, :value => Date.today + 1.year %>
+
+			    <%= f.hidden_field :fee_paid, :value => '0' %>
+			  
+					<%= f.hidden_field :payment_type, :value => 'none' %>
+	
+			    <%= f.hidden_field :charge_date, :value => Date.today %>
+			  
+			    <%= f.hidden_field :credit_card , :value => '000000000000' %>
+			    
+					<%= f.hidden_field :credit_card_type, :value => 'none' %>
+
+			    <%= f.hidden_field :credit_card_expiration, :value => '0000' %>
+
+			    <%= f.hidden_field :billing_name, :value => 'none' %>
+
+			    <%= f.hidden_field :billing_address, :value => 'none' %>
+
+			    <%= f.hidden_field :billing_city, :value => 'none' %>
+
+			    <%= f.hidden_field :billing_state, :value => 'none' %>
+
+			    <%= f.hidden_field :billing_zip, :value => '00000' %>
+
+			    <%= f.hidden_field :resort_sale_person, :value => 'physical card' %>
+			    <%= f.hidden_field :notes, :value => 'it comes from the physical card promotion'%>
+			  
+        <p>
+			    <%= f.label :full_name_second %><br />
+			    <%= f.text_field :full_name_second %>
+			  </p>
+			  <p>
+			    <%= f.label :home_phone %><br />
+			    <%= f.text_field :home_phone %>
+			  </p>
+			  <p>
+			    <%= f.label :work_phone %><br />
+			    <%= f.text_field :work_phone %>
+			  </p>
+			  <p>
+			    <%= f.label :email %><br />
+			    <%= f.text_field :email %>
+			  </p>
+			  <p>
+			    <%= f.submit "Create" , :class => "submit"%>
+			  </p>
+			</div>
+			<% end %>
+	</fieldset>
+</div>

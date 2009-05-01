@@ -27,9 +27,18 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :cities
   map.resources :locations
   
+  #
+  # CUSTOM FETURE DRIVEN
+  #
   map.home '', :controller => 'home', :action => 'index'
   map.search_city '/search_city', :controller => 'home', :action => 'search_city'
   map.express_interest '/express_interest', :controller => 'rooms', :action => 'express_interest'
+  
+  
+  # OPTING IN AND OUT OF THE SERVICE
+  
+  map.optin '/optin', :controller => 'clients', :action => 'optin'
+  map.optout '/optout', :controller => 'clients', :action => 'optout'
   
   # The priority is based upon order of creation: first created -> highest priority.
  

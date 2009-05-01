@@ -3,3 +3,8 @@ Given /^the user has a room associated with him$/ do
   resort = Factory(:resort, :name => "delano", :id => '1')
   room = Factory(:room)
 end
+
+Then /^this step is pending$/ do
+  pending
+end
+

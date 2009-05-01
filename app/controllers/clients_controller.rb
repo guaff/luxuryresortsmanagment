@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
-  before_filter :login_required
+  
+  before_filter :login_required, :except => ['optin', 'optout', 'optout_email', 'create']
   layout "admin"
 
   def show
@@ -13,7 +14,6 @@ class ClientsController < ApplicationController
     end
   end
 
-
   def new
     @client = Client.new
     @payment_types = ['Credit Card', 'Money Order', 'Cash']
@@ -24,7 +24,6 @@ class ClientsController < ApplicationController
     end
   end
 
-
   def edit
     @client = Client.find(params[:id])
   end
@@ -33,12 +32,20 @@ class ClientsController < ApplicationController
     @client = Client.new(params[:client])
 
     respond_to do |format|
-      if @client.save
+      if @client.save && @current_user == true 
         flash[:notice] = 'Client was successfully created.'
         format.html { redirect_to :controller => "admin", :action => "clients" }
         format.xml  { render :xml => @client, :status => :created, :location => @client }
+      elsif @client.save && @current_user == nil
+        flash[:notice] = 'Thank you for registering. We will contact you shortly'
+        
+        # Delivering emails if they are not log-in
+        ClientMailer.deliver_physical_card_thank_you(@client)
+        ClientMailer.deliver_physical_card_notification(@client)
+        format.html { redirect_to :controller => 'home', :action => 'index' }
       else
-        format.html { render :action => "new" }
+        flash[:error] = 'there were errors with your request'
+        format.html { redirect_to :back }
         format.xml  { render :xml => @client.errors, :status => :unprocessable_entity }
       end
     end
@@ -99,8 +106,23 @@ class ClientsController < ApplicationController
       flash[:notice] = "Welcome Package was email suscesfully"
       redirect_to :back
     end
-
   end
   
+  def optin
+    @client = Client.new
+    render :layout => 'application'
+  end
+  
+  def optout
+    @client = Client.new
+    render :layout => 'application'
+  end
+  
+  def optout_email
+    flash[:notice] = 'You opted out successfully'
+    ClientMailer.deliver_physical_card_optout(params[:client])
+    render :layout => 'application'
+  end
+
 end
  

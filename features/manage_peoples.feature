@@ -1,6 +1,6 @@
 Feature: People have to register on contact and concierge
   In order to register on those pages
-  davar
+  as a regular user
   wants people to see the thank you page after they submit the form
   
   Scenario: Register new people on contact

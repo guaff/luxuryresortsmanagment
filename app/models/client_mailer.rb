@@ -24,4 +24,28 @@ class ClientMailer < ActionMailer::Base
     content_type  "text/html"
   end
   
+  def physical_card_notification(client)
+    recipients    "Luxury Resort MAnagement <optin@luxuryresortmanagement.com>"
+    from          "Luxury Resort MAnagement <contracts@luxuryresortmanagement.com>"
+    subject       "Somebody Signup from a Physical Card"
+    body          :client => client
+    content_type  "text/html"
+  end
+  
+  def physical_card_thank_you(client)
+    recipients    client.email
+    from          "Luxury Resort Management <contracts@luxuryresortmanagement.com>"
+    subject       "Thank you for Registering" 
+    body          :client => client
+    content_type  "text/html"
+  end
+  
+  def physical_card_optout(client)
+    recipients    "ivan@bakedweb.net"
+    from          "Luxury Resort Management <contracts@luxuryresortmanagement.com>"
+    subject       "Opt-Out"
+    body          :client => client
+    content_type  "text/html"
+  end
+  
 end

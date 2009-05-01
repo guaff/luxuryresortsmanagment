@@ -1,6 +1,6 @@
 <div class="search">
 	<% form_tag '/search_client', :method => 'get' do %>
-	  <label>Search by Client Number:</label>
+	  <label>Search by Client Name:</label>
 		<%= text_field :search, params[:search] %> <%= submit_tag 'search', :name => nil, :class => 'submit' %>
 	<% end %>
 </div>
