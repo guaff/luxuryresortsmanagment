@@ -24,7 +24,7 @@ end
 ActionMailer::Base.smtp_settings = {
   :address => "smtp.gmail.com",
   :port => 587,
-  :domain => "luxuryresortmanagement.com",
+  :domain => "luxuryresortmanagement.com  ",
   :authentication => :plain,
   :user_name => "contracts@luxuryresortmanagement.com",
   :password => "letmein"
