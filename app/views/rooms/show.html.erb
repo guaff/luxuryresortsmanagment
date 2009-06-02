@@ -29,11 +29,12 @@
 
 <fieldset>
   <legend>Are you interest in this unit?</legend>  
-  <% form_tag '/express_interest' do%>
+  <% form_tag '/express_interest', { :onsubmit => "return validate_form(this)" } do %>
     <p><label>Your Name:</label><br/><%= text_field :interested, 'name' %></p>
     <p><label>Your Email:</label><br/><%= text_field :interested, 'email' %></p>
     <p><label>Phone Number:</label><br/><%= text_field :interested, 'phone_number' %></p>
     <p><%= hidden_field :room, 'id', :value => @room.id %>
-      <%= submit_tag 'express interest'%></p>
+      <%= submit_tag 'express interest', :class => 'submit' %></p>
   <% end %>
 </fieldet>
+

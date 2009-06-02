@@ -11155,3 +11155,1584 @@ Rendered resorts/_find (4.6ms)
 Rendered layouts/_navegacion (0.3ms)
 Rendered layouts/_footer (0.3ms)
 Completed in 33ms (View: 14, DB: 5) | 200 OK [http://127.0.0.1/]
+
+
+Processing ClientsController#optout (for 127.0.0.1 at 2009-06-02 10:08:25) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mClient Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+Rendering template within layouts/application
+Rendering clients/optout
+Rendered clients/_opt_out (9.4ms)
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 28ms (View: 19, DB: 3) | 200 OK [http://127.0.0.1/optout]
+
+
+Processing ClientsController#optin (for 127.0.0.1 at 2009-06-02 10:08:44) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mClient Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+Rendering template within layouts/application
+Rendering clients/optin
+Rendered clients/_opt_in (9.8ms)
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 29ms (View: 20, DB: 3) | 200 OK [http://127.0.0.1/optin]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-06-02 10:09:23) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mLocation Load (0.3ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (0.3ms)
+  [4;35;1mLocation Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 24ms (View: 15, DB: 3) | 200 OK [http://127.0.0.1/locations/]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2009-06-02 10:09:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mLocation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (1.7ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 1) [0m
+  [4;35;1mCity Load (0.5ms)[0m   [0mSELECT * FROM `cities` WHERE (`cities`.location_id = 1) ORDER BY name asc[0m
+Rendering template within layouts/application
+Rendering locations/show
+Rendered layouts/_static_banner (0.5ms)
+  [4;36;1mCity Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+Rendered locations/_show_cities (4.7ms)
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 38ms (View: 16, DB: 6) | 200 OK [http://127.0.0.1/locations/1]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2009-06-02 10:09:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mLocation Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mLocation Load (0.5ms)[0m   [0mSELECT * FROM `locations` WHERE (`locations`.`id` = 1) [0m
+  [4;36;1mCity Load (0.3ms)[0m   [0;1mSELECT * FROM `cities` WHERE (`cities`.location_id = 1) ORDER BY name asc[0m
+Rendering template within layouts/application
+Rendering locations/show
+Rendered layouts/_static_banner (0.8ms)
+  [4;35;1mCity Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+Rendered locations/_show_cities (6.7ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 109ms (View: 17, DB: 6) | 200 OK [http://127.0.0.1/locations/1]
+
+
+Processing CitiesController#show (for 127.0.0.1 at 2009-06-02 10:09:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCity Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mCity Load (2.5ms)[0m   [0;1mSELECT * FROM `cities` WHERE (`cities`.`id` = 1) [0m
+  [4;35;1mResort Load (64.4ms)[0m   [0mSELECT * FROM `resorts` WHERE (`resorts`.city_id = 1) [0m
+Rendering template within layouts/application
+Rendering cities/show
+Rendered layouts/_main_banner (0.5ms)
+  [4;36;1mResort Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+Rendered cities/_show_resorts (12.2ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 114ms (View: 30, DB: 69) | 200 OK [http://127.0.0.1/cities/1]
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2009-06-02 10:22:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mResort Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+  [4;35;1mResort Load (0.7ms)[0m   [0mSELECT * FROM `resorts` WHERE (`resorts`.`id` = 1) [0m
+  [4;36;1mRoom Load (60.3ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;35;1mRoom Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mUnitSize Columns (73.7ms)[0m   [0;1mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;35;1mUnitSize Load (2.3ms)[0m   [0mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+  [4;36;1mMailinglist Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (4.6ms)
+Rendered resorts/_amenities (0.3ms)
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+[paperclip] Paperclip attachment image on Room initialized.
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+[paperclip] Paperclip attachment image on Room initialized.
+Rendered resorts/_show_rooms (7.5ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 213ms (View: 33, DB: 145) | 200 OK [http://127.0.0.1/resorts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-02 10:22:22) [GET]
+  Parameters: {"1237987833"=>nil}
+
+
+ActionController::RoutingError (No route matches "/image/rooms/1/thumb/twitter-logo-small.png" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-02 10:22:22) [GET]
+  Parameters: {"1237988670"=>nil}
+
+
+ActionController::RoutingError (No route matches "/image/rooms/2/thumb/Picture_2.png" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 10:22:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.3ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (0.8ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 1) [0m
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.full_name) on line #5 of app/views/rooms/show.html.erb:
+2:   <legend>Full Room Information</legend>  
+3:     <p>
+4:       <b>Owner:</b>
+5:       <%=h @room.client.full_name %>
+6:     </p>
+7:     <p>
+8:       <b>Code:</b>
+
+    app/views/rooms/show.html.erb:5
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render_without_instrument_17851340'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/template.rb:45:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue_without_instrument_17844590'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue_without_instrument_17844590'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action_without_instrument_17858300'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action_without_instrument_17858300'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_17856260'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_17856260'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process_without_fiveruns_dash_tracing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:15:in `process'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (104.5ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2009-06-02 10:22:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mResort Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+  [4;36;1mResort Load (0.5ms)[0m   [0;1mSELECT * FROM `resorts` WHERE (`resorts`.`id` = 1) [0m
+  [4;35;1mRoom Load (0.4ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;36;1mRoom Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mUnitSize Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;36;1mUnitSize Load (0.3ms)[0m   [0;1mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+  [4;35;1mMailinglist Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (3.3ms)
+Rendered resorts/_amenities (0.3ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+[paperclip] Paperclip attachment image on Room initialized.
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+[paperclip] Paperclip attachment image on Room initialized.
+Rendered resorts/_show_rooms (4.3ms)
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 66ms (View: 23, DB: 13) | 200 OK [http://127.0.0.1/resorts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-02 10:22:37) [GET]
+  Parameters: {"1237987833"=>nil}
+
+
+ActionController::RoutingError (No route matches "/image/rooms/1/thumb/twitter-logo-small.png" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-02 10:22:38) [GET]
+  Parameters: {"1237988670"=>nil}
+
+
+ActionController::RoutingError (No route matches "/image/rooms/2/thumb/Picture_2.png" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 10:22:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.5ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (2.5ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 1) [0m
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.full_name) on line #5 of app/views/rooms/show.html.erb:
+2:   <legend>Full Room Information</legend>  
+3:     <p>
+4:       <b>Owner:</b>
+5:       <%=h @room.client.full_name %>
+6:     </p>
+7:     <p>
+8:       <b>Code:</b>
+
+    app/views/rooms/show.html.erb:5
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render_without_instrument_17851340'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/template.rb:45:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue_without_instrument_17844590'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue_without_instrument_17844590'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action_without_instrument_17858300'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action_without_instrument_17858300'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_17856260'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_17856260'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process_without_fiveruns_dash_tracing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:15:in `process'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (107.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 10:25:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (1.4ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (1.3ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 47ms (View: 34, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 10:25:24) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (25.6ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (2.1ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (4.2ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 63ms (View: 27, DB: 28) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 10:56:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (1.1ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (2.1ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 46ms (View: 32, DB: 6) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 10:57:04) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (3.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (422.2ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.7ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (73.0ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (124.4ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.6ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 670ms (View: 233, DB: 426) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 10:57:31) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (305.6ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (58.0ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (199.8ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (124.2ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (6.6ms)
+Completed in 728ms (View: 356, DB: 364) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 10:59:24) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (1.9ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+ERROR: compiling _run_erb_app47views47rooms47show46html46erb RAISED compile error
+/Users/ivan/rails/luxuryresortmanagement/app/views/rooms/show.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting kEND
+@output_buffer.concat "  ";  form_tag '/express_interest', :onsubmit="return validate_form(this)" do ; @output_buffer.concat "\n"
+                                                                      ^
+/Users/ivan/rails/luxuryresortmanagement/app/views/rooms/show.html.erb:32: syntax error, unexpected kDO, expecting kEND
+@output_buffer.concat "  ";  form_tag '/express_interest', :onsubmit="return validate_form(this)" do ; @output_buffer.concat "\n"
+                                                                                                    ^
+/Users/ivan/rails/luxuryresortmanagement/app/views/rooms/show.html.erb:42: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47rooms47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<fieldset>\n"
+@output_buffer.concat "  <legend>Full Room Information</legend>  \n"
+@output_buffer.concat "    <p>\n"
+@output_buffer.concat "      <b>Owner:</b>\n"
+@output_buffer.concat "      "; @output_buffer.concat((h @room.client.full_name ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    </p>\n"
+@output_buffer.concat "    <p>\n"
+@output_buffer.concat "      <b>Code:</b>\n"
+@output_buffer.concat "      "; @output_buffer.concat((h @room.code ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    </p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "    <p>\n"
+@output_buffer.concat "      <b>Availability:</b>\n"
+@output_buffer.concat "      "; @output_buffer.concat((h @room.availability ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    </p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "    <p>\n"
+@output_buffer.concat "      <b>Sale or rent:</b>\n"
+@output_buffer.concat "      "; @output_buffer.concat((h @room.sale_or_rent ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    </p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "    <p>\n"
+@output_buffer.concat "      <b>Price:</b>\n"
+@output_buffer.concat "      "; @output_buffer.concat((h @room.price ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    </p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( link_to 'Back', :back ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</fieldset>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<fieldset>\n"
+@output_buffer.concat "  <legend>Are you interest in this unit?</legend>  \n"
+@output_buffer.concat "  ";  form_tag '/express_interest', :onsubmit="return validate_form(this)" do ; @output_buffer.concat "\n"
+@output_buffer.concat "    <p><label>Your Name:</label><br/>"; @output_buffer.concat(( text_field :interested, 'name' ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "    <p><label>Your Email:</label><br/>"; @output_buffer.concat(( text_field :interested, 'email' ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "    <p><label>Phone Number:</label><br/>"; @output_buffer.concat(( text_field :interested, 'phone_number' ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "    <p>"; @output_buffer.concat(( hidden_field :room, 'id', :value => @room.id ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "      "; @output_buffer.concat(( submit_tag 'express interest', :class => 'submit' ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "  ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "</fieldet>\n"
+@output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ivan/rails/luxuryresortmanagement/app/views/rooms/show.html.erb:42:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:66:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:64:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:64:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:26:in `render_without_instrument_17851340'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `render_without_fiveruns_dash_context'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `render_without_fiveruns_dash_context'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/template.rb:45:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue_without_instrument_17844590'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue_without_instrument_17844590'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action_without_instrument_17858300'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action_without_instrument_17858300'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_17856260'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_17856260'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process_without_fiveruns_dash_tracing'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:15:in `process'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+/Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+/Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/Users/ivan/rails/luxuryresortmanagement/app/views/rooms/show.html.erb:32: syntax error, unexpected tSTRING_BEG, expecting kEND
+@output_buffer.concat "  ";  form_tag '/express_interest', :onsubmit="return validate_form(this)" do ; @output_buffer.concat "\n"
+                                                                      ^
+/Users/ivan/rails/luxuryresortmanagement/app/views/rooms/show.html.erb:32: syntax error, unexpected kDO, expecting kEND
+@output_buffer.concat "  ";  form_tag '/express_interest', :onsubmit="return validate_form(this)" do ; @output_buffer.concat "\n"
+                                                                                                    ^
+/Users/ivan/rails/luxuryresortmanagement/app/views/rooms/show.html.erb:42: syntax error, unexpected kENSURE, expecting $end) on line #32 of app/views/rooms/show.html.erb:
+29: 
+30: <fieldset>
+31:   <legend>Are you interest in this unit?</legend>  
+32:   <% form_tag '/express_interest', :onsubmit="return validate_form(this)" do %>
+33:     <p><label>Your Name:</label><br/><%= text_field :interested, 'name' %></p>
+34:     <p><label>Your Email:</label><br/><%= text_field :interested, 'email' %></p>
+35:     <p><label>Phone Number:</label><br/><%= text_field :interested, 'phone_number' %></p>
+
+    app/views/rooms/show.html.erb:42:in `compile!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:66:in `compile'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:64:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:64:in `compile'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:26:in `render_without_instrument_17851340'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/template.rb:45:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue_without_instrument_17844590'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue_without_instrument_17844590'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action_without_instrument_17858300'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action_without_instrument_17858300'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_17856260'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_17856260'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.5/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process_without_fiveruns_dash_tracing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:15:in `process'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.4/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (39.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (68.4ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 10:59:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (1.6ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (2.8ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 41ms (View: 28, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-06-02 10:59:53) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"", "phone_number"=>"", "email"=>""}, "authenticity_token"=>"de93a4723b37d25e84f04482605081580f4531c2", "room"=>{"id"=>"2"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.5ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Tue, 2 Jun 2009 10:59:53 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33132</b></p>
+<p>Name: </p>
+<p>Email: </p>
+<p>Phone: </p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/2
+Completed in 4085ms (DB: 4) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 10:59:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.4ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (0.6ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 40ms (View: 28, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:00:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.3ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (0.5ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 109ms (View: 26, DB: 2) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:00:35) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.4ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (2.8ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 44ms (View: 32, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-06-02 11:00:39) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"", "phone_number"=>"", "email"=>""}, "authenticity_token"=>"de93a4723b37d25e84f04482605081580f4531c2", "room"=>{"id"=>"2"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (1.5ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Tue, 2 Jun 2009 11:00:39 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33132</b></p>
+<p>Name: </p>
+<p>Email: </p>
+<p>Phone: </p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/2
+Completed in 2606ms (DB: 4) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:00:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.4ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (3.4ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 41ms (View: 29, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:02:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (2.1ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (2.9ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 40ms (View: 28, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-06-02 11:02:12) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"", "phone_number"=>"", "email"=>""}, "authenticity_token"=>"de93a4723b37d25e84f04482605081580f4531c2", "room"=>{"id"=>"2"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (2.0ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Tue, 2 Jun 2009 11:02:12 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33132</b></p>
+<p>Name: </p>
+<p>Email: </p>
+<p>Phone: </p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/2
+Completed in 3150ms (DB: 4) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:02:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.7ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (1.6ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 38ms (View: 27, DB: 3) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:02:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.9ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (1.5ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 44ms (View: 30, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:04:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (2.6ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (1.7ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.6ms)
+Completed in 44ms (View: 30, DB: 5) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-06-02 11:04:23) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"", "phone_number"=>"", "email"=>""}, "authenticity_token"=>"de93a4723b37d25e84f04482605081580f4531c2", "room"=>{"id"=>"2"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (21.4ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.6ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Tue, 2 Jun 2009 11:04:23 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33132</b></p>
+<p>Name: </p>
+<p>Email: </p>
+<p>Phone: </p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/2
+Completed in 1871ms (DB: 22) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:04:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.4ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (1.6ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 117ms (View: 106, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:04:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.4ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (1.4ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 41ms (View: 29, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:05:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.3ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (1.4ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 43ms (View: 31, DB: 3) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-06-02 11:05:04) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"", "phone_number"=>"", "email"=>""}, "authenticity_token"=>"de93a4723b37d25e84f04482605081580f4531c2", "room"=>{"id"=>"2"}}
+  [4;35;1mSQL (2.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (6.4ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (2.8ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Tue, 2 Jun 2009 11:05:05 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33132</b></p>
+<p>Name: </p>
+<p>Email: </p>
+<p>Phone: </p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/2
+Completed in 1640ms (DB: 12) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:05:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (2.4ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (1.2ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 41ms (View: 27, DB: 5) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-06-02 11:05:09) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"", "phone_number"=>"", "email"=>""}, "authenticity_token"=>"de93a4723b37d25e84f04482605081580f4531c2", "room"=>{"id"=>"2"}}
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (1.7ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Tue, 2 Jun 2009 11:05:09 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33132</b></p>
+<p>Name: </p>
+<p>Email: </p>
+<p>Phone: </p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/2
+Completed in 2032ms (DB: 5) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:05:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.7ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (0.8ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 36ms (View: 25, DB: 3) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:05:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (2.0ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (2.8ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 135ms (View: 121, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-06-02 11:05:28) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"", "phone_number"=>"", "email"=>""}, "authenticity_token"=>"de93a4723b37d25e84f04482605081580f4531c2", "room"=>{"id"=>"2"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.3ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Tue, 2 Jun 2009 11:05:28 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33132</b></p>
+<p>Name: </p>
+<p>Email: </p>
+<p>Phone: </p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/2
+Completed in 3188ms (DB: 3) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:05:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.7ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (2.7ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 56ms (View: 35, DB: 5) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:06:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.4ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (0.8ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 39ms (View: 27, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-06-02 11:06:11) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"", "phone_number"=>"", "email"=>""}, "authenticity_token"=>"de93a4723b37d25e84f04482605081580f4531c2", "room"=>{"id"=>"2"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (2.2ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Tue, 2 Jun 2009 11:06:11 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33132</b></p>
+<p>Name: </p>
+<p>Email: </p>
+<p>Phone: </p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/2
+Completed in 1716ms (DB: 5) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:06:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.4ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (2.1ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 38ms (View: 28, DB: 3) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:07:08) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.5ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (0.8ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 41ms (View: 28, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:07:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (1.5ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (2.8ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 42ms (View: 29, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-06-02 11:08:07) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"Ivan", "phone_number"=>"", "email"=>""}, "authenticity_token"=>"de93a4723b37d25e84f04482605081580f4531c2", "room"=>{"id"=>"2"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.4ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Tue, 2 Jun 2009 11:08:07 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33132</b></p>
+<p>Name: Ivan</p>
+<p>Email: </p>
+<p>Phone: </p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/2
+Completed in 2500ms (DB: 4) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:08:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (1.3ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (0.9ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 41ms (View: 29, DB: 3) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:09:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (1.4ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (2.7ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 37ms (View: 26, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:09:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.9ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (0.9ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 35ms (View: 24, DB: 3) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-06-02 11:09:40) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"ivan", "phone_number"=>"", "email"=>"email@cantv.net"}, "authenticity_token"=>"de93a4723b37d25e84f04482605081580f4531c2", "room"=>{"id"=>"2"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (2.1ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Tue, 2 Jun 2009 11:09:40 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33132</b></p>
+<p>Name: ivan</p>
+<p>Email: email@cantv.net</p>
+<p>Phone: </p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/2
+Completed in 1543ms (DB: 4) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:09:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (0.3ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (4.1ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (1.3ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 44ms (View: 33, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:09:59) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (0.4ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (2.8ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 38ms (View: 27, DB: 3) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing RoomsController#express_interest (for 127.0.0.1 at 2009-06-02 11:10:11) [POST]
+  Parameters: {"commit"=>"express interest", "interested"=>{"name"=>"ivan", "phone_number"=>"458967", "email"=>"ivan@bakedweb.net"}, "authenticity_token"=>"de93a4723b37d25e84f04482605081580f4531c2", "room"=>{"id"=>"2"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (2.6ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Sent mail to contracts@luxuryresortmanagement.com
+
+Date: Tue, 2 Jun 2009 11:10:11 -0400
+From: contracts@luxuryresortmanagement.com
+To: contracts@luxuryresortmanagement.com
+Subject: Somebody is interested
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hello, <br/>
+
+<p>Somebody is interested in the room with code: <b>33132</b></p>
+<p>Name: ivan</p>
+<p>Email: ivan@bakedweb.net</p>
+<p>Phone: 458967</p>
+Redirected to back
+Redirected to http://127.0.0.1:3000/rooms/2
+Completed in 1589ms (DB: 5) | 302 Found [http://127.0.0.1/express_interest]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:10:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRoom Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mRoom Load (1.2ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;36;1mClient Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mClient Load (1.7ms)[0m   [0mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 45ms (View: 33, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2009-06-02 11:11:09) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://127.0.0.1/admin]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-02 11:11:09) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/session/new]
+
+
+Processing RoomsController#show (for 127.0.0.1 at 2009-06-02 11:11:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRoom Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mRoom Load (1.4ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering rooms/show
+  [4;35;1mClient Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mClient Load (2.2ms)[0m   [0;1mSELECT * FROM `clients` WHERE (`clients`.`id` = 13) [0m
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 37ms (View: 25, DB: 4) | 200 OK [http://127.0.0.1/rooms/2]
