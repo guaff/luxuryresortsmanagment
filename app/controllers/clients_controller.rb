@@ -119,8 +119,9 @@ class ClientsController < ApplicationController
   end
   
   def optout_email
+    @client = Client.new(params[:client])
     flash[:notice] = 'You opted out successfully'
-    ClientMailer.deliver_physical_card_optout(params[:client])
+    ClientMailer.deliver_physical_card_optout(@client)
     render :layout => 'application'
   end
 
