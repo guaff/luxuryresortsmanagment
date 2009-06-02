@@ -11,7 +11,7 @@
 	<!--[if lte IE 7]>
 		<link rel="stylesheet" href="stylesheets/layout_ie.css" type="text/css" media="screen"  charset="utf-8" />
 	<![endif] -->
-	<%= javascript_include_tag 'prototype' %>
+	<%= javascript_include_tag 'prototype' , 'same_as_address' %>
 </head>
 
 <body>
@@ -19,7 +19,9 @@
 	<div class="container">
 		<div style="width: 100%; text-align: center;">
 			<img src="/images/logo.jpg" alt="resort luxury managment logo"/>
-			<p style="color: green"><%= flash[:notice] %></p>
+		</div>
+		<div class="flash">
+		  <p style="color: green"><%= flash[:notice] %><%= flash[:errors] %></p>
 		</div>
 		<div style="width: 100%; float: left; text-align: left;">			
 					<%= render :partial => "/admin/menu" %>

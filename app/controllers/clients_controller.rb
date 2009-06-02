@@ -45,7 +45,7 @@ class ClientsController < ApplicationController
         format.html { redirect_to :controller => 'home', :action => 'index' }
       else
         flash[:error] = 'there were errors with your request'
-        format.html { redirect_to :back }
+        format.html { render :action  => "new" }
         format.xml  { render :xml => @client.errors, :status => :unprocessable_entity }
       end
     end

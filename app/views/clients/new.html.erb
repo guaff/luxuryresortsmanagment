@@ -14,6 +14,10 @@
 			    <%= f.text_field :full_name_second %>
 			  </p>
 			  <p>
+			    <%= f.label :email %><br />
+			    <%= f.text_field :email %>
+			  </p>
+			  <p>
 			    <%= f.label :address %><br />
 			    <%= f.text_field :address %>
 			  </p>
@@ -37,33 +41,29 @@
 			    <%= f.label :work_phone %><br />
 			    <%= f.text_field :work_phone %>
 			  </p>
-			  <p>
-			    <%= f.label :email %><br />
-			    <%= f.text_field :email %>
+		   <p>
+			    <%= f.label :same_as_address %><br/>
+          <input type="checkbox" value="same as address" id="same as address" onclick="return same_as_address()">
 			  </p>
 			  <p>
-			    <%= f.label :start_date %><br />
-			    <%= f.date_select :start_date %>
+			    <%= f.label :billing_name %><br />
+			    <%= f.text_field :billing_name %>
 			  </p>
 			  <p>
-			    <%= f.label :contract_return_date %><br />
-			    <%= f.date_select :contract_return_date %>
+			    <%= f.label :billing_address %><br />
+			    <%= f.text_field :billing_address %>
 			  </p>
 			  <p>
-			    <%= f.label :cancellation_date %><br />
-			    <%= f.date_select :cancellation_date %>
+			    <%= f.label :billing_city %><br />
+			    <%= f.text_field :billing_city %>
 			  </p>
 			  <p>
-			    <%= f.label :charge_return_date %><br />
-			    <%= f.date_select :charge_return_date %>
+			    <%= f.label :billing_state %><br />
+			    <%= f.text_field :billing_state %>
 			  </p>
 			  <p>
-			    <%= f.label :tts_sale_person %><br />
-			    <%= f.text_field :tts_sale_person %>
-			  </p>
-				<p>
-			    <%= f.label :client_pin %><br />
-			    <%= f.text_field :client_pin %>
+			    <%= f.label :billing_zip %><br />
+			    <%= f.text_field :billing_zip %>
 			  </p>
 		</div>
 		<div class="right" style="margin-right: 150px">
@@ -100,28 +100,32 @@
 			    <%= f.text_field :credit_card_expiration %>
 			  </p>
 			  <p>
-			    <%= f.label :billing_name %><br />
-			    <%= f.text_field :billing_name %>
-			  </p>
-			  <p>
-			    <%= f.label :billing_address %><br />
-			    <%= f.text_field :billing_address %>
-			  </p>
-			  <p>
-			    <%= f.label :billing_city %><br />
-			    <%= f.text_field :billing_city %>
-			  </p>
-			  <p>
-			    <%= f.label :billing_state %><br />
-			    <%= f.text_field :billing_state %>
-			  </p>
-			  <p>
-			    <%= f.label :billing_zip %><br />
-			    <%= f.text_field :billing_zip %>
-			  </p>
-			  <p>
 			    <%= f.label :resort_sale_person %><br />
 			    <%= f.text_field :resort_sale_person %>
+			  </p>
+			  <p>
+			    <%= f.label :start_date %><br />
+			    <%= f.date_select :start_date %>
+			  </p>
+			  <p>
+			    <%= f.label :contract_return_date %><br />
+			    <%= f.date_select :contract_return_date %>
+			  </p>
+			  <p>
+			    <%= f.label :cancellation_date %><br />
+			    <%= f.date_select :cancellation_date %>
+			  </p>
+			  <p>
+			    <%= f.label :charge_return_date %><br />
+			    <%= f.date_select :charge_return_date %>
+			  </p>
+			  <p>
+			    <%= f.label :tts_sale_person %><br />
+			    <%= f.text_field :tts_sale_person %>
+			  </p>
+				<p>
+			    <%= f.label :client_pin %><br />
+			    <%= f.text_field :client_pin %>
 			  </p>
 			  <p>
 			    <%= f.label :notes %><br />
