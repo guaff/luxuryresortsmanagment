@@ -1,10 +1,8 @@
-<%= render :partial => "layouts/main_banner"%>
-
-<div class="blur">
+<div class="colRight">
 <h1><%=h @city.name %></h1>
 <p><%=h @city.description %></p>
 </div>
 
-<div class="boxes_down">
+<div class="colLeft">
 	<%= render :partial => "cities/show_resorts" %>
 </div>

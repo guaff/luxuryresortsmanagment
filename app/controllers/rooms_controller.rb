@@ -26,7 +26,8 @@ class RoomsController < ApplicationController
   # GET /rooms/new.xml
   def new
     @room = Room.new
-    render :layout => "admin"
+    @room.client_id = params[:client_id]
+    render :layout => false
   end
 
   # GET /rooms/1/edit

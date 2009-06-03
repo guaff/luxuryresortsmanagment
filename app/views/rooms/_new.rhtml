@@ -1,0 +1,43 @@
+<div id="add_room_form">
+	<fieldset>
+		<legend>NEW ROOM </legend>
+        <% f.fields_for :rooms do |rooms_form| %>
+			  <%= rooms_form.error_messages %>
+			  <p>
+			    <%= rooms_form.label :code %><br />
+			    <%= rooms_form.text_field :code %>
+			  </p>
+			  <p>
+			    <%= rooms_form.label :availability %><br />
+			    <%= rooms_form.text_field :availability %>
+			  </p>
+			  <p>
+			    <%= rooms_form.label :sale_or_rent %><br />
+			  	<%= select :room, :sale_or_rent, %w[Sale Rent], {}, {:prompt => 'Select Person'} %>
+			  </p>
+				<p>
+					<%= rooms_form.label :price %> <label>or 0 for negotiable</label><br/>
+					<%= rooms_form.text_field :price %>
+				</p>
+				<p>
+					<%= rooms_form.label :owner_name %><br/>
+					<%= collection_select :room, :client_id, Client.all, :id, :full_name %>
+				</p>
+				<p>
+					<%= rooms_form.label :unit_size %><br/>
+					<%= collection_select :room, :unit_size_id, UnitSize.find(:all), :id, :name %>
+				</p>
+				<p>
+					<%= rooms_form.label :resort %><br/>
+					<%= collection_select :room, :resort_id, Resort.find(:all, :order => "name asc"), :id, :name %>
+				</p>
+				<p>
+					<%= rooms_form.label :image %><br/>
+					<%= rooms_form.file_field :image %>
+				</p>
+			  <p>
+			    <%= f.submit "Create", :class => "submit" %>
+			  </p>
+			<% end %>
+	</fieldset>
+</div>

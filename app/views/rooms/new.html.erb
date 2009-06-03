@@ -2,8 +2,7 @@
 	<fieldset>
 		<legend>NEW ROOM</legend>
 			<% form_for @room, :html => { :multipart => true } do |f| %>
-			  <%= f.error_messages %>
-
+			  <%= f.error_messages %>        
 			  <p>
 			    <%= f.label :code %><br />
 			    <%= f.text_field :code %>
@@ -20,10 +19,10 @@
 					<%= f.label :price %> <label>or 0 for negotiable</label><br/>
 					<%= f.text_field :price %>
 				</p>
-				<p>
-					<%= f.label :owner_name %><br/>
-					<%= collection_select :room, :client_id, Client.find(:all), :id, :full_name %>
-				</p>
+					
+					<%= f.hidden_field :client_id , :value => @client_id %>
+					<%# collection_select :room, :client_id, Client.all, :id, :full_name, {:prompt => true} %>
+				
 				<p>
 					<%= f.label :unit_size %><br/>
 					<%= collection_select :room, :unit_size_id, UnitSize.find(:all), :id, :name %>

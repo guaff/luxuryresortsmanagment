@@ -1,10 +1,10 @@
-<%= render :partial => "layouts/static_banner"%>
+<%= render :partial => "layouts/static_banner" , :locals => { :image => @location.image.url } %>
 
-<div class="blur">
+<div class="colLeft">
 <h1><%=h @location.name %></h1>
 <p><%=h @location.description %></p>
 </div>
 
-<div class="boxes_down">
+<div class="colRight">
 	<%= render :partial => "show_cities" %>
 </div>

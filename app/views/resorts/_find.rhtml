@@ -1,5 +1,4 @@
 <div class="find_resort">
-	<h3>FIND A RESORT</h3>
 	<img src="images/find_resort_icon.jpg" alt="find a resort" /><br/>
 	   <select id="location[id]" name="location[id]">
 				<option value="">Select a Location</option>
@@ -15,7 +14,7 @@
 	    <%= observe_field("location[id]", :update => "city_container", :url => { :action => :update_city },
 																				:with => "'id='+value", :on => "changed") %>
 	</div>
-		<%= submit_tag "Find", :class => :submit %>
+		<%= submit_tag "find", :class => :submit %>
 		<% end %>
 
 </div>

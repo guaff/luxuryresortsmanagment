@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     @locations = Location.find(:all)
     @cities = []
     @city = City.new
+    @resorts = Resort.find(:all)
   end
   
   def update_city

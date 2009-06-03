@@ -3,6 +3,8 @@ class Client < ActiveRecord::Base
   has_many :rooms
   has_many :comments
   
+  accepts_nested_attributes_for :rooms, :allow_destroy  => true
+  
   validates_presence_of :full_name, :full_name_second, :address, :city, :state, :zip, :home_phone, 
                         :work_phone, :email, :fee_paid, :payment_type, :charge_date, :credit_card, 
                         :credit_card_type, :credit_card_expiration, :billing_name, :billing_address,

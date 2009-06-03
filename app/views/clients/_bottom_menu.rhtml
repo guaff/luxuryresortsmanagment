@@ -1,9 +1,11 @@
 <div class="lista_menu">
   <ul>
     <li><%= link_to 'Edit', edit_client_path(@client) %></li>
-    <li><%=	link_to 'Add Room', :controller => 'rooms', :action => 'new', :room_client_id => @client.id %></li> 
     <li><%= link_to 'Print Contract', :action => 'print', :id => @client.id  %></li>
+    <li><%= link_to_remote "Add Room", :update => "add_room", :url => { :controller => :rooms, :action => 'new', :client_id => @client.id }%> </li>
     <li><%= link_to	'Print Credit Card Verification',	:action=>	'credit_verification',	:id	=>	@client.id	%></li>
-     <li><%= link_to 'Email Welcome Package ', :action => 'email_welcome_package', :id => @client.id %>
+    <li><%= link_to 'Email Welcome Package ', :action => 'email_welcome_package', :id => @client.id %>
   </ul>
 </div>
+
+<div id="add_room" ></div>
