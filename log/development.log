@@ -25020,3 +25020,103 @@ Rendered resorts/_find (8.0ms)
 Rendered layouts/_navegacion (0.4ms)
 Rendered layouts/_footer (0.4ms)
 Completed in 114ms (View: 20, DB: 13) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-06-03 14:38:09) [GET]
+  [4;35;1mLocation Load (0.3ms)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (0.4ms)
+  [4;36;1mLocation Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://127.0.0.1/locations/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-03 14:38:22) [GET]
+  [4;36;1mMailinglist Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.4ms)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mResort Load (0.5ms)[0m   [0mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mResort Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+  [4;35;1mLocation Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (4.5ms)
+Rendered layouts/_navegacion (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 54ms (View: 16, DB: 10) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-03 14:39:00) [GET]
+  [4;35;1mMailinglist Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (0.4ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mResort Load (0.5ms)[0m   [0;1mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mResort Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+  [4;36;1mLocation Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (7.7ms)
+Rendered layouts/_navegacion (0.6ms)
+Rendered layouts/_footer (0.6ms)
+Completed in 110ms (View: 73, DB: 12) | 200 OK [http://127.0.0.1/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-03 14:39:09) [GET]
+  [4;36;1mMailinglist Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.5ms)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mResort Load (0.5ms)[0m   [0mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mResort Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+  [4;35;1mLocation Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (6.5ms)
+Rendered layouts/_navegacion (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 53ms (View: 15, DB: 11) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-03 14:39:45) [GET]
+  [4;35;1mMailinglist Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (0.3ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mResort Load (0.5ms)[0m   [0;1mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mResort Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+  [4;36;1mLocation Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (6.8ms)
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 55ms (View: 19, DB: 11) | 200 OK [http://127.0.0.1/]

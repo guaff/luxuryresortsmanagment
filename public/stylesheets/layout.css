@@ -10,7 +10,7 @@ body{ background: url(../images/bg.jpg) fixed; margin: 0;}
 .logo{ width: 450px; margin: 15px auto;}
 
 .benefits{ float: right; margin-top: 15px;}
-.feature_resorts{ float: left; width: 450px; background: #f9f8f7}
+.feature_resorts{ float: left; width: 430px; background: #f9f8f7; padding: 10px;}
 
 .errorExplanation li{ color: red; font-size: 12px;}
 
