@@ -17,17 +17,21 @@
 <body>
 	
 	<div class="container">
-	  <div class="upper_banner"><img src="/images/upper_banner/luxury_awaits.jpg" alt="Luxury Awaits"/></div>
 	  
-		<div class="logo"><img src="/images/logo.jpg" alt="resort luxury managment logo"/></div>
+	  <div class="upper_banner">
+	    <img src="/images/upper_banner/luxury_awaits.jpg" alt="Luxury Awaits"/>
+	  </div>
+	  
+		<div class="logo">
+		  <img src="/images/logo.jpg" alt="resort luxury managment logo"/>
+		</div>
 		
 		<%= render :partial => "layouts/navegacion" %>
 		
 		<div  style="width: 100%; float: left;">
-		<p style="color: green"><%= flash[:notice] %></p>
-		<p style="color: red;"><%= flash[:error] %></p>
-		
-		<%= yield %>
+		  <p style="color: green"><%= flash[:notice] %></p>
+		  <p style="color: red;"><%= flash[:error] %></p>
+		  <%= yield %>
 		</div>
 		
 		<%= render :partial => "layouts/footer" %>
