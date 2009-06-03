@@ -7,7 +7,7 @@
 	<table width="260px" height="100%">
 	<% for resort in @resorts %>
   	<tr>
-    	<td class="oscura"><%= link_to resort.name, resort %></td>
+    	<td class="oscura"><%= link_to resort.name.capitalize, resort %></td>
   	</tr>
 		<% end %>
 	</table>

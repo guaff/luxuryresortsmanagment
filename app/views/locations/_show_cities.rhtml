@@ -6,7 +6,7 @@
 	  <table width="260px" height="100%">
 	    <% for city in @cities %>
   	  <tr>
-    	  <td class="oscura"><%= link_to city.name, city %></td>
+    	  <td class="oscura"><%= link_to city.name.capitalize, city %></td>
   	  </tr>
 		  <% end %>
 	  </table>

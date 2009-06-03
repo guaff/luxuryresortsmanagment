@@ -8,7 +8,7 @@
 
   <% for location in @locations %>
     <tr>
-      <td class="oscura"><%= link_to location.name, location %></td>
+      <td class="oscura"><%= link_to location.name.upcase, location %></td>
     </tr>
   <% end %>
   </table>
