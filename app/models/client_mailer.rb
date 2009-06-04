@@ -16,11 +16,11 @@ class ClientMailer < ActionMailer::Base
     content_type  "text/html"
   end
   
-  def contract(client, rooms)
+  def contract(client, rooms, date)
     recipients  client.email
     from        "Luxury Resort Management <contracts@luxuryresortmanagement.com>"
     subject     "Contract"
-    body        :client => client, :rooms => rooms
+    body        :client => client, :rooms => rooms, :date => date
     content_type  "text/html"
   end
   
