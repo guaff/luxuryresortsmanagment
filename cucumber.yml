@@ -1,1 +1,3 @@
-autotest: features -r features --format pretty --color
+default: -r features/support/env.rb -r features/step_definitions features/
+selenium: -r features/
+#autotest: features -r features --format pretty --color
