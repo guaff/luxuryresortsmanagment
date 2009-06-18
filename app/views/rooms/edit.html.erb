@@ -20,7 +20,7 @@
 				</p>
 				<p>
 					<%= f.label :owner_name %><br/>
-					<%= collection_select :room, :client_id, Client.find(:all), :id, :full_name %>
+					<%= @room.client.full_name %>
 				</p>
 				<p>
 					<%= f.label :unit_size %><br/>
