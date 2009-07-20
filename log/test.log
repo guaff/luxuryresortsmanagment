@@ -248,3 +248,63 @@ FiveRuns Dash [Rails] (v0.8.6) Application token missing
     You can also set app tokens for other environments (eg, staging), at the same time.
     See http://support.fiveruns.com/faqs/dash/rails for more information
     ===
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+FiveRuns Dash [Rails] (v0.8.6) Application token missing
+    ===
+    In config/initializers/dash.rb please add:
+
+      Fiveruns::Dash::Rails.start :test => 'TEST-APP-TOKEN'
+
+    You can also set app tokens for other environments (eg, staging), at the same time.
+    See http://support.fiveruns.com/faqs/dash/rails for more information
+    ===
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+FiveRuns Dash [Rails] (v0.8.6) Application token missing
+    ===
+    In config/initializers/dash.rb please add:
+
+      Fiveruns::Dash::Rails.start :test => 'TEST-APP-TOKEN'
+
+    You can also set app tokens for other environments (eg, staging), at the same time.
+    See http://support.fiveruns.com/faqs/dash/rails for more information
+    ===
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+FiveRuns Dash [Rails] (v0.8.6) Application token missing
+    ===
+    In config/initializers/dash.rb please add:
+
+      Fiveruns::Dash::Rails.start :test => 'TEST-APP-TOKEN'
+
+    You can also set app tokens for other environments (eg, staging), at the same time.
+    See http://support.fiveruns.com/faqs/dash/rails for more information
+    ===
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+FiveRuns Dash [Rails] (v0.8.6) Application token missing
+    ===
+    In config/initializers/dash.rb please add:
+
+      Fiveruns::Dash::Rails.start :test => 'TEST-APP-TOKEN'
+
+    You can also set app tokens for other environments (eg, staging), at the same time.
+    See http://support.fiveruns.com/faqs/dash/rails for more information
+    ===
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+FiveRuns Dash [Rails] (v0.8.6) Application token missing
+    ===
+    In config/initializers/dash.rb please add:
+
+      Fiveruns::Dash::Rails.start :test => 'TEST-APP-TOKEN'
+
+    You can also set app tokens for other environments (eg, staging), at the same time.
+    See http://support.fiveruns.com/faqs/dash/rails for more information
+    ===
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+FiveRuns Dash [Rails] (v0.8.6) Application token missing
+    ===
+    In config/initializers/dash.rb please add:
+
+      Fiveruns::Dash::Rails.start :test => 'TEST-APP-TOKEN'
+
+    You can also set app tokens for other environments (eg, staging), at the same time.
+    See http://support.fiveruns.com/faqs/dash/rails for more information
+    ===

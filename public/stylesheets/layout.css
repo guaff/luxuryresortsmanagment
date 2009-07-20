@@ -3,7 +3,7 @@
 /* Ivan Acosta-Rubio > Bakedweb.net */
 /* ivan at bakedweb dot net 		*/ 
 
-body{ background: url(../images/bg.jpg) fixed; margin: 0;}
+body{ background: url(../images/bg.jpg) fixed no-repeat; margin: 0;}
 
 /* MAIN ELEMENTS */
 .container{ width: 868px; height: 100%; margin: 0 auto; background: white; padding-left: 31px; padding-right: 31px; }
