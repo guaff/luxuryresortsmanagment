@@ -8,7 +8,7 @@
           <%= image_tag resort.photo1.url(:thumb) %>
         </td>
         <td style="padding: 15px;">
-          <h4><%= resort.name %></h4>
+          <h4><%= link_to resort.name, resort_path(resort) %></h4>
           <p><%= resort.description[0...170] %></p>
         </td>
       </tr>

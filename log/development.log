@@ -28011,3 +28011,480 @@ Rendering rooms/edit
 Rendered admin/_menu (0.4ms)
 Rendered layouts/_footer (0.5ms)
 Completed in 128ms (View: 98, DB: 14) | 200 OK [http://127.0.0.1/rooms/5/edit]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-07-20 12:16:55) [GET]
+  [4;35;1mMailinglist Columns (68.4ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (3.6ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (65.1ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mResort Load (3.9ms)[0m   [0;1mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mResort Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+  [4;36;1mLocation Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (84.0ms)
+Rendered layouts/_navegacion (1.0ms)
+Rendered layouts/_footer (0.7ms)
+Completed in 545ms (View: 368, DB: 145) | 200 OK [http://127.0.0.1/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#update_city (for 127.0.0.1 at 2009-07-20 12:17:24) [POST]
+  Parameters: {"authenticity_token"=>"1+LA5lMNNzYt/98ipNHU8rk3To4RNgMZeG2m9N9/M2w=", "id"=>"1"}
+  [4;36;1mCity Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mCity Load (0.3ms)[0m   [0mSELECT * FROM `cities` WHERE (`cities`.`location_id` = '1') [0m
+Completed in 13ms (View: 1, DB: 2) | 200 OK [http://127.0.0.1/home/update_city]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#search_city (for 127.0.0.1 at 2009-07-20 12:17:26) [GET]
+  Parameters: {"commit"=>"find", "id"=>"1"}
+  [4;35;1mCity Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mCity Load (0.2ms)[0m   [0;1mSELECT * FROM `cities` WHERE (`cities`.`id` = 1) [0m
+  [4;35;1mResort Load (0.7ms)[0m   [0mSELECT * FROM `resorts` WHERE (`resorts`.city_id = 1) [0m
+Rendering template within layouts/application
+Rendering home/search_city
+  [4;36;1mResort Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+Rendered cities/_show_resorts (10.9ms)
+Rendered layouts/_navegacion (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 182ms (View: 28, DB: 6) | 200 OK [http://127.0.0.1/search_city?id=1&commit=find]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2009-07-20 12:17:32) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mResort Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+  [4;35;1mResort Load (0.7ms)[0m   [0mSELECT * FROM `resorts` WHERE (`resorts`.`id` = 4) [0m
+  [4;36;1mRoom Load (76.4ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 4) [0m
+  [4;35;1mRoom Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mMailinglist Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (6.4ms)
+Rendered resorts/_amenities (1.0ms)
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `rooms` WHERE (`rooms`.resort_id = 4) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 138ms (View: 30, DB: 85) | 200 OK [http://127.0.0.1/resorts/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-07-20 12:17:41) [GET]
+  [4;35;1mLocation Load (0.4ms)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (0.7ms)
+  [4;36;1mLocation Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered layouts/_navegacion (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 22ms (View: 13, DB: 3) | 200 OK [http://127.0.0.1/locations/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2009-07-20 12:17:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` WHERE (`locations`.`id` = 1) [0m
+  [4;36;1mCity Load (0.3ms)[0m   [0;1mSELECT * FROM `cities` WHERE (`cities`.location_id = 1) ORDER BY name asc[0m
+Rendering template within layouts/application
+Rendering locations/show
+  [4;35;1mCity Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+Rendered locations/_show_cities (5.5ms)
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 93ms (View: 13, DB: 5) | 200 OK [http://127.0.0.1/locations/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CitiesController#show (for 127.0.0.1 at 2009-07-20 12:17:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCity Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mCity Load (1.2ms)[0m   [0;1mSELECT * FROM `cities` WHERE (`cities`.`id` = 1) [0m
+  [4;35;1mResort Load (0.5ms)[0m   [0mSELECT * FROM `resorts` WHERE (`resorts`.city_id = 1) [0m
+Rendering template within layouts/application
+Rendering cities/show
+  [4;36;1mResort Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+Rendered cities/_show_resorts (7.9ms)
+Rendered layouts/_navegacion (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 35ms (View: 13, DB: 6) | 200 OK [http://127.0.0.1/cities/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2009-07-20 12:17:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mResort Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+  [4;35;1mResort Load (1.9ms)[0m   [0mSELECT * FROM `resorts` WHERE (`resorts`.`id` = 1) [0m
+  [4;36;1mRoom Load (0.3ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;35;1mRoom Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mUnitSize Columns (59.1ms)[0m   [0;1mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;35;1mUnitSize Load (0.5ms)[0m   [0mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+  [4;36;1mMailinglist Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (4.7ms)
+Rendered resorts/_amenities (0.4ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+[paperclip] Paperclip attachment image on Room initialized.
+Rendered resorts/_show_rooms (4.9ms)
+Rendered layouts/_navegacion (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 180ms (View: 84, DB: 69) | 200 OK [http://127.0.0.1/resorts/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 12:17:51) [GET]
+  Parameters: {"1244043766"=>nil}
+
+ActionController::RoutingError (No route matches "/image/rooms/4/thumb/n796635829_1683419_3237.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2009-07-20 12:18:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mResort Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+  [4;35;1mResort Load (1.1ms)[0m   [0mSELECT * FROM `resorts` WHERE (`resorts`.`id` = 1) [0m
+  [4;36;1mRoom Load (0.3ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;35;1mRoom Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mUnitSize Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;35;1mUnitSize Load (0.7ms)[0m   [0mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+  [4;36;1mMailinglist Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (2.8ms)
+Rendered resorts/_amenities (0.2ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+[paperclip] Paperclip attachment image on Room initialized.
+Rendered resorts/_show_rooms (3.9ms)
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 51ms (View: 17, DB: 10) | 200 OK [http://127.0.0.1/resorts/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 12:18:29) [GET]
+  Parameters: {"1244043766"=>nil}
+
+ActionController::RoutingError (No route matches "/image/rooms/4/thumb/n796635829_1683419_3237.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-07-20 12:18:35) [GET]
+  [4;36;1mMailinglist Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mResort Load (0.4ms)[0m   [0mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mResort Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+  [4;35;1mLocation Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (4.9ms)
+Rendered layouts/_navegacion (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 43ms (View: 13, DB: 9) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-07-20 12:19:21) [GET]
+  [4;35;1mMailinglist Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mResort Load (0.4ms)[0m   [0;1mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mResort Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+  [4;36;1mLocation Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Could not dump header data for exception: stack level too deep
+
+ActionView::TemplateError (undefined method `fixnum_path' for #<ActionView::Base:0x20f1fe8>) on line #11 of app/views/home/index.rhtml:
+8:           <%= image_tag resort.photo1.url(:thumb) %>
+9:         </td>
+10:         <td style="padding: 15px;">
+11:           <h4><%= link_to resort.name, resort.id %></h4>
+12:           <p><%= resort.description[0...170] %></p>
+13:         </td>
+14:       </tr>
+
+    app/views/home/index.rhtml:11:in `_run_rhtml_app47views47home47index46rhtml'
+    app/views/home/index.rhtml:5:in `each'
+    app/views/home/index.rhtml:5:in `_run_rhtml_app47views47home47index46rhtml'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/template.rb:46:in `render'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_17817730'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_17817730'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15:in `process'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+
+Rendered rescues/_trace (55.3ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-07-20 12:20:05) [GET]
+  [4;36;1mMailinglist Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.3ms)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mResort Load (0.4ms)[0m   [0mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mResort Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+Could not dump header data for exception: stack level too deep
+
+ActionView::TemplateError (resort_url failed to generate from {:controller=>"resorts", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["resorts", :id] - are they all satisfied?) on line #11 of app/views/home/index.rhtml:
+8:           <%= image_tag resort.photo1.url(:thumb) %>
+9:         </td>
+10:         <td style="padding: 15px;">
+11:           <h4><%= link_to resort.name, resort_path %></h4>
+12:           <p><%= resort.description[0...170] %></p>
+13:         </td>
+14:       </tr>
+
+    (eval):16:in `resort_path'
+    app/views/home/index.rhtml:11:in `_run_rhtml_app47views47home47index46rhtml'
+    app/views/home/index.rhtml:5:in `each'
+    app/views/home/index.rhtml:5:in `_run_rhtml_app47views47home47index46rhtml'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/template.rb:46:in `render'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_17817730'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_17817730'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15:in `process'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+
+Rendered rescues/_trace (45.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-07-20 12:20:20) [GET]
+  [4;36;1mMailinglist Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.3ms)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mResort Load (0.4ms)[0m   [0mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mResort Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+Could not dump header data for exception: stack level too deep
+
+ActionView::TemplateError (resort_url failed to generate from {:controller=>"resorts", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["resorts", :id] - are they all satisfied?) on line #11 of app/views/home/index.rhtml:
+8:           <%= image_tag resort.photo1.url(:thumb) %>
+9:         </td>
+10:         <td style="padding: 15px;">
+11:           <h4><%= link_to resort.name, resort_url %></h4>
+12:           <p><%= resort.description[0...170] %></p>
+13:         </td>
+14:       </tr>
+
+    (eval):16:in `resort_url'
+    app/views/home/index.rhtml:11:in `_run_rhtml_app47views47home47index46rhtml'
+    app/views/home/index.rhtml:5:in `each'
+    app/views/home/index.rhtml:5:in `_run_rhtml_app47views47home47index46rhtml'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `render_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/template.rb:46:in `render'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_17817730'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_17817730'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15:in `process'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+
+Rendered rescues/_trace (45.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-07-20 12:20:35) [GET]
+  [4;36;1mMailinglist Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.3ms)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mResort Load (0.4ms)[0m   [0mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mResort Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+  [4;35;1mLocation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (5.2ms)
+Rendered layouts/_navegacion (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 47ms (View: 18, DB: 8) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2009-07-20 12:20:40) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mResort Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+  [4;36;1mResort Load (0.8ms)[0m   [0;1mSELECT * FROM `resorts` WHERE (`resorts`.`id` = 3) [0m
+  [4;35;1mRoom Load (0.3ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 3) [0m
+  [4;36;1mRoom Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mMailinglist Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (3.0ms)
+Rendered resorts/_amenities (0.3ms)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `rooms` WHERE (`rooms`.resort_id = 3) [0m
+Rendered layouts/_navegacion (0.3ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 89ms (View: 11, DB: 8) | 200 OK [http://127.0.0.1/resorts/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-07-20 12:20:43) [GET]
+  [4;36;1mMailinglist Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mResort Load (0.4ms)[0m   [0mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mResort Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+  [4;35;1mLocation Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (4.8ms)
+Rendered layouts/_navegacion (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 43ms (View: 14, DB: 9) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2009-07-20 12:20:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mResort Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+  [4;36;1mResort Load (0.8ms)[0m   [0;1mSELECT * FROM `resorts` WHERE (`resorts`.`id` = 1) [0m
+  [4;35;1mRoom Load (0.3ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;36;1mRoom Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mUnitSize Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;36;1mUnitSize Load (0.8ms)[0m   [0;1mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+  [4;35;1mMailinglist Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (2.9ms)
+Rendered resorts/_amenities (0.2ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 1) [0m
+[paperclip] Paperclip attachment image on Room initialized.
+Rendered resorts/_show_rooms (2.6ms)
+Rendered layouts/_navegacion (59.9ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 107ms (View: 73, DB: 10) | 200 OK [http://127.0.0.1/resorts/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-20 12:20:47) [GET]
+  Parameters: {"1244043766"=>nil}
+
+ActionController::RoutingError (No route matches "/image/rooms/4/thumb/n796635829_1683419_3237.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-07-20 12:20:50) [GET]
+  [4;35;1mMailinglist Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mResort Load (0.4ms)[0m   [0;1mSELECT * FROM `resorts` LIMIT 6[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mResort Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+  [4;36;1mLocation Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (4.8ms)
+Rendered layouts/_navegacion (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 43ms (View: 14, DB: 9) | 200 OK [http://127.0.0.1/]
