@@ -4,3 +4,7 @@ Given /^the user has a room associated with him$/ do
   room = Factory(:room)
 end
 
+Then /^this step is pending$/ do
+  pending
+end
+

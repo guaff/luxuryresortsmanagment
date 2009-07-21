@@ -41,7 +41,7 @@ class ClientMailer < ActionMailer::Base
   end
   
   def physical_card_optout(client)
-    recipients    "Luxury Resort Management <optout@luxuryresrotmanagement.com>"
+    recipients    "Luxury Resort Management <optout@luxuryresortmanagement.com>"
     from          "Luxury Resort Management <contracts@luxuryresortmanagement.com>"
     subject       "Opt-Out"
     body          :client => client

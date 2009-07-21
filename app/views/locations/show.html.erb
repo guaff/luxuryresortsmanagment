@@ -1,8 +1,10 @@
-<div class="colLeft">
-<h1><%=h @location.name %></h1>
-<p><%=h @location.description %></p>
+<%= render :partial => "layouts/static_banner"%>
+
+<div class="blur">
+  <h1><%=h @location.name %></h1>
+  <p><%=h @location.description %></p>
 </div>
 
-<div class="colRight">
+<div class="boxes_down">
 	<%= render :partial => "show_cities" %>
 </div>

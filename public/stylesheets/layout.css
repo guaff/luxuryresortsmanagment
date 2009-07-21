@@ -7,10 +7,11 @@ body{ background: url(../images/bg.jpg) fixed repeat-x; margin: 0;}
 
 /* MAIN ELEMENTS */
 .container{ width: 868px; height: 100%; margin: 0 auto; background: white; padding-left: 31px; padding-right: 31px; }
-.logo{ width: 450px; margin: 15px auto;}
+.logo{ width: 319px; margin: 0 auto;}
 
 .benefits{ float: right; margin-top: 15px;}
 .feature_resorts{ float: left; width: 430px; background: #f9f8f7; padding: 10px;}
+
 
 .errorExplanation li{ color: red; font-size: 12px;}
 
@@ -28,10 +29,6 @@ body{ background: url(../images/bg.jpg) fixed repeat-x; margin: 0;}
 .no_margin{ margin: 0px;}
 
 /* ELEMENTS */
-
-.colRight{ width: 280px; float: right;}
-.colLeft{ float: left; width: 570px;}
-
 .right{ float: right;}
 .left{ float: left;}
 
@@ -40,21 +37,18 @@ body{ background: url(../images/bg.jpg) fixed repeat-x; margin: 0;}
 .left_small{ float: left; width: 200px;}
 .add_room_form .right{ float: right;}
 
-.main_banner{ width: 565px; height: 332px; float: left; margin-bottom: 17px;}
-.main_blur{ width: 565px;  overflow: hidden; float: left; text-align: justify;}
+.main_banner{ width: 565px; height: 332px; float: left;}
+.main_blur{ width: 565px; height: 332px; overflow: hidden; float: left; text-align: justify;}
 
 .resort_description{ line-height: 30px; padding-right: 30px;}
 
-.blur{ width: 388px;  float: right; margin-top: -6px; text-align: justify; overflow: hidden;}
+.blur{ width: 288px; height: 330px; float: right; margin-top: -6px; text-align: justify; overflow: hidden;}
 .blur p{ line-height: 20px;}
-.find_resort{ width: 374px; height: 240px; background-color: #f9f8f7; float: right; text-align: center; padding: 10px;}
+.find_resort{ width: 268px; height: 160px; background-color: #f8f6f2; float: right; text-align: center; padding: 10px;}
 
 /* INPUTS */
 input{ border: 0px; height: 13px; background: white; font-size: 12px; color: #857461; padding: 7px; margin-top: .3em;}
-
 .submit{ height: 32px; }
-.find_resort .submit{ background: white; color: #857461; font-size: 18px; }
-
 .submit:hover { background: #857461; color: white;}
 input,.input_colorado, .image_input{ border: 0px; height: 16px; background: #f9f7f3; font-size: 12px; color: #857461; padding: 4px; margin-top: .3em;}
 textarea{ border: 0px;  background: #f9f7f3; font-size: 12px; color: #857461; padding: 7px; margin-top: .3em;}
@@ -62,6 +56,7 @@ textarea{ border: 0px;  background: #f9f7f3; font-size: 12px; color: #857461; pa
 label{ font-size: 12px; color: #8c7964;}
 select, file{ border: 0px;  background: #f9f7f3; font-size: 12px; color: #857461; padding: 7px; margin-top: .3em;}
 .find_resort select{  background: white; font-size: 18px;}
+
 
 /* BOXES DOWN */
 .boxes_down{ width: 100%; float: left; margin-top: 15px;}

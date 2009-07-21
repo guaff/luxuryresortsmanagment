@@ -16,9 +16,6 @@ class ClientsController < ApplicationController
 
   def new
     @client = Client.new
-  #  @user.hobbies.build
-    @client.rooms.build
-    
     @payment_types = ['Credit Card', 'Money Order', 'Cash']
 
     respond_to do |format|
@@ -35,12 +32,13 @@ class ClientsController < ApplicationController
     @client = Client.new(params[:client])
 
     respond_to do |format|
-      if @client.save && logged_in? == true 
+      if @client.save && @current_user == true 
         flash[:notice] = 'Client was successfully created.'
-        format.html { redirect_to :controller => "clients", :action => :show,  :id => @client.id }
+        format.html { redirect_to :controller => "admin", :action => "clients" }
         format.xml  { render :xml => @client, :status => :created, :location => @client }
-      elsif @client.save && logged_in? == false
+      elsif @client.save && @current_user == nil
         flash[:notice] = 'Thank you for registering. We will contact you shortly'
+        
         # Delivering emails if they are not log-in
         ClientMailer.deliver_physical_card_thank_you(@client)
         ClientMailer.deliver_physical_card_notification(@client)

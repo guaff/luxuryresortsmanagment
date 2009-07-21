@@ -4,7 +4,7 @@ Feature: see marketing page home, concierge, contact, locations, blog
 	
 	Scenario: See home
 	Given I am on the "home" page
-	Then I should see "HOME"
+	Then I should see "Welcome"
 	
 	Scenario: See About us
 	Given I am on the "about us" page

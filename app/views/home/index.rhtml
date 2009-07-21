@@ -1,25 +1,10 @@
-<div class="feature_resorts">
-  <center><img src="/images/feature_resort.jpg"/></center>
-  <table>
-    <tbody>
-      <% for resort in @resorts %>
-      <tr>
-        <td>
-          <%= image_tag resort.photo1.url(:thumb) %>
-        </td>
-        <td style="padding: 15px;">
-          <h4><%= link_to resort.name, resort_path(resort) %></h4>
-          <p><%= resort.description[0...170] %></p>
-        </td>
-      </tr>
-     <% end %>
-  </table>
+<%= render :partial => "layouts/static_banner", :locals => { :standard => "yes",:image => "/images/main_banner/main_banner.jpg" }%>
+
+<div class="blur">
+<h1>Welcome</h1>
+<h2>Our goal is to provide you with the top of the notch 
+resorts around the world, just for you.</h2>
+<%= render :partial => "/resorts/find"%>
 </div>
 
-<div style=" float: right; width: 400px;">
-  <%= render :partial => "/resorts/find"%>
 
-  <div class="benefits">
-    <a href="/home/concierge"><img src="images/benefits.jpg" border="0"></a>
-  </div>
-</div>
