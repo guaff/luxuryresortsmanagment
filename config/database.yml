@@ -5,6 +5,7 @@ development:
   host: localhost
   database: lrm_development
   username: root
+  password: nylecoj
 
 
   
