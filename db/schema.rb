@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(:version => 20090413152852) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "concierge_accepted",                   :default => false
-    t.date     "concierge_renewal",                    :default => '2009-04-29'
+    t.date     "concierge_renewal",                    :default => '2009-10-24'
   end
 
   create_table "comments", :force => true do |t|

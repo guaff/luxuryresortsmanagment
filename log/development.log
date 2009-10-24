@@ -14861,3 +14861,156 @@ Rendered layouts/_static_banner (0.3ms)
 Rendered layouts/_navegacion (0.2ms)
 Rendered layouts/_footer (0.2ms)
 Completed in 21ms (View: 11, DB: 3) | 200 OK [http://127.0.0.1/locations/]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+/!\ FAILSAFE /!\  Sat Oct 24 19:21:17 -0430 2009
+  Status: 500 Internal Server Error
+  Access denied for user 'root'@'localhost' (using password: NO)
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `real_connect'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `connect'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:204:in `initialize'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `new'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `mysql_connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+    /home/osle/.gem/ruby/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-24 19:24:04) [GET]
+  [4;35;1mMailinglist Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (0.1ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (1.3ms)
+Rendered resorts/_find (12.4ms)
+Rendered layouts/_navegacion (1.1ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 84ms (View: 53, DB: 3) | 200 OK [http://0.0.0.0/]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20090202134223)
+Migrating to CreateCities (20090202150833)
+Migrating to AddingLocationIdToCities (20090202150912)
+Migrating to CreateUsers (20090202193430)
+Migrating to DeleteImageOnLocations (20090203021150)
+Migrating to AddAttachmentsImageToLocation (20090203021358)
+Migrating to DelitingImageFromCities (20090203160136)
+Migrating to AddAttachmentsImageToCity (20090203160339)
+Migrating to CreateMailinglists (20090203163652)
+Migrating to CreateResorts (20090204171321)
+Migrating to AddAttachmentsPhotoMainPhoto1Photo2Photo3AndPhoto4ToResort (20090204223551)
+Migrating to CreateUnitSizes (20090207174221)
+Migrating to CreateRooms (20090207194124)
+Migrating to AddAttachmentsImageToRoom (20090207204901)
+Migrating to CreateClients (20090213144852)
+Migrating to RoomsShouldBelongToClients (20090213151244)
+Migrating to CreateBlogs (20090216145903)
+Migrating to CreatePeoples (20090218160722)
+Migrating to InrementingCcSize (20090303153059)
+Migrating to ChangingUnitSizeIdtoUnitSizesId (20090304213553)
+Migrating to ChangingZipDb (20090316201405)
+Migrating to ChangingUnitSizeId (20090317155540)
+Migrating to CommentsOnClients (20090410164412)
+Migrating to AddingTimeStampsToComments (20090410184553)
+Migrating to AddingConciergeServicesFieldToClient (20090413152852)
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW FIELDS FROM `blogs`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `blogs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `blogs`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `cities`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `cities`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mdescribe `clients`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `clients`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `locations`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `locations`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `mailinglists`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `mailinglists`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `peoples`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mdescribe `peoples`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `peoples`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `resorts`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `resorts`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `rooms`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `rooms`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `unit_sizes`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `unit_sizes`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-24 19:25:07) [GET]
+  [4;35;1mMailinglist Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (1.3ms)
+Rendered resorts/_find (4.1ms)
+Rendered layouts/_navegacion (1.2ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 77ms (View: 46, DB: 3) | 200 OK [http://0.0.0.0/]
