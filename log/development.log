@@ -15014,3 +15014,68 @@ Rendered resorts/_find (4.1ms)
 Rendered layouts/_navegacion (1.2ms)
 Rendered layouts/_footer (1.1ms)
 Completed in 77ms (View: 46, DB: 3) | 200 OK [http://0.0.0.0/]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20090202134223)
+Migrating to CreateCities (20090202150833)
+Migrating to AddingLocationIdToCities (20090202150912)
+Migrating to CreateUsers (20090202193430)
+Migrating to DeleteImageOnLocations (20090203021150)
+Migrating to AddAttachmentsImageToLocation (20090203021358)
+Migrating to DelitingImageFromCities (20090203160136)
+Migrating to AddAttachmentsImageToCity (20090203160339)
+Migrating to CreateMailinglists (20090203163652)
+Migrating to CreateResorts (20090204171321)
+Migrating to AddAttachmentsPhotoMainPhoto1Photo2Photo3AndPhoto4ToResort (20090204223551)
+Migrating to CreateUnitSizes (20090207174221)
+Migrating to CreateRooms (20090207194124)
+Migrating to AddAttachmentsImageToRoom (20090207204901)
+Migrating to CreateClients (20090213144852)
+Migrating to RoomsShouldBelongToClients (20090213151244)
+Migrating to CreateBlogs (20090216145903)
+Migrating to CreatePeoples (20090218160722)
+Migrating to InrementingCcSize (20090303153059)
+Migrating to ChangingUnitSizeIdtoUnitSizesId (20090304213553)
+Migrating to ChangingZipDb (20090316201405)
+Migrating to ChangingUnitSizeId (20090317155540)
+Migrating to CommentsOnClients (20090410164412)
+Migrating to AddingTimeStampsToComments (20090410184553)
+Migrating to AddingConciergeServicesFieldToClient (20090413152852)
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `blogs`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `blogs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `blogs`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `cities`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `cities`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mdescribe `clients`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `clients`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `locations`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `locations`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `mailinglists`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `mailinglists`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `peoples`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `peoples`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `peoples`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `resorts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `resorts`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `rooms`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `rooms`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `unit_sizes`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `unit_sizes`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
