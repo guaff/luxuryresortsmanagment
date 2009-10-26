@@ -9,7 +9,7 @@ Rails::Initializer.run do |config|
               :lib => 'fiveruns_dash_rails',
               :source => 'http://gems.github.com'
   
-  config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
+  config.gem 'mislav-will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
   config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
   config.time_zone = 'UTC'  
   config.action_controller.session = {
