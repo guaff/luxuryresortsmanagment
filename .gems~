@@ -4,4 +4,4 @@ cucumber
 webrat
 fiveruns-dash-rails --source http://gems.github.com
 thoughtbot-factory_girl --source http://gems.github.com
-will_paginate
+mislav-will_paginate
