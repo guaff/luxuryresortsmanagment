@@ -3,4 +3,5 @@ rspec-rails
 cucumber
 webrat
 fiveruns-dash-rails 
-thoughtbot-factory_girl
+thoughtbot-factory_girl --source http://gems.github.com
+
