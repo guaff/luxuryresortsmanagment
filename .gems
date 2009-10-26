@@ -2,5 +2,5 @@ rspec
 rspec-rails
 cucumber
 webrat
-
-
+fiveruns-dash-rails 
+thoughtbot-factory_girl
