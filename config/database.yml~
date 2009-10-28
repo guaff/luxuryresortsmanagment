@@ -2,9 +2,10 @@
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
   adapter: mysql
-  host: localhost
+  host: 127.0.0.1
   database: lrm_development
   username: root
+#  socket: /opt/lampp/var/mysql/mysql.sock
 
 
   
