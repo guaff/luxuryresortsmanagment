@@ -42,7 +42,7 @@ body{ background: url(../images/bg.jpg) fixed repeat-x; margin: 0;}
 
 .resort_description{ line-height: 30px; padding-right: 30px;}
 
-.blur{ width: 288px; height: 340px; float: right; margin-top: -6px; text-align: justify; overflow: hidden;}
+.blur{ width: 288px; height: 350px; float: right; margin-top: -6px; text-align: justify; overflow: hidden;}
 .blur p{ line-height: 20px;}
 .find_resort{ width: 268px; height: 160px; background-color: #f8f6f2; float: right; text-align: center; padding: 10px;}
 
