@@ -16286,3 +16286,62 @@ Rendered locations/_show_cities (28.5ms)
 Rendered layouts/_navegacion (0.4ms)
 Rendered layouts/_footer (0.4ms)
 Completed in 105ms (View: 44, DB: 8) | 200 OK [http://0.0.0.0/locations/1]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-05 12:54:10) [GET]
+  [4;35;1mMailinglist Columns (22.1ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (10.0ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (9.3ms)
+  [4;36;1mLocation Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (61.1ms)
+Rendered layouts/_navegacion (1.7ms)
+Rendered layouts/_footer (1.3ms)
+Completed in 300ms (View: 141, DB: 36) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-11-05 12:54:12) [GET]
+  [4;36;1mLocation Load (0.5ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (1.4ms)
+  [4;35;1mLocation Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered layouts/_navegacion (0.6ms)
+Rendered layouts/_footer (0.6ms)
+Completed in 42ms (View: 26, DB: 2) | 200 OK [http://0.0.0.0/locations/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2009-11-05 12:54:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (48.5ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 1) [0m
+  [4;35;1mCity Load (33.3ms)[0m   [0mSELECT * FROM `cities` WHERE (`cities`.location_id = 1) ORDER BY name asc[0m
+Rendering template within layouts/application
+Rendering locations/show
+Rendered layouts/_static_banner (1.0ms)
+  [4;36;1mCity Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+Rendered locations/_show_cities (26.4ms)
+Rendered layouts/_navegacion (0.6ms)
+Rendered layouts/_footer (0.6ms)
+Completed in 200ms (View: 44, DB: 85) | 200 OK [http://0.0.0.0/locations/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-05 12:54:22) [GET]
+  [4;36;1mMailinglist Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mLocation Load (0.4ms)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mCity Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.5ms)
+  [4;35;1mLocation Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (7.0ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 114ms (View: 13, DB: 4) | 200 OK [http://0.0.0.0/]
