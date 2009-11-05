@@ -3,9 +3,9 @@
 development:
   adapter: mysql
   host: localhost
-  database: lrm_development
+  database: lrm_development3
   username: root
-  password: nylecoj
+#  socket: /opt/lampp/var/mysql/mysql.sock
 
 
   
