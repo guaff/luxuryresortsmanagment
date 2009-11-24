@@ -1,7 +1,7 @@
 class CommentsOnClients < ActiveRecord::Migration
   def self.up
     create_table :comments do |t|
-        t.column :client_id, :string
+        t.column :client_id, :integer
         t.column :comment, :string
         t.column :author, :string
     end

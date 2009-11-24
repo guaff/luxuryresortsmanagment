@@ -16345,3 +16345,352 @@ Rendered resorts/_find (7.0ms)
 Rendered layouts/_navegacion (0.5ms)
 Rendered layouts/_footer (0.5ms)
 Completed in 114ms (View: 13, DB: 4) | 200 OK [http://0.0.0.0/]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+/!\ FAILSAFE /!\  Tue Nov 24 15:39:03 -0430 2009
+  Status: 500 Internal Server Error
+  Can't connect to MySQL server on '127.0.0.1' (111)
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `real_connect'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `connect'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:204:in `initialize'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `new'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `mysql_connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /home/osle/.gem/ruby/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /home/osle/.gem/ruby/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/osle/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /home/osle/.gem/ruby/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (26.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-24 15:42:32) [GET]
+  [4;35;1mMailinglist Columns (55.1ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (7.7ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (18.3ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (7.7ms)
+  [4;36;1mLocation Columns (8.3ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (73.8ms)
+Rendered layouts/_navegacion (1.8ms)
+Rendered layouts/_footer (1.4ms)
+Completed in 407ms (View: 220, DB: 116) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-11-24 15:42:36) [GET]
+  [4;36;1mLocation Load (0.4ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (1.1ms)
+  [4;35;1mLocation Columns (14.2ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.7ms)
+Completed in 66ms (View: 36, DB: 15) | 200 OK [http://0.0.0.0/locations/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2009-11-24 15:42:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (16.5ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 1) [0m
+  [4;35;1mCity Load (8.1ms)[0m   [0mSELECT * FROM `cities` WHERE (`cities`.location_id = 1) ORDER BY name asc[0m
+Rendering template within layouts/application
+Rendering locations/show
+Rendered layouts/_static_banner (1.0ms)
+  [4;36;1mCity Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+Rendered locations/_show_cities (25.3ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 137ms (View: 47, DB: 27) | 200 OK [http://0.0.0.0/locations/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CitiesController#show (for 127.0.0.1 at 2009-11-24 15:42:41) [GET]
+  Parameters: {"id"=>"42"}
+  [4;36;1mCity Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mCity Load (0.3ms)[0m   [0mSELECT * FROM `cities` WHERE (`cities`.`id` = 42) [0m
+  [4;36;1mResort Load (45.2ms)[0m   [0;1mSELECT * FROM `resorts` WHERE (`resorts`.city_id = 42) [0m
+Rendering template within layouts/application
+Rendering cities/show
+  [4;35;1mResort Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+Rendered cities/_show_resorts (15.3ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 130ms (View: 39, DB: 49) | 200 OK [http://0.0.0.0/cities/42]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2009-11-24 15:42:44) [GET]
+  Parameters: {"id"=>"799"}
+  [4;35;1mResort Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+  [4;36;1mResort Load (0.8ms)[0m   [0;1mSELECT * FROM `resorts` WHERE (`resorts`.`id` = 799) [0m
+  [4;35;1mRoom Load (2.8ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 799) [0m
+  [4;36;1mRoom Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mUnitSize Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;36;1mUnitSize Load (0.4ms)[0m   [0;1mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 9) [0m
+  [4;35;1mMailinglist Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (149.4ms)
+Rendered resorts/_amenities (1.8ms)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `rooms` WHERE (`rooms`.resort_id = 799) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 799) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 9) [0m
+Rendered resorts/_show_rooms (6.0ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 352ms (View: 220, DB: 11) | 200 OK [http://0.0.0.0/resorts/799]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-24 15:42:45) [GET]
+  Parameters: {"1240325233"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo_mains/799/thumb/elkhorn11.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-24 15:42:45) [GET]
+  Parameters: {"1240325231"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo1s/799/thumb/elkhorn22.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-24 15:42:45) [GET]
+  Parameters: {"1240325232"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo2s/799/thumb/elkhorn4.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-24 15:42:45) [GET]
+  Parameters: {"1240325232"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo3s/799/thumb/elkhorn3.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-24 15:42:45) [GET]
+  Parameters: {"1240325233"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo4s/799/thumb/elkhorn5.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (3.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-24 18:19:36) [GET]
+  [4;36;1mLocation Load (17.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (1.4ms)
+Rendered resorts/_find (11.5ms)
+Rendered layouts/_navegacion (1.1ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 497ms (View: 53, DB: 21) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-11-24 18:19:39) [GET]
+  [4;35;1mLocation Load (2.3ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (1.1ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 45ms (View: 27, DB: 3) | 200 OK [http://0.0.0.0/locations/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2009-11-24 18:19:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Load (2.1ms)[0m   [0;1mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+  [4;35;1mCity Load (36.5ms)[0m   [0mSELECT * FROM "cities" WHERE ("cities".location_id = 1) ORDER BY name asc[0m
+Rendering template within layouts/application
+Rendering locations/show
+Rendered layouts/_static_banner (1.0ms)
+Rendered locations/_show_cities (24.7ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 140ms (View: 43, DB: 39) | 200 OK [http://0.0.0.0/locations/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CitiesController#show (for 127.0.0.1 at 2009-11-24 18:19:43) [GET]
+  Parameters: {"id"=>"42"}
+  [4;36;1mCity Load (1.1ms)[0m   [0;1mSELECT * FROM "cities" WHERE ("cities"."id" = 42) [0m
+  [4;35;1mResort Load (5.9ms)[0m   [0mSELECT * FROM "resorts" WHERE ("resorts".city_id = 42) [0m
+Rendering template within layouts/application
+Rendering cities/show
+Rendered cities/_show_resorts (15.1ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 138ms (View: 96, DB: 8) | 200 OK [http://0.0.0.0/cities/42]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CitiesController#show (for 127.0.0.1 at 2009-11-24 18:24:44) [GET]
+  Parameters: {"id"=>"42"}
+  [4;36;1mCity Load (1.4ms)[0m   [0;1mSELECT * FROM "cities" WHERE ("cities"."id" = 42) [0m
+  [4;35;1mResort Load (2.5ms)[0m   [0mSELECT * FROM "resorts" WHERE ("resorts".city_id = 42) [0m
+Rendering template within layouts/application
+Rendering cities/show
+Rendered cities/_show_resorts (14.8ms)
+Rendered layouts/_navegacion (1.2ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 173ms (View: 52, DB: 4) | 200 OK [http://0.0.0.0/cities/42]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2009-11-24 18:24:47) [GET]
+  Parameters: {"id"=>"733"}
+  [4;36;1mResort Load (27.3ms)[0m   [0;1mSELECT * FROM "resorts" WHERE ("resorts"."id" = 733) [0m
+  [4;35;1mRoom Load (4.9ms)[0m   [0mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 733) [0m
+  [4;36;1mUnitSize Load (24.7ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" IN (9,2,3)) [0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (77.8ms)
+Rendered resorts/_amenities (1.2ms)
+  [4;35;1mSQL (67.7ms)[0m   [0mSELECT count(*) AS count_all FROM "rooms" WHERE ("rooms".resort_id = 733) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 733) [0m
+  [4;35;1mUnitSize Load (12.6ms)[0m   [0mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 2) [0m
+  [4;36;1mUnitSize Load (0.7ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+  [4;35;1mUnitSize Load (0.7ms)[0m   [0mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+Rendered resorts/_show_rooms (30.4ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 434ms (View: 137, DB: 139) | 200 OK [http://0.0.0.0/resorts/733]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-24 18:24:49) [GET]
+  Parameters: {"1237907642"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo_mains/733/thumb/banff1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-24 18:24:49) [GET]
+  Parameters: {"1237907640"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo1s/733/thumb/banff2.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-24 18:24:49) [GET]
+  Parameters: {"1237907640"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo2s/733/thumb/banff3.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-24 18:24:49) [GET]
+  Parameters: {"1237907641"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo3s/733/thumb/banff4.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-24 18:24:49) [GET]
+  Parameters: {"1237907641"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo4s/733/thumb/banff5.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

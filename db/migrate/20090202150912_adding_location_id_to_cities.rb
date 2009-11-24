@@ -1,6 +1,6 @@
 class AddingLocationIdToCities < ActiveRecord::Migration
   def self.up
-    add_column :cities, :location_id, :string
+    add_column :cities, :location_id, :integer
   end
 
   def self.down

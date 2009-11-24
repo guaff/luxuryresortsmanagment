@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20090413152852) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "location_id"
+    t.integer  "location_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(:version => 20090413152852) do
   end
 
   create_table "comments", :force => true do |t|
-    t.string   "client_id"
+    t.integer  "client_id"
     t.string   "comment"
     t.string   "author"
     t.datetime "created_at"
@@ -142,7 +142,7 @@ ActiveRecord::Schema.define(:version => 20090413152852) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "client_id"
+    t.integer   "client_id"
   end
 
   create_table "unit_sizes", :force => true do |t|
