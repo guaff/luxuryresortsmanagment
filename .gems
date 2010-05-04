@@ -1,5 +1,6 @@
 rspec
 rspec-rails
+gherkin
 cucumber
 webrat
 fiveruns-dash-rails --source http://gems.github.com
