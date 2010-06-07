@@ -1,0 +1,21 @@
+<%= render :partial => "layouts/static_banner", :locals => { :image => "/images/main_banner/locations.jpg" }%>
+
+<div class="blur">
+<h1>Locations</h1>
+<p>Select from one of our locations below</p>
+<table style="width: 100%;">
+
+<div class="colRight">
+  <h1>Locations</h1>
+  <p>Select from one of our locations below</p>
+  <table style="width: 100%;">
+
+  <% for location in @locations %>
+    <tr>
+      <td class="oscura"><%= link_to location.name.upcase, location %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+
+
