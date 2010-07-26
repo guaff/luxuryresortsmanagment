@@ -18594,3 +18594,1871 @@ ActionController::RoutingError (No route matches "/system/photo1s/736/thumb/geo2
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2010-07-26 17:20:41) [GET]
+  Parameters: {"id"=>"736"}
+  [4;36;1mResort Load (2.0ms)[0m   [0;1mSELECT * FROM "resorts" WHERE ("resorts"."id" = 736) [0m
+  [4;35;1mRoom Load (2.6ms)[0m   [0mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 736) [0m
+  [4;36;1mUnitSize Load (1.0ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (80.7ms)
+Rendered resorts/_amenities (59.6ms)
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rooms" WHERE ("rooms".resort_id = 736) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 736) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+Rendered resorts/_show_rooms (8.3ms)
+Rendered layouts/_navegacion (1.8ms)
+Rendered layouts/_footer (1.6ms)
+Completed in 323ms (View: 218, DB: 7) | 200 OK [http://localhost/resorts/736]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:20:42) [GET]
+  Parameters: {"1237899658"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo_mains/736/thumb/geo1.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:20:42) [GET]
+  Parameters: {"1237899657"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo1s/736/thumb/geo2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:20:43) [GET]
+  Parameters: {"1237899657"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo2s/736/thumb/geo3.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:20:43) [GET]
+  Parameters: {"1237899657"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo3s/736/thumb/geo4.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:20:43) [GET]
+  Parameters: {"1237899658"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo4s/736/thumb/geo5.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-07-26 17:20:45) [GET]
+  [4;36;1mLocation Load (3.1ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (1.4ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 64ms (View: 43, DB: 4) | 200 OK [http://localhost/locations/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-07-26 17:20:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mLocation Load (1.3ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = 2) [0m
+  [4;36;1mCity Load (4.2ms)[0m   [0;1mSELECT * FROM "cities" WHERE ("cities".location_id = 2) ORDER BY name asc[0m
+Rendering template within layouts/application
+Rendering locations/show
+Rendered layouts/_static_banner (1.1ms)
+Rendered locations/_show_cities (21.1ms)
+Rendered layouts/_navegacion (1.2ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 103ms (View: 47, DB: 6) | 200 OK [http://localhost/locations/2]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CitiesController#show (for 127.0.0.1 at 2010-07-26 17:20:49) [GET]
+  Parameters: {"id"=>"38"}
+  [4;35;1mCity Load (2.4ms)[0m   [0mSELECT * FROM "cities" WHERE ("cities"."id" = 38) [0m
+  [4;36;1mResort Load (1.7ms)[0m   [0;1mSELECT * FROM "resorts" WHERE ("resorts".city_id = 38) [0m
+Rendering template within layouts/application
+Rendering cities/show
+Rendered cities/_show_resorts (1.4ms)
+Rendered layouts/_navegacion (0.8ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 75ms (View: 25, DB: 5) | 200 OK [http://localhost/cities/38]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CitiesController#show (for 127.0.0.1 at 2010-07-26 17:21:27) [GET]
+  Parameters: {"id"=>"38"}
+  [4;35;1mCity Load (1.2ms)[0m   [0mSELECT * FROM "cities" WHERE ("cities"."id" = 38) [0m
+  [4;36;1mResort Load (1.7ms)[0m   [0;1mSELECT * FROM "resorts" WHERE ("resorts".city_id = 38) [0m
+Rendering template within layouts/application
+Rendering cities/show
+Rendered cities/_show_resorts (0.6ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 53ms (View: 11, DB: 3) | 200 OK [http://localhost/cities/38]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-07-26 17:25:14) [GET]
+  [4;35;1mLocation Load (2.4ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (0.6ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 41ms (View: 20, DB: 3) | 200 OK [http://localhost/locations/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#concierge (for 127.0.0.1 at 2010-07-26 17:25:15) [GET]
+Rendering template within layouts/application
+Rendering home/concierge
+Rendered layouts/_static_banner (0.7ms)
+Rendered home/_form_concierge (7.9ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 54ms (View: 34, DB: 1) | 200 OK [http://localhost/home/concierge]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-07-26 17:25:19) [GET]
+Rendering template within layouts/application
+Rendering home/contact
+Rendered layouts/_static_banner (0.8ms)
+Rendered home/_form_contact (7.6ms)
+Rendered layouts/_navegacion (0.7ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 51ms (View: 27, DB: 1) | 200 OK [http://localhost/home/contact]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-07-26 17:35:32) [GET]
+Redirected to http://localhost:3001/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://localhost/admin]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-26 17:35:32) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (61.5ms)
+Completed in 80ms (View: 75, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-26 17:36:01) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"L7d98hN8brWR3UY0FTN1Y2zmYcR6d7pDWxnrmm+yBu4=", "login"=>"ivan", "password"=>"letmein"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = E'ivan') LIMIT 1[0m
+Failed login for 'ivan' from 127.0.0.1 at Mon Jul 26 22:06:01 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 44ms (View: 6, DB: 3) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-26 17:36:05) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"L7d98hN8brWR3UY0FTN1Y2zmYcR6d7pDWxnrmm+yBu4=", "login"=>"ivan", "password"=>"letmein123"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = E'ivan') LIMIT 1[0m
+Failed login for 'ivan' from 127.0.0.1 at Mon Jul 26 22:06:05 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 42ms (View: 8, DB: 3) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-26 17:36:18) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"L7d98hN8brWR3UY0FTN1Y2zmYcR6d7pDWxnrmm+yBu4=", "login"=>"test", "password"=>"letmein"}
+  [4;36;1mUser Load (2.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = E'test') LIMIT 1[0m
+Failed login for 'test' from 127.0.0.1 at Mon Jul 26 22:06:18 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 48ms (View: 6, DB: 3) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-26 17:36:23) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"L7d98hN8brWR3UY0FTN1Y2zmYcR6d7pDWxnrmm+yBu4=", "login"=>"test", "password"=>"letmein123"}
+  [4;35;1mUser Load (2.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = E'test') LIMIT 1[0m
+Failed login for 'test' from 127.0.0.1 at Mon Jul 26 22:06:23 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.6ms)
+Rendered layouts/_footer (0.6ms)
+Completed in 47ms (View: 11, DB: 3) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-26 17:36:57) [GET]
+Could not dump header data for exception: not opened for reading
+
+ActionController::UnknownAction (No action responded to index. Actions: create and new):
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611827608'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611827608'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-26 17:37:01) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 44ms (View: 17, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-26 17:37:17) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"L7d98hN8brWR3UY0FTN1Y2zmYcR6d7pDWxnrmm+yBu4=", "user"=>{"password_confirmation"=>"999999", "password"=>"999999", "login"=>"uokesita", "email"=>"uoke-@gmail.com"}}
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (1.7ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = E'uokesita') LIMIT 1[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = E'uoke-@gmail.com') LIMIT 1[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "remember_token", "login", "email") VALUES(E'', E'8c056a587dcbec5189d9a155ebf79ac5625b89b8', '2010-07-26 22:07:17.721843', E'a4f86720a6b9ee8fb4a551a01f722da60377cf46', NULL, '2010-07-26 22:07:17.721843', NULL, E'uokesita', E'uoke-@gmail.com') RETURNING "id"[0m
+  [4;36;1mSQL (10.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3001/admin
+Completed in 70ms (DB: 16) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-07-26 17:37:17) [GET]
+  [4;35;1mUser Load (1.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/index
+Rendered admin/_menu (2.7ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 71ms (View: 31, DB: 2) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#rooms (for 127.0.0.1 at 2010-07-26 17:37:44) [GET]
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mRoom Load (1.6ms)[0m   [0mSELECT * FROM "rooms" LIMIT 10 OFFSET 0[0m
+  [4;36;1mUnitSize Load (1.2ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" IN (1,2,3)) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM "rooms" [0m
+Rendering template within layouts/admin
+Rendering admin/rooms
+Rendered admin/_search_room (2.4ms)
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 113ms (View: 32, DB: 6) | 200 OK [http://localhost/admin/rooms]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#clients (for 127.0.0.1 at 2010-07-26 17:38:05) [GET]
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mClient Load (3.0ms)[0m   [0mSELECT * FROM "clients" ORDER BY full_name asc LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clients" [0m
+Rendering template within layouts/admin
+Rendering admin/clients
+Rendered admin/_search_client (2.1ms)
+Rendered admin/_menu (1.0ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 209ms (View: 67, DB: 6) | 200 OK [http://localhost/admin/clients/]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-07-26 17:38:11) [GET]
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering clients/new
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 253ms (View: 205, DB: 3) | 200 OK [http://localhost/clients/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 17:39:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"L7d98hN8brWR3UY0FTN1Y2zmYcR6d7pDWxnrmm+yBu4=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2010", "resort_sale_person"=>"", "work_phone"=>"111111", "city"=>"test city", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"", "concierge_renewal(2i)"=>"4", "notes"=>"", "concierge_renewal(3i)"=>"16", "credit_card"=>"", "charge_date(1i)"=>"2010", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname", "full_name_second"=>"test lname", "client_pin"=>"", "tts_sale_person"=>"", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"", "charge_date(2i)"=>"7", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"26", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"", "cancellation_date(1i)"=>"2010", "payment_type"=>"", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/admin
+Rendering clients/new
+Rendered admin/_menu (0.9ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 140ms (View: 43, DB: 2) | 200 OK [http://localhost/clients]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 17:40:24) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"L7d98hN8brWR3UY0FTN1Y2zmYcR6d7pDWxnrmm+yBu4=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2010", "resort_sale_person"=>"", "work_phone"=>"111111", "city"=>"test city", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"", "charge_date(1i)"=>"2010", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname", "full_name_second"=>"test lname", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"", "charge_date(2i)"=>"7", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"26", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"", "cancellation_date(1i)"=>"2010", "payment_type"=>"", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/admin
+Rendering clients/new
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 190ms (View: 41, DB: 2) | 200 OK [http://localhost/clients]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 17:40:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"L7d98hN8brWR3UY0FTN1Y2zmYcR6d7pDWxnrmm+yBu4=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2010", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"test city", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2010", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname", "full_name_second"=>"test lname", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"7", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"26", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"no", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/admin
+Rendering clients/new
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 110ms (View: 41, DB: 2) | 200 OK [http://localhost/clients]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 17:40:58) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"L7d98hN8brWR3UY0FTN1Y2zmYcR6d7pDWxnrmm+yBu4=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2010", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"test city", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2010", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname", "full_name_second"=>"test lname", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"7", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"26", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"120", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mINSERT INTO "clients" ("address", "city", "work_phone", "start_date", "resort_sale_person", "zip", "created_at", "credit_card_expiration", "notes", "updated_at", "full_name_second", "credit_card", "billing_name", "billing_city", "billing_state", "home_phone", "credit_card_type", "tts_sale_person", "client_pin", "concierge_renewal", "full_name", "charge_date", "billing_address", "billing_zip", "cancellation_date", "concierge_accepted", "fee_paid", "contract_return_date", "charge_return_date", "state", "email", "payment_type") VALUES(E'test address', E'test city', 111111, '2010-07-26', E'sale person', E'4005', '2010-07-26 22:10:58.997174', E'04-2010', E'some notes', '2010-07-26 22:10:58.997174', E'test lname', E'123456789123', E'test fname', E'test city', E'test state', 111111, E'visa', E'test sale person', E'123456', '2009-04-16', E'test fname', '2010-07-26', E'test address', E'4005', '2010-07-26', 't', 120, '2010-07-26', '2010-07-26', E'test state', E'test@mail.com', E'cc') RETURNING "id"[0m
+  [4;36;1mSQL (15.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_footer_contracts (1.1ms)
+Sent mail to test@mail.com
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+To: test@mail.com
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear test fname</p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+Could not dump header data for exception: not opened for reading
+
+ArgumentError (wrong number of arguments (3 for 2)):
+  /usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  app/controllers/clients_controller.rb:43
+  app/controllers/clients_controller.rb:34:in `create'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611827608'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611827608'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (87.5ms)
+Rendered rescues/_request_and_response (2.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-26 17:47:02) [GET]
+  [4;35;1mLocation Load (1.6ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (1.2ms)
+Rendered resorts/_find (10.0ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 73ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-07-26 17:47:06) [GET]
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/index
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 38ms (View: 5, DB: 2) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-07-26 17:47:09) [GET]
+Redirected to http://localhost:3001/
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-26 17:47:09) [GET]
+  [4;35;1mLocation Load (2.1ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.5ms)
+Rendered resorts/_find (7.5ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 72ms (View: 16, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-07-26 17:47:15) [GET]
+Redirected to http://localhost:3001/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://localhost/admin]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-26 17:47:15) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (1.1ms)
+Rendered layouts/_footer (0.6ms)
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-26 17:47:20) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "login"=>"uokesita", "password"=>"999999"}
+  [4;36;1mUser Load (2.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = E'uokesita') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3001/admin
+Completed in 117ms (DB: 4) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-07-26 17:47:20) [GET]
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/index
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 44ms (View: 6, DB: 2) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#rooms (for 127.0.0.1 at 2010-07-26 17:47:25) [GET]
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mRoom Load (1.8ms)[0m   [0mSELECT * FROM "rooms" LIMIT 10 OFFSET 0[0m
+  [4;36;1mUnitSize Load (0.9ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" IN (1,2,3)) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM "rooms" [0m
+Rendering template within layouts/admin
+Rendering admin/rooms
+Rendered admin/_search_room (1.5ms)
+Rendered admin/_menu (0.9ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 118ms (View: 27, DB: 5) | 200 OK [http://localhost/admin/rooms]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#unit_sizes (for 127.0.0.1 at 2010-07-26 17:47:26) [GET]
+  [4;36;1mUser Load (2.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mUnitSize Load (1.1ms)[0m   [0mSELECT * FROM "unit_sizes" [0m
+Rendering template within layouts/admin
+Rendering admin/unit_sizes
+Rendered admin/_menu (0.9ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 90ms (View: 34, DB: 4) | 200 OK [http://localhost/admin/unit_sizes]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#clients (for 127.0.0.1 at 2010-07-26 17:47:31) [GET]
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mClient Load (3.6ms)[0m   [0mSELECT * FROM "clients" ORDER BY full_name asc LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clients" [0m
+Rendering template within layouts/admin
+Rendering admin/clients
+Rendered admin/_search_client (1.9ms)
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 119ms (View: 50, DB: 7) | 200 OK [http://localhost/admin/clients/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#clients (for 127.0.0.1 at 2010-07-26 17:47:42) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;36;1mClient Load (3.2ms)[0m   [0;1mSELECT * FROM "clients" ORDER BY full_name asc LIMIT 10 OFFSET 10[0m
+  [4;35;1mSQL (17.7ms)[0m   [0mSELECT count(*) AS count_all FROM "clients" [0m
+Rendering template within layouts/admin
+Rendering admin/clients
+Rendered admin/_search_client (1.3ms)
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 182ms (View: 51, DB: 23) | 200 OK [http://localhost/admin/clients?page=2]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#clients (for 127.0.0.1 at 2010-07-26 17:47:47) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mClient Load (3.4ms)[0m   [0mSELECT * FROM "clients" ORDER BY full_name asc LIMIT 10 OFFSET 20[0m
+Rendering template within layouts/admin
+Rendering admin/clients
+Rendered admin/_search_client (1.6ms)
+Rendered admin/_menu (0.7ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 102ms (View: 40, DB: 6) | 200 OK [http://localhost/admin/clients?page=3]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#clients (for 127.0.0.1 at 2010-07-26 17:57:49) [GET]
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mClient Load (2.9ms)[0m   [0mSELECT * FROM "clients" ORDER BY full_name asc LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clients" [0m
+Rendering template within layouts/admin
+Rendering admin/clients
+Rendered admin/_search_client (1.9ms)
+Rendered admin/_menu (2.2ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 178ms (View: 89, DB: 6) | 200 OK [http://localhost/admin/clients/]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-07-26 17:57:52) [GET]
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering clients/new
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 262ms (View: 205, DB: 3) | 200 OK [http://localhost/clients/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 17:58:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2013", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2012", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname 2", "full_name_second"=>"test lname 2", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"9", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"28", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname 2", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"120", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/admin
+Rendering clients/new
+Rendered admin/_menu (0.9ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 225ms (View: 55, DB: 2) | 200 OK [http://localhost/clients]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 17:58:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2013", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"test city", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2012", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname 2", "full_name_second"=>"test lname 2", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"9", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"28", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname 2", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"120", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mINSERT INTO "clients" ("address", "city", "work_phone", "start_date", "resort_sale_person", "zip", "created_at", "credit_card_expiration", "notes", "updated_at", "full_name_second", "credit_card", "billing_name", "billing_city", "billing_state", "home_phone", "credit_card_type", "tts_sale_person", "client_pin", "concierge_renewal", "full_name", "charge_date", "billing_address", "billing_zip", "cancellation_date", "concierge_accepted", "fee_paid", "contract_return_date", "charge_return_date", "state", "email", "payment_type") VALUES(E'test address', E'test city', 111111, '2013-07-26', E'sale person', E'4005', '2010-07-26 22:28:49.555592', E'04-2010', E'some notes', '2010-07-26 22:28:49.555592', E'test lname 2', E'123456789123', E'test fname 2', E'test city', E'test state', 111111, E'visa', E'test sale person', E'123456', '2009-04-16', E'test fname 2', '2012-09-28', E'test address', E'4005', '2010-07-26', 't', 120, '2010-07-26', '2010-07-26', E'test state', E'test@mail.com', E'cc') RETURNING "id"[0m
+  [4;36;1mSQL (16.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_footer_contracts (1.0ms)
+Sent mail to test@mail.com
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+To: test@mail.com
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear test fname 2</p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+Could not dump header data for exception: not opened for reading
+
+ArgumentError (wrong number of arguments (3 for 2)):
+  /usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  app/controllers/clients_controller.rb:43
+  app/controllers/clients_controller.rb:34:in `create'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611997568'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611997568'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (87.5ms)
+Rendered rescues/_request_and_response (3.1ms)
+Rendering rescues/layout (internal_server_error)
+[FiveRuns Dash] Skipping startup (`irb' not supported)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+Rendered layouts/_footer_contracts (0.7ms)
+Sent mail to 
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear </p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+[FiveRuns Dash] Skipping startup (`irb' not supported)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+Rendered layouts/_footer_contracts (0.9ms)
+Sent mail to 
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear </p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 18:14:19) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2013", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2012", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname 2", "full_name_second"=>"test lname 2", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"9", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"28", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname 2", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"120", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/admin
+Rendering clients/new
+Rendered admin/_menu (2.7ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 120ms (View: 69, DB: 2) | 200 OK [http://localhost/clients]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 18:14:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2013", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2012", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname 2", "full_name_second"=>"test lname 2", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"9", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"28", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname 2", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"120", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/admin
+Rendering clients/new
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 90ms (View: 38, DB: 2) | 200 OK [http://localhost/clients]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 18:14:33) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2013", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"test city", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2012", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname 2", "full_name_second"=>"test lname 2", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"9", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"28", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname 2", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"120", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mINSERT INTO "clients" ("address", "city", "work_phone", "start_date", "resort_sale_person", "zip", "created_at", "credit_card_expiration", "notes", "updated_at", "full_name_second", "credit_card", "billing_name", "billing_city", "billing_state", "home_phone", "credit_card_type", "tts_sale_person", "client_pin", "concierge_renewal", "full_name", "charge_date", "billing_address", "billing_zip", "cancellation_date", "concierge_accepted", "fee_paid", "contract_return_date", "charge_return_date", "state", "email", "payment_type") VALUES(E'test address', E'test city', 111111, '2013-07-26', E'sale person', E'4005', '2010-07-26 22:44:33.932142', E'04-2010', E'some notes', '2010-07-26 22:44:33.932142', E'test lname 2', E'123456789123', E'test fname 2', E'test city', E'test state', 111111, E'visa', E'test sale person', E'123456', '2009-04-16', E'test fname 2', '2012-09-28', E'test address', E'4005', '2010-07-26', 't', 120, '2010-07-26', '2010-07-26', E'test state', E'test@mail.com', E'cc') RETURNING "id"[0m
+  [4;36;1mSQL (11.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_footer_contracts (1.4ms)
+Sent mail to test@mail.com
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+To: test@mail.com
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear test fname 2</p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+Could not dump header data for exception: not opened for reading
+
+ArgumentError (wrong number of arguments (3 for 2)):
+  /usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  app/controllers/clients_controller.rb:43
+  app/controllers/clients_controller.rb:34:in `create'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_612195828'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_612195828'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (105.0ms)
+Rendered rescues/_request_and_response (3.8ms)
+Rendering rescues/layout (internal_server_error)
+Rendered layouts/_footer_contracts (0.1ms)
+Sent mail to 
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear </p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+[FiveRuns Dash] Skipping startup (`irb' not supported)
+[FiveRuns Dash] Skipping startup (`irb' not supported)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+Rendered layouts/_footer_contracts (0.6ms)
+Sent mail to 
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear </p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+[FiveRuns Dash] Skipping startup (`irb' not supported)
+[FiveRuns Dash] Skipping startup (`irb' not supported)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+Rendered layouts/_footer_contracts (0.9ms)
+Sent mail to 
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear </p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 18:18:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2013", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"test city", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2012", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname 2", "full_name_second"=>"test lname 2", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"9", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"28", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname 2", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"120", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mINSERT INTO "clients" ("address", "city", "work_phone", "start_date", "resort_sale_person", "zip", "created_at", "credit_card_expiration", "notes", "updated_at", "full_name_second", "credit_card", "billing_name", "billing_city", "billing_state", "home_phone", "credit_card_type", "tts_sale_person", "client_pin", "concierge_renewal", "full_name", "charge_date", "billing_address", "billing_zip", "cancellation_date", "concierge_accepted", "fee_paid", "contract_return_date", "charge_return_date", "state", "email", "payment_type") VALUES(E'test address', E'test city', 111111, '2013-07-26', E'sale person', E'4005', '2010-07-26 22:48:51.696455', E'04-2010', E'some notes', '2010-07-26 22:48:51.696455', E'test lname 2', E'123456789123', E'test fname 2', E'test city', E'test state', 111111, E'visa', E'test sale person', E'123456', '2009-04-16', E'test fname 2', '2012-09-28', E'test address', E'4005', '2010-07-26', 't', 120, '2010-07-26', '2010-07-26', E'test state', E'test@mail.com', E'cc') RETURNING "id"[0m
+  [4;36;1mSQL (13.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_footer_contracts (1.1ms)
+Sent mail to test@mail.com
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+To: test@mail.com
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear test fname 2</p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+Could not dump header data for exception: not opened for reading
+
+ArgumentError (wrong number of arguments (3 for 2)):
+  /usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  app/controllers/clients_controller.rb:43
+  app/controllers/clients_controller.rb:34:in `create'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611782708'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611782708'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (159.4ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 18:23:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2013", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"test city", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2012", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname 2", "full_name_second"=>"test lname 2", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"9", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"28", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname 2", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"120", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mINSERT INTO "clients" ("address", "city", "work_phone", "start_date", "resort_sale_person", "zip", "created_at", "credit_card_expiration", "notes", "updated_at", "full_name_second", "credit_card", "billing_name", "billing_city", "billing_state", "home_phone", "credit_card_type", "tts_sale_person", "client_pin", "concierge_renewal", "full_name", "charge_date", "billing_address", "billing_zip", "cancellation_date", "concierge_accepted", "fee_paid", "contract_return_date", "charge_return_date", "state", "email", "payment_type") VALUES(E'test address', E'test city', 111111, '2013-07-26', E'sale person', E'4005', '2010-07-26 22:53:48.794014', E'04-2010', E'some notes', '2010-07-26 22:53:48.794014', E'test lname 2', E'123456789123', E'test fname 2', E'test city', E'test state', 111111, E'visa', E'test sale person', E'123456', '2009-04-16', E'test fname 2', '2012-09-28', E'test address', E'4005', '2010-07-26', 't', 120, '2010-07-26', '2010-07-26', E'test state', E'test@mail.com', E'cc') RETURNING "id"[0m
+  [4;36;1mSQL (15.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_footer_contracts (1.1ms)
+Sent mail to test@mail.com
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+To: test@mail.com
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear test fname 2</p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+Could not dump header data for exception: not opened for reading
+
+ArgumentError (wrong number of arguments (3 for 2)):
+  /usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  app/controllers/clients_controller.rb:43
+  app/controllers/clients_controller.rb:34:in `create'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611582038'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611582038'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (165.9ms)
+Rendered rescues/_request_and_response (3.2ms)
+Rendering rescues/layout (internal_server_error)
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 18:26:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2013", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"test city", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2012", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname 2", "full_name_second"=>"test lname 2", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"9", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"28", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname 2", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"120", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mINSERT INTO "clients" ("address", "city", "work_phone", "start_date", "resort_sale_person", "zip", "created_at", "credit_card_expiration", "notes", "updated_at", "full_name_second", "credit_card", "billing_name", "billing_city", "billing_state", "home_phone", "credit_card_type", "tts_sale_person", "client_pin", "concierge_renewal", "full_name", "charge_date", "billing_address", "billing_zip", "cancellation_date", "concierge_accepted", "fee_paid", "contract_return_date", "charge_return_date", "state", "email", "payment_type") VALUES(E'test address', E'test city', 111111, '2013-07-26', E'sale person', E'4005', '2010-07-26 22:56:02.915478', E'04-2010', E'some notes', '2010-07-26 22:56:02.915478', E'test lname 2', E'123456789123', E'test fname 2', E'test city', E'test state', 111111, E'visa', E'test sale person', E'123456', '2009-04-16', E'test fname 2', '2012-09-28', E'test address', E'4005', '2010-07-26', 't', 120, '2010-07-26', '2010-07-26', E'test state', E'test@mail.com', E'cc') RETURNING "id"[0m
+  [4;36;1mSQL (8.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_footer_contracts (1.4ms)
+Sent mail to test@mail.com
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+To: test@mail.com
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear test fname 2</p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+Could not dump header data for exception: not opened for reading
+
+ArgumentError (wrong number of arguments (3 for 2)):
+  /usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  app/controllers/clients_controller.rb:43
+  app/controllers/clients_controller.rb:34:in `create'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611704308'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611704308'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (161.1ms)
+Rendered rescues/_request_and_response (3.1ms)
+Rendering rescues/layout (internal_server_error)
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 18:26:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2013", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"test city", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2012", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname 2", "full_name_second"=>"test lname 2", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"9", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"28", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname 2", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"120", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mINSERT INTO "clients" ("address", "city", "work_phone", "start_date", "resort_sale_person", "zip", "created_at", "credit_card_expiration", "notes", "updated_at", "full_name_second", "credit_card", "billing_name", "billing_city", "billing_state", "home_phone", "credit_card_type", "tts_sale_person", "client_pin", "concierge_renewal", "full_name", "charge_date", "billing_address", "billing_zip", "cancellation_date", "concierge_accepted", "fee_paid", "contract_return_date", "charge_return_date", "state", "email", "payment_type") VALUES(E'test address', E'test city', 111111, '2013-07-26', E'sale person', E'4005', '2010-07-26 22:56:41.805443', E'04-2010', E'some notes', '2010-07-26 22:56:41.805443', E'test lname 2', E'123456789123', E'test fname 2', E'test city', E'test state', 111111, E'visa', E'test sale person', E'123456', '2009-04-16', E'test fname 2', '2012-09-28', E'test address', E'4005', '2010-07-26', 't', 120, '2010-07-26', '2010-07-26', E'test state', E'test@mail.com', E'cc') RETURNING "id"[0m
+  [4;36;1mSQL (12.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_footer_contracts (1.1ms)
+Sent mail to test@mail.com
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+To: test@mail.com
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear test fname 2</p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+Could not dump header data for exception: not opened for reading
+
+ArgumentError (wrong number of arguments (3 for 2)):
+  /usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  app/controllers/clients_controller.rb:43
+  app/controllers/clients_controller.rb:34:in `create'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611868098'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611868098'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (178.4ms)
+Rendered rescues/_request_and_response (3.5ms)
+Rendering rescues/layout (internal_server_error)
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-07-26 18:28:56) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "client"=>{"cancellation_date(2i)"=>"7", "start_date(1i)"=>"2013", "resort_sale_person"=>"sale person", "work_phone"=>"111111", "city"=>"test city", "address"=>"test address", "cancellation_date(3i)"=>"26", "start_date(2i)"=>"7", "concierge_renewal(1i)"=>"2009", "zip"=>"4005", "start_date(3i)"=>"26", "credit_card_expiration"=>"04-2010", "concierge_renewal(2i)"=>"4", "notes"=>"some notes", "concierge_renewal(3i)"=>"16", "credit_card"=>"123456789123", "charge_date(1i)"=>"2012", "billing_state"=>"test state", "billing_city"=>"test city", "billing_name"=>"test fname 2", "full_name_second"=>"test lname 2", "client_pin"=>"123456", "tts_sale_person"=>"test sale person", "contract_return_date(1i)"=>"2010", "credit_card_type"=>"visa", "charge_date(2i)"=>"9", "home_phone"=>"111111", "contract_return_date(2i)"=>"7", "charge_date(3i)"=>"28", "charge_return_date(1i)"=>"2010", "contract_return_date(3i)"=>"26", "billing_zip"=>"4005", "billing_address"=>"test address", "full_name"=>"test fname 2", "charge_return_date(2i)"=>"7", "concierge_accepted"=>"1", "charge_return_date(3i)"=>"26", "fee_paid"=>"120", "cancellation_date(1i)"=>"2010", "payment_type"=>"cc", "state"=>"test state", "email"=>"test@mail.com"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "clients" ("address", "city", "work_phone", "start_date", "resort_sale_person", "zip", "created_at", "credit_card_expiration", "notes", "updated_at", "full_name_second", "credit_card", "billing_name", "billing_city", "billing_state", "home_phone", "credit_card_type", "tts_sale_person", "client_pin", "concierge_renewal", "full_name", "charge_date", "billing_address", "billing_zip", "cancellation_date", "concierge_accepted", "fee_paid", "contract_return_date", "charge_return_date", "state", "email", "payment_type") VALUES(E'test address', E'test city', 111111, '2013-07-26', E'sale person', E'4005', '2010-07-26 22:58:56.794625', E'04-2010', E'some notes', '2010-07-26 22:58:56.794625', E'test lname 2', E'123456789123', E'test fname 2', E'test city', E'test state', 111111, E'visa', E'test sale person', E'123456', '2009-04-16', E'test fname 2', '2012-09-28', E'test address', E'4005', '2010-07-26', 't', 120, '2010-07-26', '2010-07-26', E'test state', E'test@mail.com', E'cc') RETURNING "id"[0m
+  [4;36;1mSQL (13.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_footer_contracts (1.2ms)
+Sent mail to test@mail.com
+
+From: Luxury Resort Management <contracts@luxuryresortmanagement.com>
+To: test@mail.com
+Subject: Thank you for Registering
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p><img src="http://luxuryresortmanagement.com/images/logo.jpg" alt="Luxury Resort Management Logo"/></p>
+<p>Dear test fname 2</p>
+
+<p>Thank you very much for registering with us.</p>
+<p>We'll contact you shortly.</p>
+
+<div class="footer">
+	<img src="http://www.luxuryresortmanagement.com/images/icon_footer.jpg" alt="Resort Luxury Managment Footer"/>
+	<p>Luxury Resort Management. 3032 East Commercial Blvd. Suite#14 Fort Lauderdale,Fl. 33308</p
+	<p>Main number (954) 642-2480 and (888) 772-2480</p>
+</div> 
+Sent mail to Luxury Resort MAnagement <optin@luxuryresortmanagement.com>
+
+From: Luxury Resort MAnagement <contracts@luxuryresortmanagement.com>
+To: Luxury Resort MAnagement <optin@luxuryresortmanagement.com>
+Subject: Somebody Signup from a Physical Card
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>This is a friendly notification that test fname 2 just signed up from the physical card. </p>
+
+<p>You can look for him by name: test fname 2</p>
+Redirected to http://localhost:3001/
+Completed in 6402ms (DB: 16) | 302 Found [http://localhost/clients]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-26 18:29:03) [GET]
+  [4;35;1mLocation Load (1.9ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (1.5ms)
+Rendered resorts/_find (10.1ms)
+Rendered layouts/_navegacion (1.3ms)
+Rendered layouts/_footer (1.2ms)
+Completed in 165ms (View: 114, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-26 18:29:47) [GET]
+  [4;36;1mLocation Load (1.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.8ms)
+Rendered resorts/_find (9.9ms)
+Rendered layouts/_navegacion (0.6ms)
+Rendered layouts/_footer (0.6ms)
+Completed in 149ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#about (for 127.0.0.1 at 2010-07-26 18:29:49) [GET]
+Rendering template within layouts/application
+Rendering home/about
+Rendered layouts/_static_banner (1.1ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/home/about]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-07-26 18:29:50) [GET]
+  [4;35;1mLocation Load (2.4ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (1.7ms)
+Rendered layouts/_navegacion (0.6ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 133ms (View: 110, DB: 3) | 200 OK [http://localhost/locations/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-07-26 18:29:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Load (1.8ms)[0m   [0;1mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+  [4;35;1mCity Load (7.9ms)[0m   [0mSELECT * FROM "cities" WHERE ("cities".location_id = 1) ORDER BY name asc[0m
+Rendering template within layouts/application
+Rendering locations/show
+Rendered layouts/_static_banner (2.6ms)
+Rendered locations/_show_cities (27.3ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 110ms (View: 47, DB: 10) | 200 OK [http://localhost/locations/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CitiesController#show (for 127.0.0.1 at 2010-07-26 18:29:54) [GET]
+  Parameters: {"id"=>"42"}
+  [4;36;1mCity Load (1.7ms)[0m   [0;1mSELECT * FROM "cities" WHERE ("cities"."id" = 42) [0m
+  [4;35;1mResort Load (2.4ms)[0m   [0mSELECT * FROM "resorts" WHERE ("resorts".city_id = 42) [0m
+Rendering template within layouts/application
+Rendering cities/show
+Rendered cities/_show_resorts (15.3ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 82ms (View: 36, DB: 5) | 200 OK [http://localhost/cities/42]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2010-07-26 18:29:56) [GET]
+  Parameters: {"id"=>"810"}
+  [4;36;1mResort Load (1.8ms)[0m   [0;1mSELECT * FROM "resorts" WHERE ("resorts"."id" = 810) [0m
+  [4;35;1mRoom Load (2.1ms)[0m   [0mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 810) [0m
+  [4;36;1mUnitSize Load (0.8ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (83.4ms)
+Rendered resorts/_amenities (1.2ms)
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rooms" WHERE ("rooms".resort_id = 810) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 810) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+Rendered resorts/_show_rooms (6.3ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 273ms (View: 190, DB: 6) | 200 OK [http://localhost/resorts/810]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 18:29:56) [GET]
+  Parameters: {"1240403734"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo_mains/810/thumb/chateau1.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 18:29:57) [GET]
+  Parameters: {"1240403732"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo1s/810/thumb/chateau2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 18:29:57) [GET]
+  Parameters: {"1240403733"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo2s/810/thumb/chateau3.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 18:29:57) [GET]
+  Parameters: {"1240403733"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo3s/810/thumb/chateau1.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 18:29:57) [GET]
+  Parameters: {"1240403733"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo4s/810/thumb/chateau3.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#concierge (for 127.0.0.1 at 2010-07-26 18:29:59) [GET]
+Rendering template within layouts/application
+Rendering home/concierge
+Rendered layouts/_static_banner (0.5ms)
+Rendered home/_form_concierge (7.4ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 48ms (View: 29, DB: 1) | 200 OK [http://localhost/home/concierge]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-07-26 18:30:04) [GET]
+  [4;36;1mBlog Load (1.8ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered layouts/_navegacion (1.4ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 106ms (View: 24, DB: 2) | 200 OK [http://localhost/blogs]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-07-26 18:30:06) [GET]
+Rendering template within layouts/application
+Rendering home/contact
+Rendered layouts/_static_banner (0.5ms)
+Rendered home/_form_contact (6.5ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 40ms (View: 22, DB: 1) | 200 OK [http://localhost/home/contact]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-07-26 18:30:12) [GET]
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/index
+Rendered admin/_menu (2.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 121ms (View: 93, DB: 2) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#clients (for 127.0.0.1 at 2010-07-26 18:30:16) [GET]
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mClient Load (4.6ms)[0m   [0mSELECT * FROM "clients" ORDER BY full_name asc LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clients" [0m
+Rendering template within layouts/admin
+Rendering admin/clients
+Rendered admin/_search_client (2.7ms)
+Rendered admin/_menu (0.7ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 131ms (View: 63, DB: 7) | 200 OK [http://localhost/admin/clients/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#rooms (for 127.0.0.1 at 2010-07-26 18:30:20) [GET]
+  [4;35;1mUser Load (1.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;36;1mRoom Load (1.7ms)[0m   [0;1mSELECT * FROM "rooms" LIMIT 10 OFFSET 0[0m
+  [4;35;1mUnitSize Load (0.9ms)[0m   [0mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" IN (1,2,3)) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rooms" [0m
+Rendering template within layouts/admin
+Rendering admin/rooms
+Rendered admin/_search_room (1.9ms)
+Rendered admin/_menu (0.7ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 110ms (View: 29, DB: 6) | 200 OK [http://localhost/admin/rooms]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#unit_sizes (for 127.0.0.1 at 2010-07-26 18:30:23) [GET]
+  [4;35;1mUser Load (1.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;36;1mUnitSize Load (1.1ms)[0m   [0;1mSELECT * FROM "unit_sizes" [0m
+Rendering template within layouts/admin
+Rendering admin/unit_sizes
+Rendered admin/_menu (0.7ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 70ms (View: 27, DB: 3) | 200 OK [http://localhost/admin/unit_sizes]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#clients (for 127.0.0.1 at 2010-07-26 18:30:26) [GET]
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;36;1mClient Load (2.9ms)[0m   [0;1mSELECT * FROM "clients" ORDER BY full_name asc LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "clients" [0m
+Rendering template within layouts/admin
+Rendering admin/clients
+Rendered admin/_search_client (1.2ms)
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 113ms (View: 59, DB: 5) | 200 OK [http://localhost/admin/clients/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#rooms (for 127.0.0.1 at 2010-07-26 18:30:29) [GET]
+  [4;36;1mUser Load (2.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mRoom Load (1.5ms)[0m   [0mSELECT * FROM "rooms" LIMIT 10 OFFSET 0[0m
+  [4;36;1mUnitSize Load (1.1ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" IN (1,2,3)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "rooms" [0m
+Rendering template within layouts/admin
+Rendering admin/rooms
+Rendered admin/_search_room (1.4ms)
+Rendered admin/_menu (1.0ms)
+Rendered layouts/_footer (0.6ms)
+Completed in 192ms (View: 30, DB: 7) | 200 OK [http://localhost/admin/rooms]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#unit_sizes (for 127.0.0.1 at 2010-07-26 18:30:30) [GET]
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mUnitSize Load (1.1ms)[0m   [0mSELECT * FROM "unit_sizes" [0m
+Rendering template within layouts/admin
+Rendering admin/unit_sizes
+Rendered admin/_menu (0.7ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 76ms (View: 33, DB: 3) | 200 OK [http://localhost/admin/unit_sizes]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#locations (for 127.0.0.1 at 2010-07-26 18:30:32) [GET]
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mLocation Load (2.5ms)[0m   [0mSELECT * FROM "locations" ORDER BY name asc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/admin
+Rendering admin/locations
+Rendered admin/_menu (0.7ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 77ms (View: 21, DB: 5) | 200 OK [http://localhost/admin/locations]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#cities (for 127.0.0.1 at 2010-07-26 18:30:34) [GET]
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mCity Load (2.6ms)[0m   [0mSELECT * FROM "cities" ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cities" [0m
+Rendering template within layouts/admin
+Rendering admin/cities
+Rendered admin/_menu (0.7ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 76ms (View: 23, DB: 5) | 200 OK [http://localhost/admin/cities]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#resorts (for 127.0.0.1 at 2010-07-26 18:30:35) [GET]
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;36;1mResort Load (6.1ms)[0m   [0;1mSELECT * FROM "resorts" ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "resorts" [0m
+Rendering template within layouts/admin
+Rendering admin/resorts
+Rendered admin/_menu (0.7ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 97ms (View: 29, DB: 9) | 200 OK [http://localhost/admin/resorts/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#blogs (for 127.0.0.1 at 2010-07-26 18:30:37) [GET]
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mBlog Load (1.0ms)[0m   [0mSELECT * FROM "blogs" LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/admin
+Rendering admin/blogs
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 116ms (View: 11, DB: 3) | 200 OK [http://localhost/admin/blogs/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#blogs (for 127.0.0.1 at 2010-07-26 18:30:38) [GET]
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mBlog Load (1.1ms)[0m   [0mSELECT * FROM "blogs" LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/admin
+Rendering admin/blogs
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 51ms (View: 6, DB: 3) | 200 OK [http://localhost/admin/blogs/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#rooms (for 127.0.0.1 at 2010-07-26 18:30:41) [GET]
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mRoom Load (1.4ms)[0m   [0mSELECT * FROM "rooms" LIMIT 10 OFFSET 0[0m
+  [4;36;1mUnitSize Load (0.9ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" IN (1,2,3)) [0m
+  [4;35;1mSQL (2.7ms)[0m   [0mSELECT count(*) AS count_all FROM "rooms" [0m
+Rendering template within layouts/admin
+Rendering admin/rooms
+Rendered admin/_search_room (1.1ms)
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 168ms (View: 23, DB: 7) | 200 OK [http://localhost/admin/rooms]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#clients (for 127.0.0.1 at 2010-07-26 18:30:45) [GET]
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mClient Load (3.9ms)[0m   [0mSELECT * FROM "clients" ORDER BY full_name asc LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clients" [0m
+Rendering template within layouts/admin
+Rendering admin/clients
+Rendered admin/_search_client (1.0ms)
+Rendered admin/_menu (0.7ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 115ms (View: 46, DB: 7) | 200 OK [http://localhost/admin/clients/]
+  [4;35;1mSQL (1.8ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-07-26 18:30:47) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;36;1mClient Load (2.0ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 23) [0m
+Rendering template within layouts/admin
+Rendering clients/show
+Rendered clients/_bottom_menu (5.6ms)
+Rendered comments/_new (8.3ms)
+  [4;35;1mComment Load (0.0ms)[0m   [0mPGError: ERROR: operator does not exist: character varying = integer
+LINE 1: SELECT * FROM "comments" WHERE ("comments".client_id = 23) 
+ ^
+HINT: No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT * FROM "comments" WHERE ("comments".client_id = 23) [0m
+Could not dump header data for exception: not opened for reading
+
+ActionView::TemplateError (PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: SELECT * FROM "comments" WHERE ("comments".client_id = 23) 
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT * FROM "comments" WHERE ("comments".client_id = 23) ) on line #8 of app/views/comments/_show.rhtml:
+5:       <th width="200px">When</th>
+6:       <th width="650px">Comment</th>
+7:     </tr>
+8: <% for comment in @comments %>
+9:     <tr>
+10:       <td><%= comment.author %></td>
+11:       <td><%= comment.created_at.to_formatted_s(:short)  %></td>
+
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `log'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `log'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_by_sql_without_dash_context'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_by_sql_without_dash_context'
+    (eval):3:in `find_by_sql'
+    /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:41:in `with_model_context'
+    (eval):2:in `find_by_sql'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_without_dash_context'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_without_dash_context'
+    (eval):3:in `find'
+    /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:54:in `with_model_context'
+    (eval):2:in `find'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:168:in `method_missing'
+    app/views/comments/_show.rhtml:8:in `_run_rhtml_app47views47comments47_show46rhtml_locals_object_show'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `render_without_fiveruns_dash_context'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `render_without_fiveruns_dash_context'
+    /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/template.rb:46:in `render'
+    app/views/clients/show.html.erb:156
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `render_without_fiveruns_dash_context'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `render_without_fiveruns_dash_context'
+    /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/template.rb:46:in `render'
+    app/controllers/clients_controller.rb:11:in `show'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611851938'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611851938'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+    /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+    /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+    /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+    /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+    /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (242.7ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-07-26 18:38:48) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = E'') LIMIT 1[0m
+Redirected to http://localhost:3001/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 47ms (DB: 4) | 302 Found [http://localhost/clients/23]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-26 18:38:48) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 22ms (View: 15, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-26 18:38:56) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "login"=>"uokesita", "password"=>"999999"}
+  [4;36;1mUser Load (2.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = E'uokesita') LIMIT 1[0m
+Failed login for 'uokesita' from 127.0.0.1 at Mon Jul 26 23:08:56 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (2.4ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 48ms (View: 12, DB: 7) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-26 18:39:12) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 43ms (View: 18, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-26 18:39:22) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "user"=>{"password_confirmation"=>"999999", "password"=>"999999", "login"=>"uokesita", "email"=>"uoke-@gmail.com"}}
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (1.7ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = E'uokesita') LIMIT 1[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = E'uoke-@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "remember_token", "login", "email") VALUES(E'', E'ea92cebd50a15793398a4e449453f9fe19e5e3da', '2010-07-26 23:09:22.753915', E'c594727c77e1cde794b4bc826b423cd9f347cdca', NULL, '2010-07-26 23:09:22.753915', NULL, E'uokesita', E'uoke-@gmail.com') RETURNING "id"[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/clients/23
+Completed in 138ms (DB: 19) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-07-26 18:39:22) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mClient Load (1.8ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 23) [0m
+Rendering template within layouts/admin
+Rendering clients/show
+Rendered clients/_bottom_menu (2.3ms)
+Rendered comments/_new (7.4ms)
+  [4;36;1mComment Load (0.9ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".client_id = 23) [0m
+Rendered comments/_show (3.4ms)
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 87ms (View: 29, DB: 5) | 200 OK [http://localhost/clients/23]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing AdminController#clients (for 127.0.0.1 at 2010-07-26 18:39:38) [GET]
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;36;1mClient Load (3.0ms)[0m   [0;1mSELECT * FROM "clients" ORDER BY full_name asc LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "clients" [0m
+Rendering template within layouts/admin
+Rendering admin/clients
+Rendered admin/_search_client (2.3ms)
+Rendered admin/_menu (0.7ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 123ms (View: 60, DB: 6) | 200 OK [http://localhost/admin/clients/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-07-26 18:39:41) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) LIMIT 1[0m
+  [4;35;1mClient Load (1.6ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 23) [0m
+Rendering template within layouts/admin
+Rendering clients/show
+Rendered clients/_bottom_menu (2.2ms)
+Rendered comments/_new (8.7ms)
+  [4;36;1mComment Load (0.9ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".client_id = 23) [0m
+Rendered comments/_show (4.4ms)
+Rendered admin/_menu (0.8ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 174ms (View: 33, DB: 4) | 200 OK [http://localhost/clients/23]
