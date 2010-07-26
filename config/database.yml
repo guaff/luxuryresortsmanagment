@@ -1,12 +1,12 @@
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
-    adapter: mysql
+    adapter: postgresql
     database: luxury2
-    username: root
+    username: postgres
     password: 999999
     host: 127.0.0.1
-    socket: /opt/lampp/var/mysql/mysql.sock
+    port: 5432
 
 
   

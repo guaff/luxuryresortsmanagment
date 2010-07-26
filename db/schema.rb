@@ -61,8 +61,8 @@ ActiveRecord::Schema.define(:version => 20090413152852) do
     t.string   "client_pin"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "concierge_accepted",                   :default => false
-    t.date     "concierge_renewal",                    :default => '2009-10-26'
+    t.boolean  "concierge_accepted",                   :default => true
+    t.date     "concierge_renewal",                    :default => '2010-07-26'
   end
 
   create_table "comments", :force => true do |t|
@@ -142,7 +142,7 @@ ActiveRecord::Schema.define(:version => 20090413152852) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.integer   "client_id"
+    t.integer  "client_id"
   end
 
   create_table "unit_sizes", :force => true do |t|

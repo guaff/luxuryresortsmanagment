@@ -16866,3 +16866,1731 @@ Rendered layouts/_static_banner (0.6ms)
 Rendered layouts/_navegacion (0.5ms)
 Rendered layouts/_footer (0.5ms)
 Completed in 43ms (View: 23, DB: 7) | 200 OK [http://localhost/locations/]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (19.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-05-31 19:19:14) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 24ms (DB: 20) | 302 Found [http://localhost/admin]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-31 19:19:14) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_navegacion (1.8ms)
+Rendered layouts/_footer (1.6ms)
+Completed in 87ms (View: 82, DB: 0) | 200 OK [http://localhost/session/new]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (74.2ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (111.9ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20090202134223)
+  [4;36;1mSQL (87.6ms)[0m   [0;1mCREATE TABLE `locations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `image` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (32.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090202134223')[0m
+Migrating to CreateCities (20090202150833)
+  [4;36;1mSQL (118.5ms)[0m   [0;1mCREATE TABLE `cities` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `image` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (16.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090202150833')[0m
+Migrating to AddingLocationIdToCities (20090202150912)
+  [4;36;1mSQL (105.5ms)[0m   [0;1mALTER TABLE `cities` ADD `location_id` int(11)[0m
+  [4;35;1mSQL (24.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090202150912')[0m
+Migrating to CreateUsers (20090202193430)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (61.7ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(40), `name` varchar(100) DEFAULT '', `email` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (120.1ms)[0m   [0;1mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;35;1mSQL (32.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090202193430')[0m
+Migrating to DeleteImageOnLocations (20090203021150)
+  [4;36;1mSQL (155.4ms)[0m   [0;1mALTER TABLE `locations` DROP `image`[0m
+  [4;35;1mSQL (16.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090203021150')[0m
+Migrating to AddAttachmentsImageToLocation (20090203021358)
+  [4;36;1mSQL (139.5ms)[0m   [0;1mALTER TABLE `locations` ADD `image_file_name` varchar(255)[0m
+  [4;35;1mSQL (169.1ms)[0m   [0mALTER TABLE `locations` ADD `image_content_type` varchar(255)[0m
+  [4;36;1mSQL (176.1ms)[0m   [0;1mALTER TABLE `locations` ADD `image_file_size` int(11)[0m
+  [4;35;1mSQL (106.2ms)[0m   [0mALTER TABLE `locations` ADD `image_updated_at` datetime[0m
+  [4;36;1mSQL (16.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090203021358')[0m
+Migrating to DelitingImageFromCities (20090203160136)
+  [4;35;1mSQL (110.6ms)[0m   [0mALTER TABLE `cities` DROP `image`[0m
+  [4;36;1mSQL (24.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090203160136')[0m
+Migrating to AddAttachmentsImageToCity (20090203160339)
+  [4;35;1mSQL (117.9ms)[0m   [0mALTER TABLE `cities` ADD `image_file_name` varchar(255)[0m
+  [4;36;1mSQL (228.6ms)[0m   [0;1mALTER TABLE `cities` ADD `image_content_type` varchar(255)[0m
+  [4;35;1mSQL (103.4ms)[0m   [0mALTER TABLE `cities` ADD `image_file_size` int(11)[0m
+  [4;36;1mSQL (187.1ms)[0m   [0;1mALTER TABLE `cities` ADD `image_updated_at` datetime[0m
+  [4;35;1mSQL (16.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090203160339')[0m
+Migrating to CreateMailinglists (20090203163652)
+  [4;36;1mSQL (59.0ms)[0m   [0;1mCREATE TABLE `mailinglists` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090203163652')[0m
+Migrating to CreateResorts (20090204171321)
+  [4;36;1mSQL (49.4ms)[0m   [0;1mCREATE TABLE `resorts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `city_id` int(11), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (16.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090204171321')[0m
+Migrating to AddAttachmentsPhotoMainPhoto1Photo2Photo3AndPhoto4ToResort (20090204223551)
+  [4;36;1mSQL (111.3ms)[0m   [0;1mALTER TABLE `resorts` ADD `photo_main_file_name` varchar(255)[0m
+  [4;35;1mSQL (211.4ms)[0m   [0mALTER TABLE `resorts` ADD `photo_main_content_type` varchar(255)[0m
+  [4;36;1mSQL (103.3ms)[0m   [0;1mALTER TABLE `resorts` ADD `photo_main_file_size` int(11)[0m
+  [4;35;1mSQL (211.8ms)[0m   [0mALTER TABLE `resorts` ADD `photo_main_updated_at` datetime[0m
+  [4;36;1mSQL (102.8ms)[0m   [0;1mALTER TABLE `resorts` ADD `photo1_file_name` varchar(255)[0m
+  [4;35;1mSQL (219.8ms)[0m   [0mALTER TABLE `resorts` ADD `photo1_content_type` varchar(255)[0m
+  [4;36;1mSQL (103.3ms)[0m   [0;1mALTER TABLE `resorts` ADD `photo1_file_size` int(11)[0m
+  [4;35;1mSQL (203.6ms)[0m   [0mALTER TABLE `resorts` ADD `photo1_updated_at` datetime[0m
+  [4;36;1mSQL (103.5ms)[0m   [0;1mALTER TABLE `resorts` ADD `photo2_file_name` varchar(255)[0m
+  [4;35;1mSQL (186.5ms)[0m   [0mALTER TABLE `resorts` ADD `photo2_content_type` varchar(255)[0m
+  [4;36;1mSQL (103.4ms)[0m   [0;1mALTER TABLE `resorts` ADD `photo2_file_size` int(11)[0m
+  [4;35;1mSQL (203.6ms)[0m   [0mALTER TABLE `resorts` ADD `photo2_updated_at` datetime[0m
+  [4;36;1mSQL (120.1ms)[0m   [0;1mALTER TABLE `resorts` ADD `photo3_file_name` varchar(255)[0m
+  [4;35;1mSQL (161.3ms)[0m   [0mALTER TABLE `resorts` ADD `photo3_content_type` varchar(255)[0m
+  [4;36;1mSQL (120.0ms)[0m   [0;1mALTER TABLE `resorts` ADD `photo3_file_size` int(11)[0m
+  [4;35;1mSQL (153.0ms)[0m   [0mALTER TABLE `resorts` ADD `photo3_updated_at` datetime[0m
+  [4;36;1mSQL (120.0ms)[0m   [0;1mALTER TABLE `resorts` ADD `photo4_file_name` varchar(255)[0m
+  [4;35;1mSQL (161.3ms)[0m   [0mALTER TABLE `resorts` ADD `photo4_content_type` varchar(255)[0m
+  [4;36;1mSQL (120.1ms)[0m   [0;1mALTER TABLE `resorts` ADD `photo4_file_size` int(11)[0m
+  [4;35;1mSQL (161.1ms)[0m   [0mALTER TABLE `resorts` ADD `photo4_updated_at` datetime[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090204223551')[0m
+Migrating to CreateUnitSizes (20090207174221)
+  [4;35;1mSQL (67.0ms)[0m   [0mCREATE TABLE `unit_sizes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090207174221')[0m
+Migrating to CreateRooms (20090207194124)
+  [4;35;1mSQL (56.9ms)[0m   [0mCREATE TABLE `rooms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `availability` varchar(255), `sale_or_rent` varchar(255), `price` int(11), `owner_name` varchar(255), `unit_size_id` int(11), `resort_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090207194124')[0m
+Migrating to AddAttachmentsImageToRoom (20090207204901)
+  [4;35;1mSQL (112.9ms)[0m   [0mALTER TABLE `rooms` ADD `image_file_name` varchar(255)[0m
+  [4;36;1mSQL (197.6ms)[0m   [0;1mALTER TABLE `rooms` ADD `image_content_type` varchar(255)[0m
+  [4;35;1mSQL (108.5ms)[0m   [0mALTER TABLE `rooms` ADD `image_file_size` int(11)[0m
+  [4;36;1mSQL (185.4ms)[0m   [0;1mALTER TABLE `rooms` ADD `image_updated_at` datetime[0m
+  [4;35;1mSQL (16.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090207204901')[0m
+Migrating to CreateClients (20090213144852)
+  [4;36;1mSQL (69.2ms)[0m   [0;1mCREATE TABLE `clients` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `full_name` varchar(255), `full_name_second` varchar(255), `address` varchar(255), `city` varchar(255), `state` varchar(255), `zip` int(11), `home_phone` int(11), `work_phone` int(11), `email` varchar(255), `fee_paid` int(11), `payment_type` varchar(255), `charge_date` date, `credit_card` int(11), `credit_card_type` varchar(255), `credit_card_expiration` varchar(255), `billing_name` varchar(255), `billing_address` varchar(255), `billing_city` varchar(255), `billing_state` varchar(255), `billing_zip` int(11), `start_date` date, `contract_return_date` date, `cancellation_date` date, `charge_return_date` date, `tts_sale_person` varchar(255), `resort_sale_person` varchar(255), `notes` text, `client_pin` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (16.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090213144852')[0m
+Migrating to RoomsShouldBelongToClients (20090213151244)
+  [4;36;1mSQL (112.2ms)[0m   [0;1mALTER TABLE `rooms` ADD `client_id` int(11)[0m
+  [4;35;1mSQL (24.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090213151244')[0m
+Migrating to CreateBlogs (20090216145903)
+  [4;36;1mSQL (74.3ms)[0m   [0;1mCREATE TABLE `blogs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (16.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090216145903')[0m
+Migrating to CreatePeoples (20090218160722)
+  [4;36;1mSQL (57.8ms)[0m   [0;1mCREATE TABLE `peoples` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `phone` int(11), `where` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (16.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090218160722')[0m
+Migrating to InrementingCcSize (20090303153059)
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mSQL (112.4ms)[0m   [0mALTER TABLE `clients` CHANGE `credit_card` `credit_card` varchar(20) DEFAULT NULL[0m
+  [4;36;1mSQL (24.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090303153059')[0m
+Migrating to ChangingUnitSizeIdtoUnitSizesId (20090304213553)
+  [4;35;1mSQL (2.5ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW COLUMNS FROM `rooms` LIKE 'unit_size_id'[0m
+  [4;35;1mSQL (47.9ms)[0m   [0mALTER TABLE `rooms` CHANGE `unit_size_id` `unit_sizes_id` int(11) DEFAULT NULL[0m
+  [4;36;1mSQL (16.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090304213553')[0m
+Migrating to ChangingZipDb (20090316201405)
+  [4;35;1mSQL (2.3ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mSQL (190.9ms)[0m   [0;1mALTER TABLE `clients` CHANGE `zip` `zip` varchar(255) DEFAULT NULL[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mSQL (116.2ms)[0m   [0;1mALTER TABLE `clients` CHANGE `billing_zip` `billing_zip` varchar(255) DEFAULT NULL[0m
+  [4;35;1mSQL (24.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090316201405')[0m
+Migrating to ChangingUnitSizeId (20090317155540)
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW COLUMNS FROM `rooms` LIKE 'unit_sizes_id'[0m
+  [4;36;1mSQL (28.7ms)[0m   [0;1mALTER TABLE `rooms` CHANGE `unit_sizes_id` `unit_size_id` int(11) DEFAULT NULL[0m
+  [4;35;1mSQL (16.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090317155540')[0m
+Migrating to CommentsOnClients (20090410164412)
+  [4;36;1mSQL (74.8ms)[0m   [0;1mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `client_id` int(11), `comment` varchar(255), `author` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (24.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090410164412')[0m
+Migrating to AddingTimeStampsToComments (20090410184553)
+  [4;36;1mSQL (164.4ms)[0m   [0;1mALTER TABLE `comments` ADD `created_at` datetime[0m
+  [4;35;1mSQL (111.5ms)[0m   [0mALTER TABLE `comments` ADD `updated_at` datetime[0m
+  [4;36;1mSQL (32.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090410184553')[0m
+Migrating to AddingConciergeServicesFieldToClient (20090413152852)
+  [4;35;1mSQL (163.7ms)[0m   [0mALTER TABLE `clients` ADD `concierge_accepted` tinyint(1) DEFAULT 1[0m
+  [4;36;1mSQL (116.6ms)[0m   [0;1mALTER TABLE `clients` ADD `concierge_renewal` date DEFAULT '2010-07-26'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090413152852')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `blogs`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `blogs`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `blogs`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `cities`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `cities`[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `clients`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `clients`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `locations`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `locations`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `mailinglists`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `mailinglists`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `peoples`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `peoples`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `peoples`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `resorts`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `resorts`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `rooms`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `rooms`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `unit_sizes`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `unit_sizes`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-26 14:57:23) [GET]
+  [4;35;1mMailinglist Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (0.3ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (1.6ms)
+Rendered resorts/_find (17.5ms)
+Rendered layouts/_navegacion (1.2ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 175ms (View: 133, DB: 3) | 200 OK [http://localhost/]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-26 15:09:35) [GET]
+  [4;35;1mMailinglist Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (0.5ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (1.4ms)
+  [4;36;1mLocation Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (11.4ms)
+Rendered layouts/_navegacion (1.2ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 156ms (View: 55, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#update_city (for 127.0.0.1 at 2010-07-26 15:09:38) [POST]
+  Parameters: {"authenticity_token"=>"L7d98hN8brWR3UY0FTN1Y2zmYcR6d7pDWxnrmm+yBu4=", "id"=>"1", "_"=>""}
+  [4;36;1mCity Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mCity Load (1.0ms)[0m   [0mSELECT * FROM `cities` WHERE (`cities`.`location_id` = '1') [0m
+Completed in 32ms (View: 2, DB: 2) | 200 OK [http://localhost/home/update_city]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#search_city (for 127.0.0.1 at 2010-07-26 15:09:42) [GET]
+  Parameters: {"commit"=>"Find", "id"=>"48"}
+  [4;35;1mCity Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mCity Load (0.3ms)[0m   [0;1mSELECT * FROM `cities` WHERE (`cities`.`id` = 48) [0m
+  [4;35;1mResort Load (1.7ms)[0m   [0mSELECT * FROM `resorts` WHERE (`resorts`.city_id = 48) [0m
+Rendering template within layouts/application
+Rendering home/search_city
+Rendered layouts/_main_banner (1.0ms)
+  [4;36;1mResort Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+Rendered cities/_show_resorts (13.5ms)
+Rendered layouts/_navegacion (0.7ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 93ms (View: 38, DB: 5) | 200 OK [http://localhost/search_city?id=48&commit=Find]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2010-07-26 15:09:44) [GET]
+  Parameters: {"id"=>"827"}
+  [4;36;1mResort Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+  [4;35;1mResort Load (0.4ms)[0m   [0mSELECT * FROM `resorts` WHERE (`resorts`.`id` = 827) [0m
+  [4;36;1mRoom Load (1.2ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 827) [0m
+  [4;35;1mRoom Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mUnitSize Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;35;1mUnitSize Load (0.3ms)[0m   [0mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 3) [0m
+  [4;36;1mMailinglist Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (199.2ms)
+Rendered resorts/_amenities (1.5ms)
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT count(*) AS count_all FROM `rooms` WHERE (`rooms`.resort_id = 827) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 827) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 3) [0m
+Rendered resorts/_show_rooms (8.5ms)
+Rendered layouts/_navegacion (0.6ms)
+Rendered layouts/_footer (0.6ms)
+Completed in 328ms (View: 247, DB: 9) | 200 OK [http://localhost/resorts/827]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 15:09:45) [GET]
+  Parameters: {"1240857610"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo_mains/827/thumb/Breezy_Point_Timeshare_new.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 15:09:45) [GET]
+  Parameters: {"1240857282"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo1s/827/thumb/BreezyPointInternationalmn2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 15:09:45) [GET]
+  Parameters: {"1240857282"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo2s/827/thumb/BreezyPointInternationalmn3.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 15:09:45) [GET]
+  Parameters: {"1240857609"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo3s/827/thumb/Breezy_Point_Timeshare_new2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 15:09:45) [GET]
+  Parameters: {"1240857283"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo4s/827/thumb/BreezyPointInternational5.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-07-26 15:09:47) [GET]
+  [4;36;1mLocation Load (0.4ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (1.3ms)
+  [4;35;1mLocation Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 47ms (View: 25, DB: 2) | 200 OK [http://localhost/locations/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-07-26 15:09:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (0.4ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 1) [0m
+  [4;35;1mCity Load (1.5ms)[0m   [0mSELECT * FROM `cities` WHERE (`cities`.location_id = 1) ORDER BY name asc[0m
+Rendering template within layouts/application
+Rendering locations/show
+Rendered layouts/_static_banner (1.0ms)
+  [4;36;1mCity Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+Rendered locations/_show_cities (27.3ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 87ms (View: 44, DB: 5) | 200 OK [http://localhost/locations/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CitiesController#show (for 127.0.0.1 at 2010-07-26 15:09:52) [GET]
+  Parameters: {"id"=>"42"}
+  [4;36;1mCity Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mCity Load (0.3ms)[0m   [0mSELECT * FROM `cities` WHERE (`cities`.`id` = 42) [0m
+  [4;36;1mResort Load (1.5ms)[0m   [0;1mSELECT * FROM `resorts` WHERE (`resorts`.city_id = 42) [0m
+Rendering template within layouts/application
+Rendering cities/show
+  [4;35;1mResort Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+Rendered cities/_show_resorts (15.1ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 136ms (View: 28, DB: 5) | 200 OK [http://localhost/cities/42]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2010-07-26 15:09:54) [GET]
+  Parameters: {"id"=>"799"}
+  [4;35;1mResort Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+  [4;36;1mResort Load (0.5ms)[0m   [0;1mSELECT * FROM `resorts` WHERE (`resorts`.`id` = 799) [0m
+  [4;35;1mRoom Load (1.6ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 799) [0m
+  [4;36;1mRoom Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mUnitSize Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;36;1mUnitSize Load (0.2ms)[0m   [0;1mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 9) [0m
+  [4;35;1mMailinglist Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (5.8ms)
+Rendered resorts/_amenities (0.4ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `rooms` WHERE (`rooms`.resort_id = 799) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `rooms` WHERE (`rooms`.resort_id = 799) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `unit_sizes` WHERE (`unit_sizes`.`id` = 9) [0m
+Rendered resorts/_show_rooms (6.8ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 91ms (View: 28, DB: 9) | 200 OK [http://localhost/resorts/799]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 15:09:54) [GET]
+  Parameters: {"1240316233"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo_mains/799/thumb/elkhorn11.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 15:09:54) [GET]
+  Parameters: {"1240316232"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo3s/799/thumb/elkhorn3.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 15:09:54) [GET]
+  Parameters: {"1240316231"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo1s/799/thumb/elkhorn22.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 15:09:55) [GET]
+  Parameters: {"1240316233"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo4s/799/thumb/elkhorn5.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 15:09:55) [GET]
+  Parameters: {"1240316232"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo2s/799/thumb/elkhorn4.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-26 15:10:09) [GET]
+  [4;35;1mMailinglist Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mLocation Load (0.4ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mCity Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (0.5ms)
+  [4;36;1mLocation Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered resorts/_find (7.7ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 112ms (View: 14, DB: 4) | 200 OK [http://localhost/]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20090202134223)
+Migrating to CreateCities (20090202150833)
+Migrating to AddingLocationIdToCities (20090202150912)
+Migrating to CreateUsers (20090202193430)
+Migrating to DeleteImageOnLocations (20090203021150)
+Migrating to AddAttachmentsImageToLocation (20090203021358)
+Migrating to DelitingImageFromCities (20090203160136)
+Migrating to AddAttachmentsImageToCity (20090203160339)
+Migrating to CreateMailinglists (20090203163652)
+Migrating to CreateResorts (20090204171321)
+Migrating to AddAttachmentsPhotoMainPhoto1Photo2Photo3AndPhoto4ToResort (20090204223551)
+Migrating to CreateUnitSizes (20090207174221)
+Migrating to CreateRooms (20090207194124)
+Migrating to AddAttachmentsImageToRoom (20090207204901)
+Migrating to CreateClients (20090213144852)
+Migrating to RoomsShouldBelongToClients (20090213151244)
+Migrating to CreateBlogs (20090216145903)
+Migrating to CreatePeoples (20090218160722)
+Migrating to InrementingCcSize (20090303153059)
+Migrating to ChangingUnitSizeIdtoUnitSizesId (20090304213553)
+Migrating to ChangingZipDb (20090316201405)
+Migrating to ChangingUnitSizeId (20090317155540)
+Migrating to CommentsOnClients (20090410164412)
+Migrating to AddingTimeStampsToComments (20090410184553)
+Migrating to AddingConciergeServicesFieldToClient (20090413152852)
+Migrating to ChangeDataTypeForCities (20100726194624)
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mSQL (50.5ms)[0m   [0;1mALTER TABLE `cities` CHANGE `location_id` `location_id` int(11) DEFAULT NULL[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100726194624')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `blogs`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `blogs`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `blogs`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `cities`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `cities`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `clients`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `clients`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `locations`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `locations`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `mailinglists`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `mailinglists`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `peoples`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `peoples`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `peoples`[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `resorts`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `resorts`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `rooms`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `rooms`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `unit_sizes`[0m
+  [4;36;1mSQL (13.2ms)[0m   [0;1mSHOW KEYS FROM `unit_sizes`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to ChangeDataTypeForCities (20100726194624)
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mSQL (60.0ms)[0m   [0;1mALTER TABLE `cities` CHANGE `location_id` `location_id` varchar(255) DEFAULT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100726194624'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `blogs`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `blogs`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `blogs`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cities`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `cities`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `cities`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mdescribe `clients`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `clients`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `locations`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `locations`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `mailinglists`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `mailinglists`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `mailinglists`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `peoples`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `peoples`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `peoples`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `resorts`[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mdescribe `resorts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `resorts`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `rooms`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `rooms`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `rooms`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `unit_sizes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `unit_sizes`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-07-26 15:27:01) [GET]
+  [4;35;1mLocation Load (0.5ms)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (1.8ms)
+  [4;36;1mLocation Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered layouts/_navegacion (1.7ms)
+Rendered layouts/_footer (1.2ms)
+Completed in 156ms (View: 133, DB: 3) | 200 OK [http://localhost/locations/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-07-26 15:27:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mLocation Load (0.4ms)[0m   [0mSELECT * FROM `locations` WHERE (`locations`.`id` = 1) [0m
+  [4;36;1mCity Load (1.5ms)[0m   [0;1mSELECT * FROM `cities` WHERE (`cities`.location_id = 1) ORDER BY name asc[0m
+Rendering template within layouts/application
+Rendering locations/show
+Rendered layouts/_static_banner (1.1ms)
+  [4;35;1mCity Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+Rendered locations/_show_cities (26.0ms)
+Rendered layouts/_navegacion (0.6ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 99ms (View: 43, DB: 4) | 200 OK [http://localhost/locations/1]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20090202134223)
+Migrating to CreateCities (20090202150833)
+Migrating to AddingLocationIdToCities (20090202150912)
+Migrating to CreateUsers (20090202193430)
+Migrating to DeleteImageOnLocations (20090203021150)
+Migrating to AddAttachmentsImageToLocation (20090203021358)
+Migrating to DelitingImageFromCities (20090203160136)
+Migrating to AddAttachmentsImageToCity (20090203160339)
+Migrating to CreateMailinglists (20090203163652)
+Migrating to CreateResorts (20090204171321)
+Migrating to AddAttachmentsPhotoMainPhoto1Photo2Photo3AndPhoto4ToResort (20090204223551)
+Migrating to CreateUnitSizes (20090207174221)
+Migrating to CreateRooms (20090207194124)
+Migrating to AddAttachmentsImageToRoom (20090207204901)
+Migrating to CreateClients (20090213144852)
+Migrating to RoomsShouldBelongToClients (20090213151244)
+Migrating to CreateBlogs (20090216145903)
+Migrating to CreatePeoples (20090218160722)
+Migrating to InrementingCcSize (20090303153059)
+Migrating to ChangingUnitSizeIdtoUnitSizesId (20090304213553)
+Migrating to ChangingZipDb (20090316201405)
+Migrating to ChangingUnitSizeId (20090317155540)
+Migrating to CommentsOnClients (20090410164412)
+Migrating to AddingTimeStampsToComments (20090410184553)
+Migrating to AddingConciergeServicesFieldToClient (20090413152852)
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `blogs`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `blogs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `blogs`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `cities`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `cities`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `cities`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `clients`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `clients`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `clients`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `locations`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `locations`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `mailinglists`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `mailinglists`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `mailinglists`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `peoples`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `peoples`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `peoples`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `resorts`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `resorts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `resorts`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `rooms`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `rooms`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `rooms`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `unit_sizes`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `unit_sizes`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `unit_sizes`[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (22.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (35.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20090202134223)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (58.3ms)[0m   [0;1mCREATE TABLE "locations" ("id" serial primary key, "name" character varying(255), "description" text, "image" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090202134223')[0m
+  [4;36;1mSQL (26.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateCities (20090202150833)
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (52.6ms)[0m   [0;1mCREATE TABLE "cities" ("id" serial primary key, "name" character varying(255), "description" text, "image" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090202150833')[0m
+  [4;36;1mSQL (21.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddingLocationIdToCities (20090202150912)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mALTER TABLE "cities" ADD COLUMN "location_id" integer[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090202150912')[0m
+  [4;36;1mSQL (16.1ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateUsers (20090202193430)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (37.2ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(40), "name" character varying(100) DEFAULT E'', "email" character varying(100), "crypted_password" character varying(40), "salt" character varying(40), "created_at" timestamp, "updated_at" timestamp, "remember_token" character varying(40), "remember_token_expires_at" timestamp) [0m
+  [4;35;1mSQL (40.4ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_login" ON "users" ("login")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090202193430')[0m
+  [4;35;1mSQL (20.7ms)[0m   [0mCOMMIT[0m
+Migrating to DeleteImageOnLocations (20090203021150)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mALTER TABLE "locations" DROP "image"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090203021150')[0m
+  [4;35;1mSQL (13.3ms)[0m   [0mCOMMIT[0m
+Migrating to AddAttachmentsImageToLocation (20090203021358)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mALTER TABLE "locations" ADD COLUMN "image_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "locations" ADD COLUMN "image_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "locations" ADD COLUMN "image_file_size" integer[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "locations" ADD COLUMN "image_updated_at" timestamp[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090203021358')[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to DelitingImageFromCities (20090203160136)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "cities" DROP "image"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090203160136')[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddAttachmentsImageToCity (20090203160339)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "cities" ADD COLUMN "image_file_name" character varying(255)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "cities" ADD COLUMN "image_content_type" character varying(255)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mALTER TABLE "cities" ADD COLUMN "image_file_size" integer[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "cities" ADD COLUMN "image_updated_at" timestamp[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090203160339')[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreateMailinglists (20090203163652)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (60.4ms)[0m   [0mCREATE TABLE "mailinglists" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090203163652')[0m
+  [4;35;1mSQL (17.8ms)[0m   [0mCOMMIT[0m
+Migrating to CreateResorts (20090204171321)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (69.8ms)[0m   [0mCREATE TABLE "resorts" ("id" serial primary key, "name" character varying(255), "city_id" integer, "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090204171321')[0m
+  [4;35;1mSQL (19.7ms)[0m   [0mCOMMIT[0m
+Migrating to AddAttachmentsPhotoMainPhoto1Photo2Photo3AndPhoto4ToResort (20090204223551)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo_main_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo_main_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo_main_file_size" integer[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo_main_updated_at" timestamp[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo1_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo1_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo1_file_size" integer[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo1_updated_at" timestamp[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo2_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo2_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo2_file_size" integer[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo2_updated_at" timestamp[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo3_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo3_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo3_file_size" integer[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo3_updated_at" timestamp[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo4_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo4_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo4_file_size" integer[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo4_updated_at" timestamp[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090204223551')[0m
+  [4;36;1mSQL (13.1ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateUnitSizes (20090207174221)
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (30.5ms)[0m   [0;1mCREATE TABLE "unit_sizes" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (3.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090207174221')[0m
+  [4;36;1mSQL (20.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateRooms (20090207194124)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (51.9ms)[0m   [0;1mCREATE TABLE "rooms" ("id" serial primary key, "code" character varying(255), "availability" character varying(255), "sale_or_rent" character varying(255), "price" integer, "owner_name" character varying(255), "unit_size_id" integer, "resort_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090207194124')[0m
+  [4;36;1mSQL (27.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddAttachmentsImageToRoom (20090207204901)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mALTER TABLE "rooms" ADD COLUMN "image_file_name" character varying(255)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "rooms" ADD COLUMN "image_content_type" character varying(255)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mALTER TABLE "rooms" ADD COLUMN "image_file_size" integer[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mALTER TABLE "rooms" ADD COLUMN "image_updated_at" timestamp[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090207204901')[0m
+  [4;35;1mSQL (19.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreateClients (20090213144852)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (50.3ms)[0m   [0mCREATE TABLE "clients" ("id" serial primary key, "full_name" character varying(255), "full_name_second" character varying(255), "address" character varying(255), "city" character varying(255), "state" character varying(255), "zip" integer, "home_phone" integer, "work_phone" integer, "email" character varying(255), "fee_paid" integer, "payment_type" character varying(255), "charge_date" date, "credit_card" integer, "credit_card_type" character varying(255), "credit_card_expiration" character varying(255), "billing_name" character varying(255), "billing_address" character varying(255), "billing_city" character varying(255), "billing_state" character varying(255), "billing_zip" integer, "start_date" date, "contract_return_date" date, "cancellation_date" date, "charge_return_date" date, "tts_sale_person" character varying(255), "resort_sale_person" character varying(255), "notes" text, "client_pin" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090213144852')[0m
+  [4;35;1mSQL (22.7ms)[0m   [0mCOMMIT[0m
+Migrating to RoomsShouldBelongToClients (20090213151244)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mALTER TABLE "rooms" ADD COLUMN "client_id" integer[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090213151244')[0m
+  [4;35;1mSQL (37.6ms)[0m   [0mCOMMIT[0m
+Migrating to CreateBlogs (20090216145903)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (47.4ms)[0m   [0mCREATE TABLE "blogs" ("id" serial primary key, "title" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090216145903')[0m
+  [4;35;1mSQL (40.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePeoples (20090218160722)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (46.7ms)[0m   [0mCREATE TABLE "peoples" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "phone" integer, "where" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090218160722')[0m
+  [4;35;1mSQL (19.6ms)[0m   [0mCOMMIT[0m
+Migrating to InrementingCcSize (20090303153059)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (77.9ms)[0m   [0mALTER TABLE "clients" ALTER COLUMN "credit_card" TYPE character varying(20)[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090303153059')[0m
+  [4;35;1mSQL (18.1ms)[0m   [0mCOMMIT[0m
+Migrating to ChangingUnitSizeIdtoUnitSizesId (20090304213553)
+  [4;36;1mSQL (3.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mALTER TABLE "rooms" RENAME COLUMN "unit_size_id" TO "unit_sizes_id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090304213553')[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Migrating to ChangingZipDb (20090316201405)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (62.7ms)[0m   [0mALTER TABLE "clients" ALTER COLUMN "zip" TYPE character varying(255)[0m
+  [4;36;1mSQL (65.9ms)[0m   [0;1mALTER TABLE "clients" ALTER COLUMN "billing_zip" TYPE character varying(255)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090316201405')[0m
+  [4;36;1mSQL (17.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to ChangingUnitSizeId (20090317155540)
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mALTER TABLE "rooms" RENAME COLUMN "unit_sizes_id" TO "unit_size_id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090317155540')[0m
+  [4;36;1mSQL (37.3ms)[0m   [0;1mCOMMIT[0m
+Migrating to CommentsOnClients (20090410164412)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (53.1ms)[0m   [0;1mCREATE TABLE "comments" ("id" serial primary key, "client_id" integer, "comment" character varying(255), "author" character varying(255)) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090410164412')[0m
+  [4;36;1mSQL (19.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddingTimeStampsToComments (20090410184553)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mALTER TABLE "comments" ADD COLUMN "created_at" timestamp[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "comments" ADD COLUMN "updated_at" timestamp[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090410184553')[0m
+  [4;35;1mSQL (28.2ms)[0m   [0mCOMMIT[0m
+Migrating to AddingConciergeServicesFieldToClient (20090413152852)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mALTER TABLE "clients" ADD COLUMN "concierge_accepted" boolean[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mALTER TABLE "clients" ALTER COLUMN "concierge_accepted" SET DEFAULT 't'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "clients" ADD COLUMN "concierge_renewal" date[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mALTER TABLE "clients" ALTER COLUMN "concierge_renewal" SET DEFAULT '2010-07-26'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090413152852')[0m
+  [4;36;1mSQL (10.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-07-26 16:31:06) [GET]
+  [4;36;1mLocation Load (2.9ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering locations/index
+Rendered layouts/_static_banner (1.3ms)
+Rendered layouts/_navegacion (1.1ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 75ms (View: 56, DB: 4) | 200 OK [http://localhost/locations/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-07-26 16:31:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Load (1.3ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+  [4;36;1mCity Load (0.0ms)[0m   [0;1mPGError: ERROR: operator does not exist: character varying = integer
+LINE 1: ...ELECT * FROM "cities" WHERE ("cities".location_id = 1) ORDE...
+ ^
+HINT: No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT * FROM "cities" WHERE ("cities".location_id = 1) ORDER BY name asc[0m
+Could not dump header data for exception: not opened for reading
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ELECT * FROM "cities" WHERE ("cities".location_id = 1)  ORDE...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT * FROM "cities" WHERE ("cities".location_id = 1)  ORDER BY name asc):
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `log'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `log'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_by_sql_without_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_by_sql_without_dash_context'
+  (eval):3:in `find_by_sql'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:41:in `with_model_context'
+  (eval):2:in `find_by_sql'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_without_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_without_dash_context'
+  (eval):3:in `find'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:54:in `with_model_context'
+  (eval):2:in `find'
+  app/controllers/locations_controller.rb:21:in `show'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611622808'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611622808'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (200.7ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20090202134223)
+Migrating to CreateCities (20090202150833)
+Migrating to AddingLocationIdToCities (20090202150912)
+Migrating to CreateUsers (20090202193430)
+Migrating to DeleteImageOnLocations (20090203021150)
+Migrating to AddAttachmentsImageToLocation (20090203021358)
+Migrating to DelitingImageFromCities (20090203160136)
+Migrating to AddAttachmentsImageToCity (20090203160339)
+Migrating to CreateMailinglists (20090203163652)
+Migrating to CreateResorts (20090204171321)
+Migrating to AddAttachmentsPhotoMainPhoto1Photo2Photo3AndPhoto4ToResort (20090204223551)
+Migrating to CreateUnitSizes (20090207174221)
+Migrating to CreateRooms (20090207194124)
+Migrating to AddAttachmentsImageToRoom (20090207204901)
+Migrating to CreateClients (20090213144852)
+Migrating to RoomsShouldBelongToClients (20090213151244)
+Migrating to CreateBlogs (20090216145903)
+Migrating to CreatePeoples (20090218160722)
+Migrating to InrementingCcSize (20090303153059)
+Migrating to ChangingUnitSizeIdtoUnitSizesId (20090304213553)
+Migrating to ChangingZipDb (20090316201405)
+Migrating to ChangingUnitSizeId (20090317155540)
+Migrating to CommentsOnClients (20090410164412)
+Migrating to AddingTimeStampsToComments (20090410184553)
+Migrating to AddingConciergeServicesFieldToClient (20090413152852)
+Migrating to ChangeDataTypeFromCities (20100726210402)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (75.8ms)[0m   [0;1mALTER TABLE "cities" ALTER COLUMN "location_id" TYPE character varying(255)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100726210402')[0m
+  [4;36;1mSQL (27.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-07-26 16:38:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Load (2.0ms)[0m   [0;1mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+  [4;35;1mCity Load (0.0ms)[0m   [0mPGError: ERROR: operator does not exist: character varying = integer
+LINE 1: ...ELECT * FROM "cities" WHERE ("cities".location_id = 1) ORDE...
+ ^
+HINT: No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT * FROM "cities" WHERE ("cities".location_id = 1) ORDER BY name asc[0m
+Could not dump header data for exception: not opened for reading
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ELECT * FROM "cities" WHERE ("cities".location_id = 1)  ORDE...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT * FROM "cities" WHERE ("cities".location_id = 1)  ORDER BY name asc):
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `log'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `log'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_by_sql_without_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_by_sql_without_dash_context'
+  (eval):3:in `find_by_sql'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:41:in `with_model_context'
+  (eval):2:in `find_by_sql'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_without_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_without_dash_context'
+  (eval):3:in `find'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:54:in `with_model_context'
+  (eval):2:in `find'
+  app/controllers/locations_controller.rb:21:in `show'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611765708'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611765708'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (194.3ms)
+Rendered rescues/_request_and_response (2.3ms)
+Rendering rescues/layout (internal_server_error)
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ChangeDataTypeFromCities (20100726210402)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: column "location_id" cannot be cast to type integer
+: ALTER TABLE "cities" ALTER COLUMN "location_id" TYPE integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-07-26 16:40:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Load (1.2ms)[0m   [0;1mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+  [4;35;1mCity Load (0.0ms)[0m   [0mPGError: ERROR: operator does not exist: character varying = integer
+LINE 1: ...ELECT * FROM "cities" WHERE ("cities".location_id = 1) ORDE...
+ ^
+HINT: No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT * FROM "cities" WHERE ("cities".location_id = 1) ORDER BY name asc[0m
+Could not dump header data for exception: not opened for reading
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ELECT * FROM "cities" WHERE ("cities".location_id = 1)  ORDE...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT * FROM "cities" WHERE ("cities".location_id = 1)  ORDER BY name asc):
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `log'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `log'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_by_sql_without_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_by_sql_without_dash_context'
+  (eval):3:in `find_by_sql'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:41:in `with_model_context'
+  (eval):2:in `find_by_sql'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_without_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_without_dash_context'
+  (eval):3:in `find'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:54:in `with_model_context'
+  (eval):2:in `find'
+  app/controllers/locations_controller.rb:21:in `show'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_612022168'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_612022168'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (177.5ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ChangeDataTypeFromCities (20100726210402)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: column "location_id" cannot be cast to type integer
+: ALTER TABLE "cities" ALTER COLUMN "location_id" TYPE integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ChangeDataTypeFromCities (20100726210402)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (63.5ms)[0m   [0mALTER TABLE "cities" ALTER COLUMN "location_id" TYPE character varying(255)[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100726210402'[0m
+  [4;35;1mSQL (26.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20090202134223)
+Migrating to CreateCities (20090202150833)
+Migrating to AddingLocationIdToCities (20090202150912)
+Migrating to CreateUsers (20090202193430)
+Migrating to DeleteImageOnLocations (20090203021150)
+Migrating to AddAttachmentsImageToLocation (20090203021358)
+Migrating to DelitingImageFromCities (20090203160136)
+Migrating to AddAttachmentsImageToCity (20090203160339)
+Migrating to CreateMailinglists (20090203163652)
+Migrating to CreateResorts (20090204171321)
+Migrating to AddAttachmentsPhotoMainPhoto1Photo2Photo3AndPhoto4ToResort (20090204223551)
+Migrating to CreateUnitSizes (20090207174221)
+Migrating to CreateRooms (20090207194124)
+Migrating to AddAttachmentsImageToRoom (20090207204901)
+Migrating to CreateClients (20090213144852)
+Migrating to RoomsShouldBelongToClients (20090213151244)
+Migrating to CreateBlogs (20090216145903)
+Migrating to CreatePeoples (20090218160722)
+Migrating to InrementingCcSize (20090303153059)
+Migrating to ChangingUnitSizeIdtoUnitSizesId (20090304213553)
+Migrating to ChangingZipDb (20090316201405)
+Migrating to ChangingUnitSizeId (20090317155540)
+Migrating to CommentsOnClients (20090410164412)
+Migrating to AddingTimeStampsToComments (20090410184553)
+Migrating to AddingConciergeServicesFieldToClient (20090413152852)
+Migrating to ChangeDataTypeFromCities (20100726210402)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: column "location_id" cannot be cast to type integer
+: ALTER TABLE "cities" ALTER COLUMN "location_id" TYPE integer[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20090202134223)
+Migrating to CreateCities (20090202150833)
+Migrating to AddingLocationIdToCities (20090202150912)
+Migrating to CreateUsers (20090202193430)
+Migrating to DeleteImageOnLocations (20090203021150)
+Migrating to AddAttachmentsImageToLocation (20090203021358)
+Migrating to DelitingImageFromCities (20090203160136)
+Migrating to AddAttachmentsImageToCity (20090203160339)
+Migrating to CreateMailinglists (20090203163652)
+Migrating to CreateResorts (20090204171321)
+Migrating to AddAttachmentsPhotoMainPhoto1Photo2Photo3AndPhoto4ToResort (20090204223551)
+Migrating to CreateUnitSizes (20090207174221)
+Migrating to CreateRooms (20090207194124)
+Migrating to AddAttachmentsImageToRoom (20090207204901)
+Migrating to CreateClients (20090213144852)
+Migrating to RoomsShouldBelongToClients (20090213151244)
+Migrating to CreateBlogs (20090216145903)
+Migrating to CreatePeoples (20090218160722)
+Migrating to InrementingCcSize (20090303153059)
+Migrating to ChangingUnitSizeIdtoUnitSizesId (20090304213553)
+Migrating to ChangingZipDb (20090316201405)
+Migrating to ChangingUnitSizeId (20090317155540)
+Migrating to CommentsOnClients (20090410164412)
+Migrating to AddingTimeStampsToComments (20090410184553)
+Migrating to AddingConciergeServicesFieldToClient (20090413152852)
+Migrating to ChangeDataTypeFromCities (20100726210402)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: column "location_id" cannot be cast to type integer
+: ALTER TABLE "cities" ALTER COLUMN "location_id" TYPE int[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (37.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20090202134223)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (56.1ms)[0m   [0;1mCREATE TABLE "locations" ("id" serial primary key, "name" character varying(255), "description" text, "image" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090202134223')[0m
+  [4;36;1mSQL (19.0ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateCities (20090202150833)
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (50.6ms)[0m   [0;1mCREATE TABLE "cities" ("id" serial primary key, "name" character varying(255), "description" text, "image" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090202150833')[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddingLocationIdToCities (20090202150912)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "cities" ADD COLUMN "location_id" integer[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090202150912')[0m
+  [4;36;1mSQL (37.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateUsers (20090202193430)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (33.2ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(40), "name" character varying(100) DEFAULT E'', "email" character varying(100), "crypted_password" character varying(40), "salt" character varying(40), "created_at" timestamp, "updated_at" timestamp, "remember_token" character varying(40), "remember_token_expires_at" timestamp) [0m
+  [4;35;1mSQL (25.8ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_login" ON "users" ("login")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090202193430')[0m
+  [4;35;1mSQL (22.2ms)[0m   [0mCOMMIT[0m
+Migrating to DeleteImageOnLocations (20090203021150)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mALTER TABLE "locations" DROP "image"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090203021150')[0m
+  [4;35;1mSQL (17.7ms)[0m   [0mCOMMIT[0m
+Migrating to AddAttachmentsImageToLocation (20090203021358)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mALTER TABLE "locations" ADD COLUMN "image_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "locations" ADD COLUMN "image_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "locations" ADD COLUMN "image_file_size" integer[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mALTER TABLE "locations" ADD COLUMN "image_updated_at" timestamp[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090203021358')[0m
+  [4;36;1mSQL (8.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to DelitingImageFromCities (20090203160136)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mALTER TABLE "cities" DROP "image"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090203160136')[0m
+  [4;36;1mSQL (5.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddAttachmentsImageToCity (20090203160339)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mALTER TABLE "cities" ADD COLUMN "image_file_name" character varying(255)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "cities" ADD COLUMN "image_content_type" character varying(255)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "cities" ADD COLUMN "image_file_size" integer[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mALTER TABLE "cities" ADD COLUMN "image_updated_at" timestamp[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090203160339')[0m
+  [4;35;1mSQL (6.6ms)[0m   [0mCOMMIT[0m
+Migrating to CreateMailinglists (20090203163652)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (46.0ms)[0m   [0mCREATE TABLE "mailinglists" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090203163652')[0m
+  [4;35;1mSQL (19.6ms)[0m   [0mCOMMIT[0m
+Migrating to CreateResorts (20090204171321)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (53.3ms)[0m   [0mCREATE TABLE "resorts" ("id" serial primary key, "name" character varying(255), "city_id" integer, "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090204171321')[0m
+  [4;35;1mSQL (22.4ms)[0m   [0mCOMMIT[0m
+Migrating to AddAttachmentsPhotoMainPhoto1Photo2Photo3AndPhoto4ToResort (20090204223551)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo_main_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo_main_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo_main_file_size" integer[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo_main_updated_at" timestamp[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo1_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo1_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo1_file_size" integer[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo1_updated_at" timestamp[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo2_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo2_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo2_file_size" integer[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo2_updated_at" timestamp[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo3_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo3_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo3_file_size" integer[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo3_updated_at" timestamp[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo4_file_name" character varying(255)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo4_content_type" character varying(255)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "resorts" ADD COLUMN "photo4_file_size" integer[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mALTER TABLE "resorts" ADD COLUMN "photo4_updated_at" timestamp[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090204223551')[0m
+  [4;36;1mSQL (12.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateUnitSizes (20090207174221)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (25.7ms)[0m   [0;1mCREATE TABLE "unit_sizes" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090207174221')[0m
+  [4;36;1mSQL (17.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateRooms (20090207194124)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (51.7ms)[0m   [0;1mCREATE TABLE "rooms" ("id" serial primary key, "code" character varying(255), "availability" character varying(255), "sale_or_rent" character varying(255), "price" integer, "owner_name" character varying(255), "unit_size_id" integer, "resort_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090207194124')[0m
+  [4;36;1mSQL (22.3ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddAttachmentsImageToRoom (20090207204901)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mALTER TABLE "rooms" ADD COLUMN "image_file_name" character varying(255)[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mALTER TABLE "rooms" ADD COLUMN "image_content_type" character varying(255)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mALTER TABLE "rooms" ADD COLUMN "image_file_size" integer[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "rooms" ADD COLUMN "image_updated_at" timestamp[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090207204901')[0m
+  [4;35;1mSQL (26.8ms)[0m   [0mCOMMIT[0m
+Migrating to CreateClients (20090213144852)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (60.5ms)[0m   [0mCREATE TABLE "clients" ("id" serial primary key, "full_name" character varying(255), "full_name_second" character varying(255), "address" character varying(255), "city" character varying(255), "state" character varying(255), "zip" integer, "home_phone" integer, "work_phone" integer, "email" character varying(255), "fee_paid" integer, "payment_type" character varying(255), "charge_date" date, "credit_card" integer, "credit_card_type" character varying(255), "credit_card_expiration" character varying(255), "billing_name" character varying(255), "billing_address" character varying(255), "billing_city" character varying(255), "billing_state" character varying(255), "billing_zip" integer, "start_date" date, "contract_return_date" date, "cancellation_date" date, "charge_return_date" date, "tts_sale_person" character varying(255), "resort_sale_person" character varying(255), "notes" text, "client_pin" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090213144852')[0m
+  [4;35;1mSQL (21.8ms)[0m   [0mCOMMIT[0m
+Migrating to RoomsShouldBelongToClients (20090213151244)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "rooms" ADD COLUMN "client_id" integer[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090213151244')[0m
+  [4;35;1mSQL (15.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreateBlogs (20090216145903)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (60.1ms)[0m   [0mCREATE TABLE "blogs" ("id" serial primary key, "title" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090216145903')[0m
+  [4;35;1mSQL (20.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePeoples (20090218160722)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (52.1ms)[0m   [0mCREATE TABLE "peoples" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "phone" integer, "where" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090218160722')[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mCOMMIT[0m
+Migrating to InrementingCcSize (20090303153059)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (69.3ms)[0m   [0mALTER TABLE "clients" ALTER COLUMN "credit_card" TYPE character varying(20)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090303153059')[0m
+  [4;35;1mSQL (22.4ms)[0m   [0mCOMMIT[0m
+Migrating to ChangingUnitSizeIdtoUnitSizesId (20090304213553)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mALTER TABLE "rooms" RENAME COLUMN "unit_size_id" TO "unit_sizes_id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090304213553')[0m
+  [4;35;1mSQL (24.2ms)[0m   [0mCOMMIT[0m
+Migrating to ChangingZipDb (20090316201405)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (80.3ms)[0m   [0mALTER TABLE "clients" ALTER COLUMN "zip" TYPE character varying(255)[0m
+  [4;36;1mSQL (66.2ms)[0m   [0;1mALTER TABLE "clients" ALTER COLUMN "billing_zip" TYPE character varying(255)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090316201405')[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to ChangingUnitSizeId (20090317155540)
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mALTER TABLE "rooms" RENAME COLUMN "unit_sizes_id" TO "unit_size_id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090317155540')[0m
+  [4;36;1mSQL (39.4ms)[0m   [0;1mCOMMIT[0m
+Migrating to CommentsOnClients (20090410164412)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE TABLE "comments" ("id" serial primary key, "client_id" integer, "comment" character varying(255), "author" character varying(255)) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090410164412')[0m
+  [4;36;1mSQL (20.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddingTimeStampsToComments (20090410184553)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mALTER TABLE "comments" ADD COLUMN "created_at" timestamp[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "comments" ADD COLUMN "updated_at" timestamp[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090410184553')[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Migrating to AddingConciergeServicesFieldToClient (20090413152852)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mALTER TABLE "clients" ADD COLUMN "concierge_accepted" boolean[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "clients" ALTER COLUMN "concierge_accepted" SET DEFAULT 't'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mALTER TABLE "clients" ADD COLUMN "concierge_renewal" date[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mALTER TABLE "clients" ALTER COLUMN "concierge_renewal" SET DEFAULT '2010-07-26'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090413152852')[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-07-26 17:07:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Load (1.6ms)[0m   [0;1mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+  [4;35;1mCity Load (7.1ms)[0m   [0mSELECT * FROM "cities" WHERE ("cities".location_id = 1) ORDER BY name asc[0m
+Rendering template within layouts/application
+Rendering locations/show
+Rendered layouts/_static_banner (1.2ms)
+Rendered locations/_show_cities (25.8ms)
+Rendered layouts/_navegacion (1.1ms)
+Rendered layouts/_footer (1.3ms)
+Completed in 163ms (View: 74, DB: 9) | 200 OK [http://localhost/locations/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CitiesController#show (for 127.0.0.1 at 2010-07-26 17:07:21) [GET]
+  Parameters: {"id"=>"71"}
+  [4;36;1mCity Load (3.3ms)[0m   [0;1mSELECT * FROM "cities" WHERE ("cities"."id" = 71) [0m
+  [4;35;1mResort Load (2.0ms)[0m   [0mSELECT * FROM "resorts" WHERE ("resorts".city_id = 71) [0m
+Rendering template within layouts/application
+Rendering cities/show
+Rendered cities/_show_resorts (13.7ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 86ms (View: 34, DB: 6) | 200 OK [http://localhost/cities/71]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2010-07-26 17:07:26) [GET]
+  Parameters: {"id"=>"675"}
+  [4;36;1mResort Load (2.2ms)[0m   [0;1mSELECT * FROM "resorts" WHERE ("resorts"."id" = 675) [0m
+  [4;35;1mRoom Load (2.3ms)[0m   [0mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 675) [0m
+  [4;36;1mUnitSize Load (1.2ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (96.1ms)
+Rendered resorts/_amenities (1.2ms)
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rooms" WHERE ("rooms".resort_id = 675) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 675) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+Rendered resorts/_show_rooms (6.4ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 258ms (View: 149, DB: 8) | 200 OK [http://localhost/resorts/675]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:07:27) [GET]
+  Parameters: {"1237207596"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo_mains/675/thumb/bella1.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:07:27) [GET]
+  Parameters: {"1237207595"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo3s/675/thumb/bella4.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:07:27) [GET]
+  Parameters: {"1237207595"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo1s/675/thumb/bella2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:07:28) [GET]
+  Parameters: {"1237207596"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo4s/675/thumb/bella5.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:07:28) [GET]
+  Parameters: {"1237207595"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo2s/675/thumb/bella3.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-26 17:07:33) [GET]
+  [4;36;1mLocation Load (1.6ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (2.1ms)
+Rendered resorts/_find (13.0ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.7ms)
+Completed in 165ms (View: 41, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#update_city (for 127.0.0.1 at 2010-07-26 17:07:34) [POST]
+  Parameters: {"authenticity_token"=>"L7d98hN8brWR3UY0FTN1Y2zmYcR6d7pDWxnrmm+yBu4=", "id"=>"1", "_"=>""}
+  [4;35;1mCity Load (5.5ms)[0m   [0mSELECT * FROM "cities" WHERE ("cities"."location_id" = E'1') [0m
+Completed in 51ms (View: 2, DB: 6) | 200 OK [http://localhost/home/update_city]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#search_city (for 127.0.0.1 at 2010-07-26 17:07:37) [GET]
+  Parameters: {"commit"=>"Find", "id"=>"49"}
+  [4;36;1mCity Load (1.5ms)[0m   [0;1mSELECT * FROM "cities" WHERE ("cities"."id" = 49) [0m
+  [4;35;1mResort Load (3.0ms)[0m   [0mSELECT * FROM "resorts" WHERE ("resorts".city_id = 49) [0m
+Rendering template within layouts/application
+Rendering home/search_city
+Rendered layouts/_main_banner (1.1ms)
+Rendered cities/_show_resorts (16.4ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 163ms (View: 40, DB: 5) | 200 OK [http://localhost/search_city?id=49&commit=Find]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2010-07-26 17:07:39) [GET]
+  Parameters: {"id"=>"736"}
+  [4;36;1mResort Load (1.8ms)[0m   [0;1mSELECT * FROM "resorts" WHERE ("resorts"."id" = 736) [0m
+  [4;35;1mRoom Load (1.6ms)[0m   [0mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 736) [0m
+  [4;36;1mUnitSize Load (1.0ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (6.8ms)
+Rendered resorts/_amenities (0.5ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "rooms" WHERE ("rooms".resort_id = 736) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 736) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+Rendered resorts/_show_rooms (4.4ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 112ms (View: 28, DB: 6) | 200 OK [http://localhost/resorts/736]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:07:39) [GET]
+  Parameters: {"1237899658"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo_mains/736/thumb/geo1.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:07:39) [GET]
+  Parameters: {"1237899657"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo3s/736/thumb/geo4.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:07:39) [GET]
+  Parameters: {"1237899657"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo2s/736/thumb/geo3.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:07:39) [GET]
+  Parameters: {"1237899658"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo4s/736/thumb/geo5.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 17:07:40) [GET]
+  Parameters: {"1237899657"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo1s/736/thumb/geo2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
