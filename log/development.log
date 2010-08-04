@@ -20462,3 +20462,315 @@ Rendered comments/_show (4.4ms)
 Rendered admin/_menu (0.8ms)
 Rendered layouts/_footer (0.5ms)
 Completed in 174ms (View: 33, DB: 4) | 200 OK [http://localhost/clients/23]
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+Set FiveRuns Dash `activerecord' :total_time setting to response_time
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-27 15:14:25) [GET]
+  [4;36;1mLocation Load (25.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_static_banner (1.7ms)
+Rendered resorts/_find (14.0ms)
+Rendered layouts/_navegacion (1.7ms)
+Rendered layouts/_footer (10.9ms)
+Completed in 263ms (View: 86, DB: 26) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#update_city (for 127.0.0.1 at 2010-07-27 15:14:28) [POST]
+  Parameters: {"authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "id"=>"1", "_"=>""}
+  [4;35;1mCity Load (6.3ms)[0m   [0mSELECT * FROM "cities" WHERE ("cities"."location_id" = E'1') [0m
+Completed in 40ms (View: 2, DB: 7) | 200 OK [http://localhost/home/update_city]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#search_city (for 127.0.0.1 at 2010-07-27 15:14:31) [GET]
+  Parameters: {"commit"=>"Find", "id"=>""}
+  [4;36;1mCity Load (1.5ms)[0m   [0;1mSELECT * FROM "cities" WHERE ("cities"."id" = 0) [0m
+Could not dump header data for exception: not opened for reading
+
+ActiveRecord::RecordNotFound (Couldn't find City with ID=):
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_without_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_without_dash_context'
+  (eval):3:in `find'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:54:in `with_model_context'
+  (eval):2:in `find'
+  app/controllers/home_controller.rb:22:in `search_city'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611932468'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611932468'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (86.2ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#search_city (for 127.0.0.1 at 2010-07-27 15:14:36) [GET]
+  Parameters: {"commit"=>"Find"}
+Could not dump header data for exception: not opened for reading
+
+ActiveRecord::RecordNotFound (Couldn't find City without an ID):
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_without_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_without_dash_context'
+  (eval):3:in `find'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:54:in `with_model_context'
+  (eval):2:in `find'
+  app/controllers/home_controller.rb:22:in `search_city'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611932468'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611932468'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (85.3ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#update_city (for 127.0.0.1 at 2010-07-27 15:14:44) [POST]
+  Parameters: {"authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "id"=>"", "_"=>""}
+  [4;35;1mCity Load (0.0ms)[0m   [0mPGError: ERROR: invalid input syntax for integer: ""
+LINE 1: SELECT * FROM "cities" WHERE ("cities"."location_id" = E'') 
+ ^
+: SELECT * FROM "cities" WHERE ("cities"."location_id" = E'') [0m
+Could not dump header data for exception: not opened for reading
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  invalid input syntax for integer: ""
+LINE 1: SELECT * FROM "cities" WHERE ("cities"."location_id" = E'') 
+                                                               ^
+: SELECT * FROM "cities" WHERE ("cities"."location_id" = E'') ):
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `log'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `log'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_by_sql_without_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_by_sql_without_dash_context'
+  (eval):3:in `find_by_sql'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:41:in `with_model_context'
+  (eval):2:in `find_by_sql'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `find_without_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:45:in `reentrant_timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `find_without_dash_context'
+  (eval):3:in `find'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/active_record.rb:54:in `with_model_context'
+  (eval):2:in `find'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/controllers/home_controller.rb:11:in `update_city'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:125:in `perform_action_without_rescue'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_instrument_611932468'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_instrument_611932468'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:121:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:65:in `timing'
+  /var/lib/gems/1.8/gems/fiveruns-dash-ruby-0.8.10/lib/fiveruns/dash/instrument.rb:120:in `perform_action_without_fiveruns_dash_context'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:37:in `perform_action'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:15
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `call'
+  /var/lib/gems/1.8/gems/fiveruns-dash-rails-0.8.6/lib/fiveruns/dash/rails/context/action.rb:26:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (216.0ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#update_city (for 127.0.0.1 at 2010-07-27 15:14:45) [POST]
+  Parameters: {"authenticity_token"=>"DFDgg3ZVSe/7n7JBxy1FcEeiTe/eN0JPt4RZwg6RYLU=", "id"=>"1", "_"=>""}
+  [4;36;1mCity Load (6.3ms)[0m   [0;1mSELECT * FROM "cities" WHERE ("cities"."location_id" = E'1') [0m
+Completed in 39ms (View: 1, DB: 7) | 200 OK [http://localhost/home/update_city]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#search_city (for 127.0.0.1 at 2010-07-27 15:14:49) [GET]
+  Parameters: {"commit"=>"Find", "id"=>"49"}
+  [4;35;1mCity Load (1.3ms)[0m   [0mSELECT * FROM "cities" WHERE ("cities"."id" = 49) [0m
+  [4;36;1mResort Load (2.8ms)[0m   [0;1mSELECT * FROM "resorts" WHERE ("resorts".city_id = 49) [0m
+Rendering template within layouts/application
+Rendering home/search_city
+Rendered layouts/_main_banner (2.8ms)
+Rendered cities/_show_resorts (39.1ms)
+Rendered layouts/_navegacion (0.5ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 222ms (View: 87, DB: 5) | 200 OK [http://localhost/search_city?id=49&commit=Find]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ResortsController#show (for 127.0.0.1 at 2010-07-27 15:14:51) [GET]
+  Parameters: {"id"=>"618"}
+  [4;35;1mResort Load (1.9ms)[0m   [0mSELECT * FROM "resorts" WHERE ("resorts"."id" = 618) [0m
+  [4;36;1mRoom Load (1.7ms)[0m   [0;1mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 618) [0m
+  [4;35;1mUnitSize Load (1.0ms)[0m   [0mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering resorts/show
+[paperclip] Paperclip attachment photo_main on Resort initialized.
+[paperclip] Paperclip attachment photo1 on Resort initialized.
+[paperclip] Paperclip attachment photo2 on Resort initialized.
+[paperclip] Paperclip attachment photo3 on Resort initialized.
+[paperclip] Paperclip attachment photo4 on Resort initialized.
+Rendered resorts/_photos (188.2ms)
+Rendered resorts/_amenities (1.7ms)
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rooms" WHERE ("rooms".resort_id = 618) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "rooms" WHERE ("rooms".resort_id = 618) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "unit_sizes" WHERE ("unit_sizes"."id" = 3) [0m
+Rendered resorts/_show_rooms (9.4ms)
+Rendered layouts/_navegacion (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 399ms (View: 234, DB: 6) | 200 OK [http://localhost/resorts/618]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-27 15:14:52) [GET]
+  Parameters: {"1235739256"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo_mains/618/thumb/carriageridge1.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-27 15:14:52) [GET]
+  Parameters: {"1235739254"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo1s/618/thumb/carriageridge4.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-27 15:14:52) [GET]
+  Parameters: {"1235739254"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo2s/618/thumb/carriageridge1.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-27 15:14:52) [GET]
+  Parameters: {"1235739255"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo3s/618/thumb/carriageridge2.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-27 15:14:52) [GET]
+  Parameters: {"1235739255"=>nil}
+
+ActionController::RoutingError (No route matches "/system/photo4s/618/thumb/carriageridge3.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
