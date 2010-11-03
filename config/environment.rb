@@ -21,14 +21,14 @@ end
 
 # EMAIL ACCOUNT CONFIG 
 
+
 ActionMailer::Base.smtp_settings = {
-  :tls => true,
   :address => "smtp.gmail.com",
   :port => 587,
-  :domain => "luxuryresortmanagement.com  ",
+  :domain => "gmail.com",
   :authentication => :plain,
-  :user_name => "contracts@luxuryresortmanagement.com",
-  :password => "letmein"
+  :user_name => "contractconfirmation@gmail.com",
+  :password => "cancun1234"
 }
 
 # EXCEPTIONS NOTIFICATIONS CONFIGURATIONS
